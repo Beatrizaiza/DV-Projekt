@@ -55,26 +55,58 @@
 		<div class="diagram">
 			classDiagram
 			class Benutzeroberfläche {
-				int age
-				String gender
-				isMammal()
-				mate()
+				String Einheit
+				double Größe
+				Ausgabe()
+				Einheit()
+				
 			}
-			class Duck {
-				String beakColor
-				swim()
-				quack()
+			class Länge {
+			double Länge
+			berechne()
+			getLänge()
+			setLänge()
+				
 			}
-			class Fish {
-				int sizeInFeet
-				canEat()
+			class Voloumen {
+			double Voloumen
+			berechne()
+			getVoloumen()
+			setvoloumen()	
 			}
-			class Zebra {
-				bool is_wild
-				run()
+			class Fläche {
+			double Fläche
+			berechne()
+			getFläche()
+			setFläche()
 			}
-			Animal <|-- Duck
-		
+			class Gewicht {
+			double Gewicht
+			berechne()
+			getGewicht()
+			setGewicht()
+			}
+			class Temperatur {
+			double Temperatur
+			berechne()
+			getTemeperatur()
+			setTemperatur()
+			}
+			class Geschwindigkeit{
+			double Geschwindigkeit
+			berechne()
+			getGeschwindigkeit()	
+			setGeschwindigkeit()
+			}
+
+			Benutzeroberfläche  <|-- Länge
+			Benutzeroberfläche  <|-- Voloumen
+			Benutzeroberfläche  <|-- Fläche
+			Benutzeroberfläche  <|-- Gewicht
+			Benutzeroberfläche  <|-- Temperatur
+			Benutzeroberfläche  <|-- Geschwindigkeit
+
+			
 		</div>
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
 		<p>TODO: Der größten Aufwand wird die Umsetzung der grafischen Oberfläche in Anspruch nehmen. Hier sollten zwei Leute dauerhaft gebunden sein um eine nutzeransprechende und vor allem funktionierende Oberfläche zu programmieren. Der Rest der Gruppe kümmert sich um die Umsetzung der mathematischen Operationen und den verschiedenen Einheiten. Hier könnte jeweils einer Person mehrere Kategorien zugeordnet werden (z.B. Person A: Länge, Person B: Gewicht etc.). Sollte die Nutzeroberfläche fertig sein konzentriert sich das ganze Team auf die Fehlerverbesserung und Erweiterung um andere Formeln.  </p>
