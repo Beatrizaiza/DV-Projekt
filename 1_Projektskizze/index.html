@@ -189,11 +189,154 @@ Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/class
 </p>
 
 
-<div class="diagram"> classDiagram class Animal { int age
-String gender isMammal() mate() } class Duck { String beakColor swim()
-quack() } class Fish { int sizeInFeet canEat() } class Zebra { bool
-is_wild run() } Animal &lt;|-- Duck Animal &lt;|-- Fish Animal
-&lt;|-- Zebra </div>
+<div class="diagram"> 			classDiagram
+			class Startbildschirm {
+				interface button einheit(1)
+				interface button voloumen(2)
+				interface button fläche(3)
+				interface button temperatur(4)
+				gehezu1()
+				gehezu2()
+				gehezu3()
+				gehezu4()
+				
+			}
+			class Einheiten {
+			double einheit
+			berechne()
+			getLänge()
+			setLänge()
+			ausgabe()
+				
+			}
+			class Voloumen {
+			double voloumen
+			berechne()
+			getVoloumen()
+			setvoloumen()	
+			ausgabe()
+			}
+			class Fläche {
+			double fläche
+			double Grundseite
+			double hohe
+			berechne()
+			getFläche()
+			setFläche()
+			ausgabe()
+			}
+			class Temperatur {
+			double temperatur
+			berechne()
+			getGewicht()
+			setGewicht()
+			ausgabe()
+
+			}
+			class Temperatur {
+			double Temperatur
+			berechne()
+			getTemeperatur()
+			setTemperatur()
+			ausgabe()
+			
+			}
+			class Länge {
+			double einheit
+			berechne()
+			getLänge()
+			setLänge()
+			ausgabe()
+				
+			}
+			class Kapazität {
+			double kapazität
+			berechne()
+			getVoloumen()
+			setvoloumen()	
+			ausgabe()
+			}
+			class Areal {
+			double areal
+			double Grundseite
+			double hohe
+			berechne()
+			getFläche()
+			setFläche()
+			ausgabe()
+			}
+			class Gewicht {
+			double gewicht 
+			berechne()
+			getGewicht()
+			setGewicht()
+			ausgabe()
+
+			}
+			class Geschwindigkeit {
+			double Geschwindigkeit
+			berechne()
+			getTemeperatur()
+			setTemperatur()
+			ausgabe()
+
+			}
+	
+			Einheit  <|-- Länge
+			Einheit  <|-- Kapazität
+			Einheit  <|-- Fläche
+			Einheit  <|-- Gewicht
+
+
+			class Viereck {
+			double längeA
+			double längeB
+			berechne()
+			ausgabe()
+			}
+
+			class Kreis {
+			double radius
+			berechne()
+			ausgabe()
+			}
+			class Dreieck {
+			double grundseite
+			double hoehe
+			berechne()
+			ausgabe()
+
+			}
+
+			Fläche  <|-- Viereck
+			Fläche  <|-- Kreis
+			Fläche  <|-- Dreieck
+		
+			class Viereck {
+			double länge
+			double breite
+			berechne()
+			ausgabe()
+			}
+
+			class Kreis {
+			double radius
+			berechne()
+			ausgabe()
+			}
+			class Pyramid {
+			double grundseite
+			double hoehe
+			berechne()
+			ausgabe()
+
+			}
+
+			Voloumen  <|-- Würfel
+			Voloumen  <|-- Kugel
+			Voloumen  <|-- Pyramid
+
+			</div>
 
 
 <h2>4. Aufwandssch&auml;tzung und Aufteilung</h2>
