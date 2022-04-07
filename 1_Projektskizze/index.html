@@ -192,7 +192,7 @@ Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/class
 <div class="diagram"> 			classDiagram
 			class Startbildschirm {
 				interface button einheit(1)
-				interface button voloumen(2)
+				interface button volumen(2)
 				interface button fläche(3)
 				interface button temperatur(4)
 				gehezu1()
@@ -209,11 +209,11 @@ Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/class
 			ausgabe()
 				
 			}
-			class Voloumen {
-			double voloumen
+			class Volumen {
+			double volumen
 			berechne()
-			getVoloumen()
-			setvoloumen()	
+			getVolumen()
+			setvolumen()	
 			ausgabe()
 			}
 			class Fläche {
@@ -282,9 +282,14 @@ Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/class
 
 			}
 	
-			Startbildschirm  <|-- Länge
-			Startbildschirm  <|-- Kapazität
-			Startbildschirm  <|-- Fläche
+			Einheit  <|-- Länge
+			Einheit  <|-- Kapazität
+			Einheit  <|-- Fläche
+			Einheit  <|-- Gewicht
+
+			Startbildschirm  <|-- Einheiten
+			Startbildschirm  <|-- Voloumen
+			Startbildschirm  <|-- Areal 
 			Startbildschirm  <|-- Gewicht
 
 
@@ -332,9 +337,9 @@ Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/class
 
 			}
 
-			Voloumen  <|-- Würfel
-			Voloumen  <|-- Kugel
-			Voloumen  <|-- Pyramid
+			Volumen  <|-- Würfel
+			Volumen  <|-- Kugel
+			Volumen  <|-- Pyramid
 
 			</div>
 
