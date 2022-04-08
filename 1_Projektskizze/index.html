@@ -3,13 +3,19 @@
 <head>
 
 
+
+  
   
   <meta charset="UTF-8">
 
 
+
+  
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+  
   
   <title>Projektskizze</title>
 </head>
@@ -18,42 +24,53 @@
 <body>
 
 
+
 <header> <img src="images/HFU-Logo.png"> </header>
 <h1>Projekt:&nbsp;(Um-)Rechnungstool</h1>
 
 
+
 <h2>Semester:&nbsp;SS 2022</h2>
+
 
 
 <b>Teammitglieder:</b>
 <ul>
 
 
+
   <li>Beatriz Aiza Rocha (beatriz.rocha@hs-furtwangen.de)</li>
+
 
 
   <li>Jasmin Binkowski (jasmin.helene.binkowski@hs-furtwangen.de)</li>
 
 
+
   <li>Sophia Hug (sophia.hug@hs-furtwangen.de)</li>
+
 
 
   <li>Luca Wieland (luca.leon.wieland@hs-furtwangen.de)</li>
 
 
+
   <li>Leon Welker (leon.tenzin.welker@hs-furtwangen.de)</li>
 
 
+
 </ul>
+
 
 
 <main> </main>
 <h2>1. Projekt-Beschreibung</h2>
 
 
+
 <p>Das Projekt bietet dem Anwender vielf&auml;ltige
-M&ouml;glichkeiten zur einfachen Umrechnung verschiedener Einheiten
-sowie zur Berechnungen von geometrischen und mathematischen
+M&ouml;glichkeiten zur einfachen Umrechnung verschiedener Einheiten,
+sowie zur Berechnung von geometrischen und mathematischen
 Gr&ouml;&szlig;en und Formen.
 Dabei wird man &uuml;ber ein simples Auswahlsystem auf dem
 Bildschirm
@@ -61,7 +78,9 @@ zum gew&uuml;nschten Umrechnungsfenster navigiert, indem man die
 Umrechnung durchf&uuml;hren kann.</p>
 
 
+
 <h2>2. Features und Anforderungen</h2>
+
 
 
 Die Aufgabe des (Um-)Rechnungstools ist es, den Anwender schnell und
@@ -74,24 +93,31 @@ Folgende Dienste sollen dabei zum Angebot stehen:
 <ol>
 
 
+
   <li>allgemeiner Einheitenumrechner</li>
+
 
 
   <li>Fl&auml;chenberechnung von zweidimensionalen
 geometrischen Formen</li>
 
 
+
   <li>Volumenberechnung von dreidimensionalen geometrischen Formen</li>
 
 
-  <li>Temperatur Umrechnung zwischen Celsius, Kelvin und
+
+  <li>Temperatur-Umrechnung zwischen Celsius, Kelvin und
 Fahrenheit <br>
+
 
 
   </li>
 
 
+
 </ol>
+
 
 
 
@@ -115,6 +141,7 @@ Button
 ausgef&uuml;hrt werden. Das Ergebnis ist dann im Ausgabefenster zu sehen.<br>
 
 
+
 Die Oberfl&auml;che zur Fl&auml;chen-und Volumenberechnung
 bietet in
 einer Dropdown-Liste zuerst die Auswahlm&ouml;glichkeit einer
@@ -128,8 +155,10 @@ berechnet und das Ergebnis wie oben beschrieben dann
 einheitenspezifisch im Ausgabefeld dargestellt.<br>
 
 
+
 Bei unzul&auml;ssigen oder keinen Eingaben, soll das Programm
 folgenderma&szlig;en reagieren:<br>
+
 
 
 Wird eine gewisse Gr&ouml;&szlig;e einer Zahl
@@ -140,12 +169,14 @@ Fu&szlig; = 3,048*10^-5 km). Sollte keine Einheit bei der Ein- oder
 Ausgabe ausgew&auml;hlt oder kein Eingabewert eingegeben werden, so
 wird eine Fehlermeldung mit einem Hinweis beim Dr&uuml;cken des
 "Berechne"-Buttons ausgegeben.<br>
+
 <br>
+
 Die Bedienoberfl&auml;che soll im Sinne eines allgemeinen
 &Uuml;bersetzungstools als grafische Benutzeroberfl&auml;che
 (GUI) aufgebaut
 sein. Der Nutzer kann von einem
-Startfenster einen der oben beschriebenen Rechner auswählen. Dies
+Startfenster einen der oben beschriebenen Rechner ausw&auml;hlen. Dies
 f&uuml;hrt zur Weiterleitung zum entsprechenden Fenster mit den oben
 beschriebenen Dropdown-Fenstern, Eingabefeldern und einem
 "Berechne-Button", der zur Ausgabe des Ergebnisses f&uuml;hrt.
@@ -153,44 +184,60 @@ Zus&auml;tzlich
 wird der Nutzer textuell durch eine Schritt f&uuml;r
 Schritt-Anleitung durch
 jedes Fenster geleitet.<br>
+
 <br>
+
 <div style="text-align: center;"><big style="font-weight: bold;">Startfenster zum W&auml;hlen des Rechners:</big><br>
+
 <br>
+
 </div>
+
 <div style="text-align: center;"><img style="width: 477px; height: 274px;" src="images/Main.png"><br>
+
 <br>
+
 <big style="font-weight: bold;">Beispielfenster zu den einzelnen Rechnern:</big><br>
+
 <br>
+
 </div>
+
 <div style="text-align: center;"><img style="width: 1145px; height: 661px;" src="images/optionen4.png"><br>
+
 </div>
 
 
+
 <br>
+
 
 
 Der Quellcode wird &uuml;ber die Entwicklungsumgebung Eclipse
 mittels der
 Programmiersprache
-Java geschrieben. Eventuell kommt das Programm BlueJ zur
+Java geschrieben und steht dann als Desktop-App als Systemumgebung zur Verf&uuml;gung.. Eventuell kommt das Programm BlueJ zur
 Fehlererkennung zum
 Einsatz.
 <h2>3. Architektur</h2>
 
 
+
 <p></p>
 
 
+
 <p>
-</a>.
+.
 </p>
+
 
 
 <div class="diagram"> 			classDiagram
 			class Startbildschirm {
 				interface button einheit(1)
 				interface button volumen(2)
-				interface button fläche(3)
+				interface button fl&auml;che(3)
 				interface button temperatur(4)
 				gehezu1()
 				gehezu2()
@@ -201,8 +248,8 @@ Einsatz.
 			class Einheiten {
 			double einheit
 			berechne()
-			getLänge()
-			setLänge()
+			getL&auml;nge()
+			setL&auml;nge()
 			ausgabe()
 				
 			}
@@ -213,13 +260,13 @@ Einsatz.
 			setvolumen()	
 			ausgabe()
 			}
-			class Fläche {
-			double fläche
+			class Fl&auml;che {
+			double fl&auml;che
 			double Grundseite
 			double hohe
 			berechne()
-			getFläche()
-			setFläche()
+			getFl&auml;che()
+			setFl&auml;che()
 			ausgabe()
 			}
 			
@@ -231,16 +278,16 @@ Einsatz.
 			ausgabe()
 			
 			}
-			class Länge {
+			class L&auml;nge {
 			double einheit
 			berechne()
-			getLänge()
-			setLänge()
+			getL&auml;nge()
+			setL&auml;nge()
 			ausgabe()
 				
 			}
-			class Kapazität {
-			double kapazität
+			class Kapazit&auml;t {
+			double kapazit&auml;t
 			berechne()
 			getVoloumen()
 			setvoloumen()	
@@ -251,8 +298,8 @@ Einsatz.
 			double Grundseite
 			double hohe
 			berechne()
-			getFläche()
-			setFläche()
+			getFl&auml;che()
+			setFl&auml;che()
 			ausgabe()
 			}
 			class Gewicht {
@@ -265,20 +312,20 @@ Einsatz.
 			}
 			
 	
-			Einheiten  <|-- Länge
-			Einheiten  <|-- Kapazität
-			Einheiten  <|-- Fläche
-			Einheiten  <|-- Gewicht
+			Einheiten  &lt;|-- L&auml;nge
+			Einheiten  &lt;|-- Kapazit&auml;t
+			Einheiten  &lt;|-- Fl&auml;che
+			Einheiten  &lt;|-- Gewicht
 
-			Startbildschirm  <|-- Einheiten
-			Startbildschirm  <|-- Volumen
-			Startbildschirm  <|-- Areal 
-			Startbildschirm  <|-- Temperatur
+			Startbildschirm  &lt;|-- Einheiten
+			Startbildschirm  &lt;|-- Volumen
+			Startbildschirm  &lt;|-- Areal 
+			Startbildschirm  &lt;|-- Temperatur
 
 
 			class Viereck {
-			double längeA
-			double längeB
+			double l&auml;ngeA
+			double l&auml;ngeB
 			berechne()
 			ausgabe()
 			}
@@ -296,12 +343,12 @@ Einsatz.
 
 			}
 
-			Areal  <|-- Viereck
-			Areal  <|-- Kreis
-			Areal  <|-- Dreieck
+			Areal  &lt;|-- Viereck
+			Areal  &lt;|-- Kreis
+			Areal  &lt;|-- Dreieck
 		
-			class Würfel {
-			double länge
+			class W&uuml;rfel {
+			double l&auml;nge
 			double breite
 			berechne()
 			ausgabe()
@@ -320,28 +367,51 @@ Einsatz.
 
 			}
 
-			Volumen  <|-- Würfel
-			Volumen  <|-- Kugel
-			Volumen  <|-- Pyramide
+			Volumen  &lt;|-- W&uuml;rfel
+			Volumen  &lt;|-- Kugel
+			Volumen  &lt;|-- Pyramide
 
 			</div>
+
 
 
 <h2>4. Aufwandssch&auml;tzung und Aufteilung</h2>
 
 
-<p>Der benötigte Arbeitsaufwand wird auf ca. 320 Stunden insgesamt geschätzt. Pro Person sind das 64 Arbeitsstunden. 
-Zwei Teammitglieder kümmern sich um das Layout und den Startbildschirm, während sich die anderen drei um die Umsetzung der Software für die Einheiten, Flächen und Volumen kümmern. Da die Temperatur Um- beziehungsweise Berechnung in unseren Augen am wenigsten komplex ist, wird diese am Ende integriert. 
-Angesetzt sind dabei pro Unterkategorie ca. 55 Stunden pp. Wir erwarten, dass das "Layout-Team" schneller fertig ist und die anderen anschließend unterstützt. Die letzten 45 Stunden sind als Puffer für eventuelle Änderungen, Störungen und Bugfixes gedacht.
+
+<p>Der ben&ouml;tigte Arbeitsaufwand wird auf ca. 320 Stunden insgesamt
+gesch&auml;tzt. Pro Person sind das 64 Arbeitsstunden. Zwei
+Teammitglieder k&uuml;mmern sich um das Layout und den Startbildschirm,
+w&auml;hrend sich die anderen drei um die Umsetzung der Software
+f&uuml;r die Einheiten, Fl&auml;chen und Volumen k&uuml;mmern. Da die
+Temperatur Um- beziehungsweise Berechnung in unseren Augen am wenigsten
+komplex ist, wird diese am Ende integriert. Angesetzt sind dabei pro
+Unterkategorie ca. 55 Stunden pp. Wir erwarten, dass das "Layout-Team"
+schneller fertig ist und die anderen anschlie&szlig;end
+unterst&uuml;tzt. Die letzten 45 Stunden sind als Puffer f&uuml;r
+eventuelle &Auml;nderungen, St&ouml;rungen und Bugfixes gedacht.
 <br>
+
 Beatriz : Startbildschirm      (45h) <br>
+
 Jasmin  : Volumen              (50h) <br>
-Sophia  : Fläche	              (50h) <br>
+
+Sophia  : Fl&auml;che	              (50h) <br>
+
 Luca    : Startbildschirm      (45h) <br>
+
 Leon    : Einheiten            (50h) <br>
-			___________ <br>
-			Rest:  80h  -> für Temperatur und weitere Verbesserungen <br>
+
+			___________<span style="text-decoration: underline;"> &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;</span> <br>
+
+			Rest:  80h&nbsp; &raquo; &nbsp;f&uuml;r Temperatur und weitere Verbesserungen <br>
+
 </p>
+
 
 
 
