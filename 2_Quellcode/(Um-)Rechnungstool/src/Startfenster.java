@@ -33,10 +33,10 @@ public class Startfenster
 		
 		JFrame hauptfenster = new JFrame("Umrechnungstool");
         
-		maﬂband = new ImageIcon(JFrame.class.getResource("Bild Maﬂband.png"));
-		dreieck = new ImageIcon(JFrame.class.getResource("Bild Dreieck.png"));
-		kugel = new ImageIcon(JFrame.class.getResource("Bild Kugel.png"));
-		thermometer = new ImageIcon(JFrame.class.getResource("Bild Thermometer.png"));
+		maﬂband = new ImageIcon("Bild-Maﬂband.png");
+		dreieck = new ImageIcon("Bild Dreieck.png");
+		kugel = new ImageIcon("Bild Kugel.png");
+		thermometer = new ImageIcon("Bild Thermometer.png");
 		
 		//Erzeugt Hauptfenster//
 		hauptfenster.setBounds(350, 100, 850, 600); //legt Grˆﬂe und Position fest//
@@ -47,7 +47,7 @@ public class Startfenster
         bild2 = new JLabel(dreieck);
         bild3 = new JLabel(kugel);
         bild4 = new JLabel(thermometer);
-        
+//        
         hauptfenster.addWindowListener(new WindowAdapter() { 
         	@Override
             public void windowClosing(WindowEvent e)
@@ -117,7 +117,7 @@ public class Startfenster
         pane.add(bild2);
         pane.add(bild3);
         pane.add(bild4);
-
+        hauptfenster.pack();
            
 	}
 }
