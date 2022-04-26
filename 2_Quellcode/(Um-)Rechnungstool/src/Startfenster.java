@@ -1,30 +1,54 @@
 
-import java.awt.Component;
 import java.awt.Container;
-import java.awt.LayoutManager;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
-import javax.swing.BoxLayout;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
-public class Runner
+public class Startfenster
 {
 	
 	public static void main(String[] args)
 	{
-		//Erzeugt Hauptfenster//
-		JFrame mainWindow = new JFrame("Umrechnungstool");
-        mainWindow.setBounds(350, 100, 850, 600); //legt Grˆﬂe und Position fest//
-        mainWindow.setVisible(true); //macht Fenster sichtbar//
-        mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Befehl beim Schlieﬂen des Fensters//
+		
+		JLabel bild1;
+		JLabel bild2;
+		JLabel bild3;
+		JLabel bild4;
+		
+		Icon maﬂband;
+		Icon dreieck;
+		Icon kugel;
+		Icon thermometer;
+		
+		JFrame hauptfenster = new JFrame("Umrechnungstool");
         
-        mainWindow.addWindowListener(new WindowAdapter() { 
+		maﬂband = new ImageIcon("Bild-Maﬂband.png");
+		dreieck = new ImageIcon("Bild Dreieck.png");
+		kugel = new ImageIcon("Bild Kugel.png");
+		thermometer = new ImageIcon("Bild Thermometer.png");
+		
+		//Erzeugt Hauptfenster//
+		hauptfenster.setBounds(350, 100, 850, 600); //legt Grˆﬂe und Position fest//
+        hauptfenster.setVisible(true); //macht Fenster sichtbar//
+        hauptfenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Befehl beim Schlieﬂen des Fensters//
+        
+        bild1 = new JLabel(maﬂband);
+        bild2 = new JLabel(dreieck);
+        bild3 = new JLabel(kugel);
+        bild4 = new JLabel(thermometer);
+//        
+        hauptfenster.addWindowListener(new WindowAdapter() { 
         	@Override
             public void windowClosing(WindowEvent e)
         	{
@@ -55,7 +79,7 @@ public class Runner
 	    	@Override
 			public void actionPerformed(ActionEvent e) 
 			{
-				System.out.println("Weiterleitung zum Fl‰chenrechner");
+				System.out.println("Weiterleitung zum Einheitenumrechner");
 					
 			}	
 		});
@@ -81,20 +105,19 @@ public class Runner
 	        });	 
         
         //--- add components to the main window ---//
-        Container pane = mainWindow.getContentPane();
-        JPanel selection = new JPanel();
-        pane.add(selection);
-        LayoutManager myLayout = new BoxLayout(selection, BoxLayout.Y_AXIS);
-        selection.setLayout(myLayout);
-//        panel.add(label);
-//        panel.add(einheitenumrechner);
-//        panel.add(flaechenrechner);
-//        panel.add(volumenrechner);
-        temperaturumrechner.setAlignmentX(Component.CENTER_ALIGNMENT);
-        einheitenumrechner.setAlignmentX(Component.CENTER_ALIGNMENT);
-        selection.add(temperaturumrechner);
-        selection.add(einheitenumrechner);
-        //mainWindow.pack();
+        Container pane = hauptfenster.getContentPane();
+        pane.setLayout(new FlowLayout());
+        pane.add(label);
+        pane.add(einheitenumrechner);
+        pane.add(flaechenrechner);
+        pane.add(volumenrechner);
+        pane.add(temperaturumrechner);
+        
+        pane.add(bild1);
+        pane.add(bild2);
+        pane.add(bild3);
+        pane.add(bild4);
+        hauptfenster.pack();
            
 	}
 }
