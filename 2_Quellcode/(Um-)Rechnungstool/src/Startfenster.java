@@ -5,10 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
 
-import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -31,17 +28,17 @@ public class Startfenster
 		Icon kugel;
 		Icon thermometer;
 		
-		massband = new ImageIcon("Bild-Maï¿½band.png");
-		dreieck = new ImageIcon("Bild Dreieck.png");
-		kugel = new ImageIcon("Bild Kugel.png");
-		thermometer = new ImageIcon("Bild Thermometer.png");
+		massband = new ImageIcon("Bild-Maßband.png");
+		dreieck = new ImageIcon("Bild-Dreieck.png");
+		kugel = new ImageIcon("Bild-Kugel.png");
+		thermometer = new ImageIcon("Bild-Thermometer.png");
 		
 		//Erzeugt Hauptfenster//
 		JFrame hauptfenster = new JFrame("Umrechnungstool");
-		hauptfenster.setBounds(350, 100, 850, 600); //legt Grï¿½ï¿½e und Position fest//
+		hauptfenster.setBounds(350, 100, 850, 600); //legt Größe und Position fest//
 
         hauptfenster.setVisible(true); //macht Fenster sichtbar//
-        hauptfenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Befehl beim Schlieï¿½en des Fensters//
+        hauptfenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Befehl beim Schleißen des Fensters//
         
         bild1 = new JLabel(massband);
         bild2 = new JLabel(dreieck);
@@ -58,16 +55,17 @@ public class Startfenster
         });
                
         //--- create a label, a text field, a fly button and a custom drawing canvas ---//
-        JLabel label = new JLabel("Wï¿½hlen Sie zwischen folgenden Rechnern:");
+        JLabel label = new JLabel("Wählen Sie zwischen folgenden Rechnern:");
         JButton einheitenumrechner = new JButton("Einheitenumrechner");
-        JButton flaechenrechner = new JButton("Flï¿½chenrechner");
+        JButton flaechenrechner = new JButton("Flächenrechner");
         JButton volumenrechner = new JButton("Volumenrechner");
         JButton temperaturumrechner = new JButton("Temperaturumrechner");
         
         //Positionieren der Buttons, Labels und Bilder
-        
+        label.setBounds(175, 20, 100, 20);
+        einheitenumrechner.setLocation(175, 30); //funktioniert beides nicht???
 
-        //Befehl zum ï¿½ffnen des Einheitenumrechners//
+        //Befehl zum Öffnen des Einheitenumrechners//
         einheitenumrechner.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) 
@@ -77,17 +75,17 @@ public class Startfenster
 			}
         });
 			
-		//Befehl zum ï¿½ffnen des Flï¿½chenrechners//
+		//Befehl zum Öffnen des Flächenrechners//
 	    flaechenrechner.addActionListener(new ActionListener() {
 	    	@Override
 			public void actionPerformed(ActionEvent e) 
 			{
-				System.out.println("Weiterleitung zum Einheitenumrechner");
+				System.out.println("Weiterleitung zum Flächenrechner");
 					
 			}	
 		});
 	    
-		  //Befehl zum ï¿½ffnen des Volumenrechners//
+		  //Befehl zum Öffnen des Volumenrechners//
 	        volumenrechner.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) 
@@ -97,7 +95,7 @@ public class Startfenster
 				}
 	        });
 	        
-	      //Befehl zum ï¿½ffnen des Temperaturumrechners//
+	      //Befehl zum Öffnen des Temperaturumrechners//
 	        volumenrechner.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) 
@@ -122,6 +120,8 @@ public class Startfenster
         pane.add(bild4);
         hauptfenster.pack();
         hauptfenster.setBounds(350, 100, 850, 600); //legt Größe und Position fest//
+        
+        
            
 	}
 }
