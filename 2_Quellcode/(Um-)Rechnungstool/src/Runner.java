@@ -10,7 +10,6 @@ import java.awt.event.WindowEvent;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Runner
@@ -34,7 +33,7 @@ public class Runner
         });
                
         //--- create a label, a text field, a fly button and a custom drawing canvas ---//
-        JLabel label = new JLabel("Wählen Sie zwischen folgenden Rechnern:");
+        //JLabel label = new JLabel("Wählen Sie zwischen folgenden Rechnern:");
         JButton einheitenumrechner = new JButton("Einheitenumrechner");
         JButton flaechenrechner = new JButton("Flächenrechner");
         JButton volumenrechner = new JButton("Volumenrechner");
