@@ -26,24 +26,24 @@ public class Startfenster
 		JLabel bild3;
 		JLabel bild4;
 		
-		Icon maßband;
+		Icon massband;
 		Icon dreieck;
 		Icon kugel;
 		Icon thermometer;
 		
 		JFrame hauptfenster = new JFrame("Umrechnungstool");
         
-		maßband = new ImageIcon("Bild-Maßband.png");
+		massband = new ImageIcon("Bild-Maï¿½band.png");
 		dreieck = new ImageIcon("Bild Dreieck.png");
 		kugel = new ImageIcon("Bild Kugel.png");
 		thermometer = new ImageIcon("Bild Thermometer.png");
 		
 		//Erzeugt Hauptfenster//
-		hauptfenster.setBounds(350, 100, 850, 600); //legt Größe und Position fest//
+		hauptfenster.setBounds(350, 100, 850, 600); //legt Grï¿½ï¿½e und Position fest//
         hauptfenster.setVisible(true); //macht Fenster sichtbar//
-        hauptfenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Befehl beim Schließen des Fensters//
+        hauptfenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Befehl beim Schlieï¿½en des Fensters//
         
-        bild1 = new JLabel(maßband);
+        bild1 = new JLabel(massband);
         bild2 = new JLabel(dreieck);
         bild3 = new JLabel(kugel);
         bild4 = new JLabel(thermometer);
@@ -58,13 +58,13 @@ public class Startfenster
         });
                
         //--- create a label, a text field, a fly button and a custom drawing canvas ---//
-        JLabel label = new JLabel("Wählen Sie zwischen folgenden Rechnern:");
+        JLabel label = new JLabel("Wï¿½hlen Sie zwischen folgenden Rechnern:");
         JButton einheitenumrechner = new JButton("Einheitenumrechner");
-        JButton flaechenrechner = new JButton("Flächenrechner");
+        JButton flaechenrechner = new JButton("Flï¿½chenrechner");
         JButton volumenrechner = new JButton("Volumenrechner");
         JButton temperaturumrechner = new JButton("Temperaturumrechner");
 
-        //Befehl zum Öffnen des Einheitenumrechners//
+        //Befehl zum ï¿½ffnen des Einheitenumrechners//
         einheitenumrechner.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) 
@@ -74,7 +74,7 @@ public class Startfenster
 			}
         });
 			
-		//Befehl zum Öffnen des Flächenrechners//
+		//Befehl zum ï¿½ffnen des Flï¿½chenrechners//
 	    flaechenrechner.addActionListener(new ActionListener() {
 	    	@Override
 			public void actionPerformed(ActionEvent e) 
@@ -84,7 +84,7 @@ public class Startfenster
 			}	
 		});
 	    
-		  //Befehl zum Öffnen des Volumenrechners//
+		  //Befehl zum ï¿½ffnen des Volumenrechners//
 	        volumenrechner.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) 
@@ -94,7 +94,7 @@ public class Startfenster
 				}
 	        });
 	        
-	      //Befehl zum Öffnen des Temperaturumrechners//
+	      //Befehl zum ï¿½ffnen des Temperaturumrechners//
 	        volumenrechner.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) 
