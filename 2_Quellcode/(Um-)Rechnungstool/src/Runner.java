@@ -94,7 +94,8 @@ public class Runner
         einheitenumrechner.setAlignmentX(Component.CENTER_ALIGNMENT);
         selection.add(temperaturumrechner);
         selection.add(einheitenumrechner);
-        //mainWindow.pack();
+        mainWindow.pack();
+        mainWindow.setBounds(350, 100, 850, 600); //legt Größe und Position fest//
            
 	}
 }

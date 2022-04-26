@@ -31,14 +31,14 @@ public class Startfenster
 		Icon kugel;
 		Icon thermometer;
 		
-		JFrame hauptfenster = new JFrame("Umrechnungstool");
         
 		maﬂband = new ImageIcon("Bild-Maﬂband.png");
-		dreieck = new ImageIcon("Bild Dreieck.png");
-		kugel = new ImageIcon("Bild Kugel.png");
-		thermometer = new ImageIcon("Bild Thermometer.png");
+		dreieck = new ImageIcon("Bild-Dreieck.png");
+		kugel = new ImageIcon("Bild-Kugel.png");
+		thermometer = new ImageIcon("Bild-Thermometer.png");
 		
 		//Erzeugt Hauptfenster//
+		JFrame hauptfenster = new JFrame("Umrechnungstool");
 		hauptfenster.setBounds(350, 100, 850, 600); //legt Grˆﬂe und Position fest//
         hauptfenster.setVisible(true); //macht Fenster sichtbar//
         hauptfenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Befehl beim Schlieﬂen des Fensters//
@@ -63,6 +63,9 @@ public class Startfenster
         JButton flaechenrechner = new JButton("Fl‰chenrechner");
         JButton volumenrechner = new JButton("Volumenrechner");
         JButton temperaturumrechner = new JButton("Temperaturumrechner");
+        
+        //Positionieren der Buttons, Labels und Bilder
+        
 
         //Befehl zum ÷ffnen des Einheitenumrechners//
         einheitenumrechner.addActionListener(new ActionListener() {
@@ -118,6 +121,7 @@ public class Startfenster
         pane.add(bild3);
         pane.add(bild4);
         hauptfenster.pack();
+        hauptfenster.setBounds(350, 100, 850, 600); //legt Grˆﬂe und Position fest//
            
 	}
 }
