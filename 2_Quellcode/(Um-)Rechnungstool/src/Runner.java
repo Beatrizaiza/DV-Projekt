@@ -1,20 +1,15 @@
 
 import java.awt.Component;
 import java.awt.Container;
-import java.awt.FlowLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.LayoutManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Runner
@@ -38,7 +33,7 @@ public class Runner
         });
                
         //--- create a label, a text field, a fly button and a custom drawing canvas ---//
-        JLabel label = new JLabel("Wählen Sie zwischen folgenden Rechnern:");
+        //JLabel label = new JLabel("Wählen Sie zwischen folgenden Rechnern:");
         JButton einheitenumrechner = new JButton("Einheitenumrechner");
         JButton flaechenrechner = new JButton("Flächenrechner");
         JButton volumenrechner = new JButton("Volumenrechner");
