@@ -37,6 +37,7 @@ public class Startfenster
 		thermometer = new ImageIcon("Bild Thermometer.png");
 		
 		//Erzeugt Hauptfenster//
+		JFrame hauptfenster = new JFrame("Umrechnungstool");
 		hauptfenster.setBounds(350, 100, 850, 600); //legt Gr��e und Position fest//
 
         hauptfenster.setVisible(true); //macht Fenster sichtbar//
