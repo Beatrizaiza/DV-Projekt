@@ -96,7 +96,7 @@ public class Startfenster
 	        });
 	        
 	      //Befehl zum Öffnen des Temperaturumrechners//
-	        volumenrechner.addActionListener(new ActionListener() {
+	        temperaturumrechner.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) 
 				{
