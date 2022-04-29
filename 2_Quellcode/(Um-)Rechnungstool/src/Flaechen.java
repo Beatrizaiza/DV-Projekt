@@ -4,6 +4,7 @@ public class Flaechen {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		// SOLLTE DANN MIT PUBLIC DOUBLE ARBEITEN
 		Rechteck  d= new Rechteck();
         // Calling
         d.Area(40, 300);
