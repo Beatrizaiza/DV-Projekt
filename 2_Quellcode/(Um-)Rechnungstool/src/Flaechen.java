@@ -9,6 +9,7 @@ public class Flaechen {
         // Calling
         d.Area(40, 300);
         d.Area(4.4, 2.1);
+        Flaechen.rectArea(4.4, 2.1);
         
         Circle d1 = new Circle();
         // Calling
@@ -20,9 +21,15 @@ public class Flaechen {
         d2.Area(10);
         d2.Area(3.1);
 		 
-	}}
+	}
+	
+	public static double rectArea(double w, double h)
+	{
+		return w*h;
+	}
+}
 
-// für jedes object eine classe:
+// for each object a classe:
 	class Quadrat 
 	{
 	   
