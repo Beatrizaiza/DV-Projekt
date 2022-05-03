@@ -46,6 +46,12 @@ public class RunnerSophia
 				double h = Double.parseDouble(input.getText());
 				double r = Flaechen.rectArea(w, h);
 				result.setText("F:"+r);
+				
+				
+				// NEED TO AJUST THE GUI!! need "call the values from Flaeche
+				
+				
+				
 			}
         });
 			
