@@ -1,6 +1,7 @@
 
 import java.awt.Container;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -9,6 +10,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -44,10 +46,6 @@ public class Startfenster {
 		JButton volumenrechner = new JButton("Volumenrechner");
 		JButton temperaturumrechner = new JButton("Temperaturumrechner");
 
-		// Positionieren der Buttons, Labels und Bilder
-		label.setBounds(175, 20, 100, 20);
-		einheitenumrechner.setLocation(175, 30); // funktioniert beides nicht???
-
 		// Befehl zum Öffnen des Einheitenumrechners//
 		einheitenumrechner.addActionListener(new ActionListener() {
 			@Override
@@ -80,13 +78,13 @@ public class Startfenster {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Weiterleitung zum Temperaturumrechner");
-
 			}
 		});
 
-		// --- add components to the main window ---//
+		// add components to the main window
 		Container pane = hauptfenster.getContentPane();
-		pane.setLayout(new FlowLayout());
+		pane.setLayout(null);
+		
 		pane.add(label);
 		pane.add(einheitenumrechner);
 		pane.add(flaechenrechner);
@@ -97,8 +95,19 @@ public class Startfenster {
 		pane.add(labelDreieck);
 		pane.add(labelKugel);
 		pane.add(labelThermometer);
-		hauptfenster.pack();
+		
+		//Festlegen der Positionen
+		label.setBounds(300, 10, 300, 50);
+		einheitenumrechner.setBounds(275,70, 300, 30);
+		flaechenrechner.setBounds(275,110, 300, 30);
+		volumenrechner.setBounds(275,150, 300, 30);
+		temperaturumrechner.setBounds(275,190, 300, 30);
+		labelMassband.setBounds(170, 240, 164, 113);
+		labelDreieck.setBounds(350, 240, 89, 138);
+		labelKugel.setBounds(450, 240, 135, 123);
+		labelThermometer.setBounds(605, 240, 56, 131);
 		hauptfenster.setBounds(350, 100, 850, 600); // legt Größe und Position fest//
+		hauptfenster.setResizable(false);
 
 	}
 }
