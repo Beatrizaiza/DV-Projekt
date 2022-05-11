@@ -15,6 +15,8 @@ import javax.swing.SwingConstants;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Einheitenumrechner extends JFrame {
 
@@ -57,23 +59,84 @@ public class Einheitenumrechner extends JFrame {
 		titel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titel);
 		
-		JComboBox Dropdown_Größen = new JComboBox();
-		Dropdown_Größen.setFont(new Font("Tahoma", Font.BOLD, 14));
-		Dropdown_Größen.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hlen...", "L\u00E4nge", "Fl\u00E4che", "Volumen", "Gewicht"}));
-		Dropdown_Größen.setBounds(300, 87, 240, 21);
-		contentPane.add(Dropdown_Größen);
+		JComboBox drop_eingeinheit = new JComboBox();
+		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"Wähle Eingabeeinheit..."}));
+		drop_eingeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		drop_eingeinheit.setBounds(129, 210, 232, 31);
+		contentPane.add(drop_eingeinheit);
 		
-		JComboBox dropdown_eingabeeinheit = new JComboBox();
-		dropdown_eingabeeinheit.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hle Eingabeeinheit...", "", "Kilometer [km]", "Meter [m]", "Dezimeter [dm]", "Zentimeter [cm]", "Millimeter [mm]", "Mikrometer [\u00B5m]", "Nanometer [nm]", "", "Quadratkilometer [km^2]", "Hektar [ha]", "Ar [a]", "Quadratmeter [m^2]", "Quadratdezimeter [dm^2]", "Quadratzentimeter [cm^2]", "Quadratmillimeter [mm^2]", "Quadratmikrometer [\u00B5m^2]", "Quadratnanometer [nm^2]", "", "Kubikkilometer [km^3]", "Kubikmeter [m^3]", "Kubikdezimeter/Liter [dm^3/l]", "Kubikzentimeter/Milliliter [cm^3/ml]", "Kubikmillimeter [mm^3]", "Kubikmikrometer [\u00B5m^3]", "Kubiknanometer [nm^3]", "", "Tonnen [t]", "Kilogramm [kg]", "Gramm [g]", "Milligramm [mg]"}));
-		dropdown_eingabeeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		dropdown_eingabeeinheit.setBounds(129, 210, 232, 31);
-		contentPane.add(dropdown_eingabeeinheit);
+		JComboBox drop_groessen = new JComboBox();
 		
-		JComboBox dropdown_ausgabeeinheit = new JComboBox();
-		dropdown_ausgabeeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		dropdown_ausgabeeinheit.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hle Eingabeeinheit...", "", "Kilometer [km]", "Meter [m]", "Dezimeter [dm]", "Zentimeter [cm]", "Millimeter [mm]", "Mikrometer [\u00B5m]", "Nanometer [nm]", "", "Quadratkilometer [km^2]", "Hektar [ha]", "Ar [a]", "Quadratmeter [m^2]", "Quadratdezimeter [dm^2]", "Quadratzentimeter [cm^2]", "Quadratmillimeter [mm^2]", "Quadratmikrometer [\u00B5m^2]", "Quadratnanometer [nm^2]", "", "Kubikkilometer [km^3]", "Kubikmeter [m^3]", "Kubikdezimeter/Liter [dm^3/l]", "Kubikzentimeter/Milliliter [cm^3/ml]", "Kubikmillimeter [mm^3]", "Kubikmikrometer [\u00B5m^3]", "Kubiknanometer [nm^3]", "", "Tonnen [t]", "Kilogramm [kg]", "Gramm [g]", "Milligramm [mg]"}));
-		dropdown_ausgabeeinheit.setBounds(499, 212, 232, 29);
-		contentPane.add(dropdown_ausgabeeinheit);
+		drop_groessen.setFont(new Font("Tahoma", Font.BOLD, 14));
+		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"Wählen...", "Länge", "Fläche", "Volumen", "Gewicht"}));
+		drop_groessen.setBounds(300, 77, 240, 31);
+		contentPane.add(drop_groessen);
+		
+		drop_groessen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(drop_groessen.getSelectedItem().equals("Länge"))
+				{
+					drop_eingeinheit.removeAllItems();
+					drop_eingeinheit.setSelectedItem(null);
+					drop_eingeinheit.addItem("Kilometer [km]");
+					drop_eingeinheit.addItem("Meter [m]");
+					drop_eingeinheit.addItem("Dezimeter [dm]");
+					drop_eingeinheit.addItem("Zentimeter [cm]");
+					drop_eingeinheit.addItem("Millimeter [mm]");
+					drop_eingeinheit.addItem("Mikrometer [µm]");
+					drop_eingeinheit.addItem("Nanometer [nm]");
+				}
+				
+				else if(drop_groessen.getSelectedItem().equals("Fläche"))
+				{
+					drop_eingeinheit.removeAllItems();
+					drop_eingeinheit.setSelectedItem(null);
+					drop_eingeinheit.addItem("Kubikkilometer [km^3]");
+					drop_eingeinheit.addItem("Hektar [ha]");
+					drop_eingeinheit.addItem("Ar [a]");
+					drop_eingeinheit.addItem("Quadratmeter [m^2]");
+					drop_eingeinheit.addItem("Quadratdezimeter [dm^2]");
+					drop_eingeinheit.addItem("Quadratzentimeter [cm^2]");
+					drop_eingeinheit.addItem("Quadratmillimeter [mm^2]");
+					drop_eingeinheit.addItem("Quadratmikrometer [µm^2]");
+					drop_eingeinheit.addItem("Quadratnanometer [nm^2]");
+				}
+				
+				else if(drop_groessen.getSelectedItem().equals("Volumen"))
+				{
+					
+					drop_eingeinheit.removeAllItems();
+					drop_eingeinheit.setSelectedItem(null);
+					drop_eingeinheit.addItem("Quadratkilometer [km^2]");
+					drop_eingeinheit.addItem("Kubikmeter [m^3]");
+					drop_eingeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
+					drop_eingeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");
+					drop_eingeinheit.addItem("Kubikmillimeter [mm^3]");
+					drop_eingeinheit.addItem("Kubikmikrometer [µm^3]");
+					drop_eingeinheit.addItem("Kubiknanometer [nm^3]");
+				}
+				
+				else if(drop_groessen.getSelectedItem().equals("Gewicht"))
+				{
+					drop_eingeinheit.removeAllItems();
+					drop_eingeinheit.setSelectedItem(null);
+					drop_eingeinheit.addItem("Tonnen [t]");
+					drop_eingeinheit.addItem("Kilogramm [kg]");
+					drop_eingeinheit.addItem("Gramm [g]");
+					drop_eingeinheit.addItem("Milligramm [mg]");
+					drop_eingeinheit.addItem("Mikrogramm [µm]");
+					drop_eingeinheit.addItem("Nanogramm [ng]");
+				}
+			}
+		});
+		
+		
+		JComboBox drop_ausgeinheit = new JComboBox();
+		drop_ausgeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		drop_ausgeinheit.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hle Ausgabeeinheit...", "", "Kilometer [km]", "Meter [m]", "Dezimeter [dm]", "Zentimeter [cm]", "Millimeter [mm]", "Mikrometer [\u00B5m]", "Nanometer [nm]", "", "Quadratkilometer [km^2]", "Hektar [ha]", "Ar [a]", "Quadratmeter [m^2]", "Quadratdezimeter [dm^2]", "Quadratzentimeter [cm^2]", "Quadratmillimeter [mm^2]", "Quadratmikrometer [\u00B5m^2]", "Quadratnanometer [nm^2]", "", "Kubikkilometer [km^3]", "Kubikmeter [m^3]", "Kubikdezimeter/Liter [dm^3/l]", "Kubikzentimeter/Milliliter [cm^3/ml]", "Kubikmillimeter [mm^3]", "Kubikmikrometer [\u00B5m^3]", "Kubiknanometer [nm^3]", "", "Tonnen [t]", "Kilogramm [kg]", "Gramm [g]", "Milligramm [mg]"}));
+		drop_ausgeinheit.setBounds(499, 212, 232, 29);
+		contentPane.add(drop_ausgeinheit);
 		
 		textField_eing = new JTextField();
 		textField_eing.setFont(new Font("Tahoma", Font.PLAIN, 14));
