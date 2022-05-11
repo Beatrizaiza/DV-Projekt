@@ -8,8 +8,7 @@ public class Flaechen {
         Flaechen.squareArea(4.1);
         Flaechen.circArea(3.2);
         Flaechen.triangleArea(2, 1.4);
-        
-
+       
 	}
 	
 	// gonna do this for each the areas the user needs to compute
