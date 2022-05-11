@@ -35,33 +35,47 @@ public class RunnerSophia
                
         //--- create a label, a text field, a fly button and a custom drawing canvas ---//
         //JLabel label = new JLabel("Wählen Sie zwischen folgenden Rechnern:");
-        JTextField input = new JTextField();
+        JTextField hight = new JTextField();
+        JTextField width = new JTextField();
         JButton compute = new JButton("Compute");
-        JLabel result = new JLabel();
+        JLabel insertWidth = new JLabel();
+        JLabel insertHight = new JLabel();
+        JLabel result = new JLabel(); 
         compute.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) 
 			{
-				double w = 10;
-				double h = Double.parseDouble(input.getText());
-				double r = Flaechen.rectArea(w, h);
-				result.setText("F:"+r);
+				double w = Double.parseDouble(width.getText());
+				double h = Double.parseDouble(hight.getText());
+				double answer = Flaechen.rectArea(w, h);
 				
-				
-				// NEED TO AJUST THE GUI!! need "call the values from Flaeche
-				
-				
+				result.setText("The area is: "+ answer + " square units"); // MAYBE SHOULD ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
+				//insertWidth.setText("Width");	
+				//insertHight.setText("Hight");	
+				// NEED TO AJUST THE GUI!! need "call the values from Flaeche					
 				
 			}
+			
+			
+			
+			
         });
 			
 	    //--- add components to the main window ---//
         Container pane = mainWindow.getContentPane();
-        pane.add(input);
+        pane.add(hight);
+        pane.add(width);
         pane.add(compute);
         pane.add(result);
-        input.setBounds(0, 20, 100, 20);
-        compute.setBounds(100, 20, 100, 20);
-        result.setBounds(200,20,100,20);
+        pane.add(insertWidth);
+        pane.add(insertHight);
+        insertWidth.setBounds(0, 10 , 100, 20);
+        width.setBounds(0, 30, 100, 20);
+        insertHight.setBounds(0, 50 , 100, 20);
+        hight.setBounds(0, 70, 100, 20);
+        compute.setBounds(100, 70, 100, 20);
+        result.setBounds(0,90,300,20);
+        
+        
 	}
 }
