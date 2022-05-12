@@ -4,67 +4,55 @@ public class Flaechen {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Rechteck  d= new Rechteck();
-        // Calling
-        d.Area(40, 300);
-        d.Area(4.4, 2.1);
-        
-        Circle d1 = new Circle();
-        // Calling
-        d1.Area(6);
-        d1.Area(6.6);
-        
-        Quadrat d2 = new Quadrat();
-        // Calling
-        d2.Area(10);
-        d2.Area(3.1);
-		 
-	}}
+        Flaechen.rectArea(4.4, 2.1);
+        Flaechen.squareArea(4.1);
+        Flaechen.circArea(3.2);
+        Flaechen.triangleArea(2, 1.4);
+       
+	}
+	
+	// Areas user might need to compute:
+	public static double rectArea(double w, double h)
+	{
+		return w*h;
+	}
+	
+	public static double circArea(double r)
+	{
+		return Math.PI*r*r;
+	}
+	
+	public static double sectorCircArea(double r, double alpha) // Circular sector = Kreissektor =  Kreisausschnitt
+	{
+		double alphaRad = Math.toRadians(alpha);
+		return 0.5*Math.pow(r, 2)*alphaRad;
+	}
+	
+	public static double squareArea(double h) // yes I'm calling it h...it doesn't matter
+	{
+		return h*h;
+	}
+	
+	public static double parallelogArea(double a, double b, double alpha) // Parallelogram Area - put a diagram so user knows what is 
+	{																		// meant with the a, b and alpha 
+		double inRadians = Math.toRadians(alpha); // transform degree to radiant Java's uses radiant for sine calculation 
+		return a*b*Math.sin(inRadians);
+	}
+		
+	public static double triangleArea(double b, double h) 
+	{
+		return (b*h)/2;
+	}
+	
+	public static double equilatTriaArea(double b)  // Equilateral triangle = gleichseitiges Dreieck
+	{
+		return (Math.sqrt(3)/4)*Math.pow(b,2);
+	}
+	
+}
 
-// für jedes object eine classe:
-	class Quadrat 
-	{
-	   
-	    void Area(double l)
-	    {
-	        System.out.println("Fläche des Quadrats: "+ l * l);
-	    }
-	    
-	    void Area(float l)
-	    {
-	        System.out.println("Fläche des Quadrats: "+ l * l);
-	    }
-	}
-	
-	class Circle 
-	{
-	    static final double PI = Math.PI;
-	  
-	    void Area(double r)
-	    {
-	        double A = PI * r * r;
-	  
-	        System.out.println("Der Flächeninhalt des Kreises beträgt :" + A);
-	    }
-	  
-	    void Area(float r)
-	    {
-	        double A = PI * r * r;
-	  
-	        System.out.println("Der Flächeninhalt des Kreises beträgt :" + A);
-	    }
-	}
-	
-	class Rechteck 
-	{   
-	    void Area(double l, double b)
-	    {
-	        System.out.println("Fläche des Rechtecks: " + l * b);
-	    }
-	    
-	    void Area(int l, int b)
-	    {
-	        System.out.println("Fläche des Rechtecks: " + l * b);
-	    }
-	}
+
+
+
+
 	
