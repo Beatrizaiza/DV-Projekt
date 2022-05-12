@@ -55,9 +55,7 @@ public class RunnerSophia
 				// NEED TO AJUST THE GUI!! need "call the values from Flaeche					
 				
 			}
-			
-			
-			
+					
 			
         });
 			
