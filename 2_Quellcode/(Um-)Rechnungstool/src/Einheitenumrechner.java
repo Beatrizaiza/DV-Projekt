@@ -92,9 +92,7 @@ public class Einheitenumrechner extends JFrame {
 				{
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
-					drop_eingeinheit.addItem("Kubikkilometer [km^3]");
-					drop_eingeinheit.addItem("Hektar [ha]");
-					drop_eingeinheit.addItem("Ar [a]");
+					drop_eingeinheit.addItem("Quadratkilometer [km^2]");
 					drop_eingeinheit.addItem("Quadratmeter [m^2]");
 					drop_eingeinheit.addItem("Quadratdezimeter [dm^2]");
 					drop_eingeinheit.addItem("Quadratzentimeter [cm^2]");
@@ -108,7 +106,9 @@ public class Einheitenumrechner extends JFrame {
 					
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
-					drop_eingeinheit.addItem("Quadratkilometer [km^2]");
+					drop_eingeinheit.addItem("Kubikkilometer [km^3]");
+					drop_eingeinheit.addItem("Hektar [ha]");
+					drop_eingeinheit.addItem("Ar [a]");
 					drop_eingeinheit.addItem("Kubikmeter [m^3]");
 					drop_eingeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
 					drop_eingeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");

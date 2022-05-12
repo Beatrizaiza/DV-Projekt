@@ -38,6 +38,7 @@ public class Flaechenrechner extends JFrame {
 	 * Create the frame.
 	 */
 	public Flaechenrechner() {
+		setResizable(false);
 		setTitle("Fl\u00E4chenrechner");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 850, 600);
@@ -87,5 +88,4 @@ public class Flaechenrechner extends JFrame {
 		lblFormel.setBounds(332, 158, 140, 31);
 		contentPane.add(lblFormel);
 	}
-
 }
