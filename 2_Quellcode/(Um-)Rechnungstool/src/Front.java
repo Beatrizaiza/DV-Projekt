@@ -6,53 +6,71 @@ import javax.swing.JOptionPane;
 
 
 public class Front {
+	//
+	// LEON
+	//
+ double l = 4; 
+ 
+	public double getL() {
+	return l;
+}
 
+public void setL(double l) {
+	this.l = l;
+}
+//
+//
+//
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		double l =4;
-		boolean cm = true;
-		boolean m = false;
-		boolean km = false;
-		
-		//Drop-Down Versuch 1
-		String[] convertingoptions = {"Wählen...", "Länge", "Fläche", "Volumen", "Gewicht"};
 
-		        String getconvertingsize = (String) JOptionPane.showInputDialog(
-		                null,
-		                "Bitte wähle die gewünschte Größe:",
-		                "Einheitenumrechner",
-		                JOptionPane.QUESTION_MESSAGE,
-		                null,
-		                convertingoptions,
-		                convertingoptions[0]);
 
-		        System.out.println("Gewählte Größe:" + getconvertingsize);
 		//Drop-Down Versuch 1
-		        
+		String[] convertingoptions = {"Wï¿½hlen...", "Lï¿½nge", "Flï¿½che", "Volumen", "Gewicht"};
+
+		String getconvertingsize = (String) JOptionPane.showInputDialog(
+				null,
+				"Bitte wï¿½hle die gewï¿½nschte Grï¿½ï¿½e:",
+				"Einheitenumrechner",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				convertingoptions,
+				convertingoptions[0]);
+
+		System.out.println("Gewï¿½hlte Grï¿½ï¿½e:" + getconvertingsize);
+		//Drop-Down Versuch 1
+
 		//Drop-Down Versuch 2
-		        
-//		        JComboBox<String> box = new JComboBox<String>();
-//				box.addItem("lba");
-//				box.addItem("blup");
-//				//box.removeAllItems(); // zum entfernen aller Auswahlmöglichkeiten
-//				pane.add(box);
-//				box.setBounds(0,0, 200, 100);
-//				box.addActionListener(new ActionListener() {
-//					
-//					@Override
-//					public void actionPerformed(ActionEvent e) {
-//						String s = (String) box.getSelectedItem();
-//						System.out.println("selected: "+s);
-//						
-//					}
-//				});
-		
+
+		//		        JComboBox<String> box = new JComboBox<String>();
+		//				box.addItem("lba");
+		//				box.addItem("blup");
+		//				//box.removeAllItems(); // zum entfernen aller Auswahlmï¿½glichkeiten
+		//				pane.add(box);
+		//				box.setBounds(0,0, 200, 100);
+		//				box.addActionListener(new ActionListener() {
+		//					
+		//					@Override
+		//					public void actionPerformed(ActionEvent e) {
+		//						String s = (String) box.getSelectedItem();
+		//						System.out.println("selected: "+s);
+		//						
+		//					}
+		//				});
+
 		//Drop-Down Versuch 2
-				
-		System.out.println(Berechnung.length(l));
+
+		//
+		// LEONS PROBIER WERKSTATT
+		// NO TRESPASSING!
+		//
+
+		Berechnung Berechnung = new Berechnung();
 		
-		
-		
+		//System.out.println(l+""+ Rechnung.get("cm")+ "sind " + Berechnung.length(l)+""+Rechnung.get("zoll"));
+
+
+
 		//double g = 2;
 		//System.out.println(l+" kg sind "+Weight.weight(g)+" pfund");
 
@@ -62,9 +80,9 @@ public class Front {
 		//double v = 2;
 		//System.out.println(v+" m^3 sind "+Volumen.berechnevolumen(v)+" yard^3");
 
-
-
-
+		//
+		//
+		//
 
 
 
