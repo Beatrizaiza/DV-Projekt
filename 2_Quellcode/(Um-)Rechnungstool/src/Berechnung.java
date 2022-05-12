@@ -7,24 +7,55 @@ public class Berechnung extends Front {
 
 		HashMap<String, Double> Rechnung = new HashMap<>();
 
-		Rechnung.put("mm", 1000.0);
-		Rechnung.put("cm", 100.0);
+		Rechnung.put("mm", 0.001);
+		Rechnung.put("cm", 0.01);
 		Rechnung.put("m", 1.0);
-		Rechnung.put("km", 0.001);
+		Rechnung.put("km", 1000.0);
 
-		Rechnung.put("zoll", 39.37);
+		Rechnung.put("inch", 39.37);
 		Rechnung.put("fuß", 3.281);
 		Rechnung.put("yard", 1.094);
-		Rechnung.put("mile", 1.609);
+		Rechnung.put("mile", 0.00062150403);
 
-		double lu = (l * Rechnung.get("cm")) * Rechnung.get("zoll"); // in die Klammern muss der vom User gewählte key
+		Rechnung.put("mm^2", 0.00001);
+		Rechnung.put("cm^2", 0.0001);
+		Rechnung.put("m^2", 1.0);
+		Rechnung.put("km^2", 10000000.0);
 
-		System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4")); //WIE KEYWERT AUFRUFEN? ALSO CM STATT 100
+		Rechnung.put("inch^2", 1550.0);
+		Rechnung.put("fuß^2", 10.764);
+		Rechnung.put("yard^2", 1.196);
+		Rechnung.put("mile^2", 0.00000259);
 
-	
+		Rechnung.put("mg", 0.000001);
+		Rechnung.put("g", 0.001);
+		Rechnung.put("kg", 1.0);
 
-	
-	if (Rechnung.get == "cm" || "" //IMMER IMMER MIT RECHNUNG GET 
+		Rechnung.put("stone", 0.15748031496);
+		Rechnung.put("Pfund", 2.205);
+		Rechnung.put("Unze",  35.274);
+
+		if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "m" || Rechnung.get == "mile^2") {
+			double lu = (l * Rechnung.get("cm")) * Rechnung.get("yards"); // in die Klammern muss der vom User gewählte
+																			// key
+			System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4")); // WIE
+																											// KEYWERT
+																											// AUFRUFEN?
+		} else if (Rechnung.get == "mm^2" || Rechnung.get == "cm^2" || Rechnung.get == "m^2"|| Rechnung.get == "km^2") {
+			double fu = (f * Rechnung.get("cm^2")) * Rechnung.get("yards^2"); // in die Klammern muss der vom User
+																				// gewählte key
+			System.out.println(f + " " + Rechnung.keySet() + "sind " + fu + " " + Rechnung.get("value4")); // WIE
+																											// KEYWERT
+																											// AUFRUFEN?
+		}
+
+		else {
+			double gu = (g * Rechnung.get("kg")) * Rechnung.get("Pfund"); // in die Klammern muss der vom User
+																				// gewählte key
+			System.out.println(g + " " + Rechnung.keySet() + "sind " + gu + " " + Rechnung.get("value4")); // WIE
+																											// KEYWERT
+																											// AUFRUFEN?
+		}
 	}
 
 	public static void main(String[] args) {

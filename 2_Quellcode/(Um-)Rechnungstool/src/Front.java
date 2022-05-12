@@ -7,20 +7,41 @@ import javax.swing.JOptionPane;
 
 public class Front {
 	//
-	// LEON
+	// LEON's Werkstatt
+	// Bitte stehen lassen 
 	//
- double l = 4; 
- 
-	public double getL() {
-	return l;
-}
+	double l = 4; 
 
-public void setL(double l) {
-	this.l = l;
-}
-//
-//
-//
+	public double getL() {
+		return l;
+	}
+
+	public void setL(double l) {
+		this.l = l;
+	}
+	double f = 3;
+
+	public double getF() {
+		return f;
+	}
+
+	public void setF(double f) {
+		this.f = f;
+	}
+
+	double g = 5;
+
+	public double getG() {
+		return g;
+	}
+
+	public void setG(double g) {
+		this.g = g;
+	}
+
+	//
+	//
+	//
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -60,29 +81,6 @@ public void setL(double l) {
 
 		//Drop-Down Versuch 2
 
-		//
-		// LEONS PROBIER WERKSTATT
-		// NO TRESPASSING!
-		//
-
-		Berechnung Berechnung = new Berechnung();
-		
-		//System.out.println(l+""+ Rechnung.get("cm")+ "sind " + Berechnung.length(l)+""+Rechnung.get("zoll"));
-
-
-
-		//double g = 2;
-		//System.out.println(l+" kg sind "+Weight.weight(g)+" pfund");
-
-		//double f = 2;
-		//System.out.println(f+" m^2 sind "+Flaeche.berechneflaeche(f)+" yard^2");
-
-		//double v = 2;
-		//System.out.println(v+" m^3 sind "+Volumen.berechnevolumen(v)+" yard^3");
-
-		//
-		//
-		//
 
 
 
