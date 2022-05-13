@@ -121,14 +121,20 @@ public class FlaechenrechnerGUI extends JFrame {
 		contentPane.add(ComputeButton);
 		ComputeButton.addActionListener(new ActionListener() {
 			@Override
+			
 			public void actionPerformed(ActionEvent e) 
 			{
-				double w = Double.parseDouble(inputGrundseite.getText());
-				double h = Double.parseDouble(inputHoehe.getText());
-				double answer = Flaechen.rectArea(w, h);
+				String Form = (String) FlaechenOptionen.getSelectedItem();
+				if (Form.equals("Rechteck")) {
+					System.out.println(Form);
+					double w = Double.parseDouble(inputGrundseite.getText());
+					double h = Double.parseDouble(inputHoehe.getText());
+					double answer = Flaechen.rectArea(w, h);
+					Result.setText("Die Flaeche ist: "+ answer + " FE"); // MAYBE SHOULD ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
+									
+					
+				}
 				
-				Result.setText("Die Flaeche ist: "+ answer + " FE"); // MAYBE SHOULD ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
-								
 			}
 								
         });
