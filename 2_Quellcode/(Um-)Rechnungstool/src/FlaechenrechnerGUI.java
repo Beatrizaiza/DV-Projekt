@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import javax.swing.JMenuItem;
 
 public class FlaechenrechnerGUI extends JFrame {
 
@@ -72,7 +73,7 @@ public class FlaechenrechnerGUI extends JFrame {
 		
 		JComboBox FlaechenOptionen = new JComboBox();
 		FlaechenOptionen.addActionListener(new ActionListener() { 
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) { //COULD PROBABLY DELETE THIS PART
 				//Execute when a selection has been made
 				// Need to set how to choose between "Form"  bzw. Flaoptions 
 			}
@@ -110,25 +111,73 @@ public class FlaechenrechnerGUI extends JFrame {
 		contentPane.add(Result);
 		Result.setColumns(10);
 		
-		JLabel Loesung = new JLabel("Loesung");
-		Loesung.setBounds(118, 240, 48, 14);
-		contentPane.add(Loesung);
+		JLabel DieFlaecheIst = new JLabel(); //JLabel is empty when starting is filled at actionPerformed from compute button
+		DieFlaecheIst.setBounds(10, 212, 94, 14);
+		contentPane.add(DieFlaecheIst);
+		
 		
 		//NEED MORE OPTIONS 
 		// Compute Button to start the calculation 
 		JButton ComputeButton = new JButton("Compute");
 		ComputeButton.setBounds(263, 208, 104, 23);
 		contentPane.add(ComputeButton);
+		
+		JMenuItem menuItem = new JMenuItem("New menu item");
+		menuItem.setBounds(161, 67, 137, 26);
+		contentPane.add(menuItem);
 		ComputeButton.addActionListener(new ActionListener() {
 			@Override
+			
 			public void actionPerformed(ActionEvent e) 
-			{
-				double w = Double.parseDouble(inputGrundseite.getText());
-				double h = Double.parseDouble(inputHoehe.getText());
-				double answer = Flaechen.rectArea(w, h);
+			{ // MAYBE SHOULD ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
+				String Form = (String) FlaechenOptionen.getSelectedItem();
+				DieFlaecheIst.setText("Die Flaeche ist: "); // JLabel showed only after compute
 				
-				Result.setText("Die Flaeche ist: "+ answer + " FE"); // MAYBE SHOULD ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
-								
+				if (Form.equals("Rechteck")) {
+					System.out.println(Form);
+					double w = Double.parseDouble(inputGrundseite.getText());
+					double h = Double.parseDouble(inputHoehe.getText());
+					double answer = Flaechen.rectArea(w, h);
+					Result.setText(answer + " FE"); 
+											}
+					else if (Form.equals("Dreieck")) {	
+						System.out.println(Form); 
+					double w = Double.parseDouble(inputGrundseite.getText());
+					double h = Double.parseDouble(inputHoehe.getText());
+					double answer = Flaechen.triangleArea (w, h);
+					Result.setText(answer + " FE"); 	
+													}
+				
+					else if (Form.equals("gleichseitiges Dreieck")) {	
+						System.out.println(Form);
+					double w = Double.parseDouble(inputGrundseite.getText()); 
+					double answer = Flaechen.equilatTriaArea (w); // NEED TO ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
+					Result.setText(answer + " FE"); 	
+													}
+				
+					else if (Form.equals("Kreis")) {	
+						System.out.println(Form);
+					double w = Double.parseDouble(inputGrundseite.getText());
+					double answer = Flaechen.circArea (w); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					Result.setText(answer + " FE"); 	
+													}
+					else if (Form.equals("Kreissektor")) {	
+						System.out.println(Form); 
+					double w = Double.parseDouble(inputGrundseite.getText()); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double win = Double.parseDouble(inputWinkel.getText());   // WIN = WINKEL , alpha
+					double answer = Flaechen.sectorCircArea (w, win);
+					Result.setText(answer + " FE"); 	
+													}
+					else if (Form.equals("Parallelogramm")) {	// NEED TO CHECK IS THE ORDER OF THE GIVEN VARIABLES IS RIGHT
+						System.out.println(Form);   // NEED TO ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
+					double w = Double.parseDouble(inputGrundseite.getText()); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double h = Double.parseDouble(inputWinkel.getText()); 
+					double win = Double.parseDouble(inputWinkel.getText()); // WIN = WINKEL , alpha
+					double answer = Flaechen.parallelogArea (w, h, win); // NEED TO CONSTRAIN ANSWERS SIZE
+					Result.setText( answer + " FE"); 	
+													}
+				
+				
 			}
 								
         });
