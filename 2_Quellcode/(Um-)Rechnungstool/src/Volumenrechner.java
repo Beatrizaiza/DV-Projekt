@@ -14,25 +14,31 @@ import javax.swing.JTextPane;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.event.AncestorListener;
+import javax.swing.text.JTextComponent;
 import javax.swing.event.AncestorEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
-public class Volumenrechner extends JFrame implements Itemlistener {
+public class Volumenrechner extends JFrame implements Actionlistener {
 
 	private JPanel contentPane;
 	static JComboBox volumeMenu;
-	static JLabel L1, L2 , L3;
+	static JComboBox einhMenu;
+	static JLabel L1, L2 , L3 , volEinheit;
+	private JTextField tf1;
+	private JTextField tf2;
+	private JTextField tf3;
+	
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-				
-		volumeMenu.addItemListener();
-		
+		String volPar[] = {"Radius", "Durchmesser", "Breite", "Laenge", "Hoehe"};
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -62,51 +68,126 @@ public class Volumenrechner extends JFrame implements Itemlistener {
 		lblNewLabel.setBackground(new Color(0, 128, 0));
 		lblNewLabel.setForeground(new Color(0, 100, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel.setBounds(300, 34, 240, 21);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblNewLabel.setBounds(266, 36, 240, 21);
 		contentPane.add(lblNewLabel);
 		
 		
 		String volumeList[] = { "Kugel", "Pyramide", "Wuerfel" };
 		JComboBox volumeMenu = new JComboBox(volumeList);
-		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Waehle", "Kugel", "Pyramide", "Wuerfel"}));
+		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Wählen", "Kugel", "Pyramide", "Würfel"}));
 		volumeMenu.setForeground(new Color(0, 0, 0));
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(volumeMenu);
+		volumeMenu.addActionListener(new ActionListener() {
+			
+		public void actionPerformed(ActionEvent e) {
+			String Form = (String) volumeMenu.getSelectedItem();
+			if (Form.equals("Formen Wählen")) {
+				L1.setText("");
+				L2.setText("");
+				L3.setText("");
+
+			}
+			if (Form.equals("Kugel")) {
+				L1.setText("Radius");
+				L2.setText("Durchmesser");
+				L3.setText("");
+				contentPane.add(tf1);
+				contentPane.add(tf2);
+				
+			}
+			if (Form.equals("Pyramide")) {
+				L1.setText("Breite");
+				L2.setText("Länge");
+				L3.setText("Höhe");
+				contentPane.add(tf1);
+				contentPane.add(tf2);
+				contentPane.add(tf3);
+			}
+			if (Form.equals("Würfel")) {
+				L1.setText("Länge");
+				L2.setText("Breite");
+				L3.setText("Höhe");
+				contentPane.add(tf1);
+				contentPane.add(tf2);
+				contentPane.add(tf3);
+			}
+		}
+		});
 		
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setBounds(266, 431, 240, 38);
+		textPane.setBounds(281, 432, 240, 38);
 		contentPane.add(textPane);
 		
-		JButton btnNewButton = new JButton("Rechnen");
-		btnNewButton.setForeground(new Color(0, 128, 0));
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton.setBounds(643, 301, 107, 38);
-		contentPane.add(btnNewButton);
+		JButton rechnen = new JButton("Rechnen");
+		rechnen.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+			}
+		});
+		rechnen.setForeground(new Color(0, 128, 0));
+		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
+		rechnen.setBounds(643, 294, 107, 38);
+		contentPane.add(rechnen);
 		
 		L1 = new JLabel("");
+		L1.setHorizontalAlignment(SwingConstants.CENTER);
 		L1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		L1.setBounds(180, 342, 144, 38);
 		contentPane.add(L1);
 		
 		L2 = new JLabel("");
+		L2.setHorizontalAlignment(SwingConstants.CENTER);
 		L2.setFont(new Font("Tahoma", Font.BOLD, 15));
 		L2.setBounds(334, 342, 144, 38);
 		contentPane.add(L2);
 		
 		L3 = new JLabel("");
+		L3.setHorizontalAlignment(SwingConstants.CENTER);
 		L3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		L3.setBounds(488, 342, 144, 38);
 		contentPane.add(L3);
+		
+		einhMenu = new JComboBox();
+		einhMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
+		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten W\u00E4hlen", "mm", "cm", "m"}));
+		einhMenu.setBounds(325, 215, 181, 38);
+		contentPane.add(einhMenu);
+		einhMenu.addActionListener(new ActionListener() {
+			String Einheit = (String) einhMenu.getSelectedItem();
+			public void actionPerformed(ActionEvent e) {
+				if (Einheit.equals("m")) {
+				volEinheit.setText("m³");
+				contentPane.add(volEinheit);
+				}
+			}
+		});
+		
+		JLabel Volume = new JLabel("Volume:");
+		Volume.setFont(new Font("Tahoma", Font.BOLD, 18));
+		Volume.setBounds(180, 432, 91, 38);
+		contentPane.add(Volume);
+		
+		volEinheit = new JLabel("");
+		volEinheit.setFont(new Font("Tahoma", Font.BOLD, 18));
+		volEinheit.setBounds(531, 432, 91, 38);
+		contentPane.add(volEinheit);
+		
+		tf1 = new JTextField();
+		tf1.setBounds(180, 294, 144, 38);
+		tf1.setColumns(10);
+		
+		tf2 = new JTextField();
+		tf2.setColumns(10);
+		tf2.setBounds(334, 294, 144, 38);
+
+		
+		tf3 = new JTextField();
+		tf3.setColumns(10);
+		tf3.setBounds(489, 294, 144, 38);
 	}
-	public void itemStateChanged(ItemEvent e)
-    {
-        // if the state combobox is changed
-        if (e.getSource() == volumeMenu) {
-        	String volPar[] = {"Radius", "Durchmesser", "Breite", "Laenge", "Hoehe"};
-            L1.setText(volPar[0]);
-        }
-    }
 }
