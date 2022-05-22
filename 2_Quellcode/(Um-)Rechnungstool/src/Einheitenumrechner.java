@@ -25,7 +25,46 @@ public class Einheitenumrechner extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField_eing;
 	private JTextField textField_ausg;
+	////
+	////
+	////
+	double ausgwert = 0.0;
+	
+	public double getAusgwert() {
+		return ausgwert;
+	}
 
+	public void setAusgwert(double ausgwert) {
+		this.ausgwert = ausgwert;
+	}
+	
+	String einheite ="null";
+	String einheita ="null";
+	
+	public String getEinheite() {
+		return einheite;
+	}
+	public void setEinheite(String einheite) {
+		this.einheite = einheite;
+	}
+	public String getEinheita() {
+		return einheita;
+	}
+	public void setEinheita(String einheita) {
+		this.einheita = einheita;
+	}
+	
+	double eingwert = 0;
+	
+	public double getEingwert() {
+		return eingwert;
+	}
+	public void setEingwert(double eingwert) {
+		this.eingwert = eingwert;
+	}
+	////
+	////
+	////
 	/**
 	 * Launch the application.
 	 */
@@ -230,8 +269,8 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Pfund [lb]");
 					drop_ausgeinheit.addItem("Unze [oz]");
 				}
-			}
-		});
+			
+		
 		
 		
 		btnNewButton.addActionListener(new ActionListener() {
@@ -241,60 +280,42 @@ public class Einheitenumrechner extends JFrame {
 				eingwert = 0;
 				ausgwert = 0;
 				
+				String einheite,einheita;
+				einheite ="null";
+				einheita ="null";
 				
-				try {
-					eingwert = Double.parseDouble(textField_eing.getText());
-				} catch (Exception e2) {
-					JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
-				}
-				
-				
-				if(drop_eingeinheit.getSelectedItem().equals("Kilometer [km]"))
-				{
-					
-					
-				}
-					if(drop_ausgeinheit.getSelectedItem().equals("Kilometer [km]"))
-					{
-						ausgwert = eingwert;
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-					
-					else if(drop_ausgeinheit.getSelectedItem().equals("Meter [m]"))
-					{
-						ausgwert = eingwert*(10^2);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-					
-					else if(drop_ausgeinheit.getSelectedItem().equals("Dezimeter [dm]"))
-					{
-						ausgwert = eingwert*(10^3);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-					
-					else if(drop_ausgeinheit.getSelectedItem().equals("Zentimeter [cm]"))
-					{
-						ausgwert = eingwert*(10^4);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-					else if(drop_ausgeinheit.getSelectedItem().equals("Millimeter [mm]"))
-					{
-						ausgwert = eingwert*(10^5);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-					else if(drop_ausgeinheit.getSelectedItem().equals("Mikrometer [�m]"))
-					{
-						ausgwert = eingwert*(10^8);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-					else if(drop_ausgeinheit.getSelectedItem().equals("Nanometer [nm]"))
-					{
-						ausgwert = eingwert*(10^11);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-				}
-			
-		});
+				einheite = drop_eingeinheit.getSelectedItem().toString();
+				einheita = drop_ausgeinheit.getSelectedItem().toString();
+				System.out.println(einheite);
+				System.out.println(einheita);
+			}
 		
-	}
-}
+		});
+
+			}
+		});
+	}}
+
+			
+		
+		
+				//try {
+			//		eingwert = Double.parseDouble(textField_eing.getText());
+			//	} catch (Exception e2) {
+			//		JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
+			//	}
+				
+				
+			//	if(drop_eingeinheit.getSelectedItem().equals("Kilometer [km]"))
+			//	{
+					
+					
+			//	}
+			//		if(drop_ausgeinheit.getSelectedItem().equals("Kilometer [km]"))
+			//		{
+			//			ausgwert = eingwert;
+			//			textField_ausg.setText(String.valueOf(ausgwert));
+			//		}
+			
+	
+
