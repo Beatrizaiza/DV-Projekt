@@ -37,8 +37,8 @@ public class Berechnung extends Einheitenumrechner {
 	// HashMap
 	public void Umrechnung() {
 		
-		public String Umrechner(String eingwert2, String einheite, String einheita) {
-		double eingwert1 = Double.parseDouble(eingwert2);
+		public String Umrechner(String eingwert, String einheite, String einheita) {
+		
 					
 		HashMap<String, Double> Rechnung = new HashMap<>();
 

@@ -276,7 +276,7 @@ public class Einheitenumrechner extends JFrame {
 				btnNewButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 
-						String eingwert2 = "null";
+						
 						double eingwert;
 						double ausgwert;
 						eingwert = 0;
@@ -284,7 +284,7 @@ public class Einheitenumrechner extends JFrame {
 						//ausgwert = 0;
 						try {
 							eingwert = Double.parseDouble(textField_eing.getText());
-							String eingewert2 = String.valueOf(eingwert);
+							
 				
 						} catch (Exception e2) {
 							JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
@@ -313,6 +313,7 @@ public class Einheitenumrechner extends JFrame {
 			}
 		});
 	}}
+
 
 
 
