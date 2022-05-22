@@ -80,6 +80,7 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(volumeMenu);
+		// Adapts GUI to the right function input 
 		volumeMenu.addActionListener(new ActionListener() {
 			
 		public void actionPerformed(ActionEvent e) {
@@ -91,10 +92,10 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 
 			}
 			if (Form.equals("Kugel")) {
-				L1.setText("Radius");
-				L2.setText("Durchmesser");
+				L1.setText("");
+				L2.setText("Radius");
 				L3.setText("");
-				contentPane.add(tf1);
+				
 				contentPane.add(tf2);
 				
 			}
