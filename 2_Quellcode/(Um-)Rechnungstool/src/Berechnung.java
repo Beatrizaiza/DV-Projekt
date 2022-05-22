@@ -2,13 +2,30 @@ import java.util.HashMap;
 
 public class Berechnung extends Einheitenumrechner {
 
+
+	//Werte aus Einheitenrechner
+	String einheite ="null";
+	String einheita ="null";
+
+	
+
+	double eingwert = 0;
+
+	public double getEingwert() {
+		return eingwert;
+	}
+	public void setEingwert(double eingwert) {
+		this.eingwert = eingwert;
+	}
+
+	
 	
 	// HashMap
 	public void Umrechnung() {
 
 		HashMap<String, Double> Rechnung = new HashMap<>();
 
-		Rechnung.put("mm", 0.001);
+		Rechnung.put("Millimeter [mm]", 0.001);
 		Rechnung.put("cm", 0.01);
 		Rechnung.put("dm", 0.1);
 		Rechnung.put("m", 1.0);
@@ -39,29 +56,86 @@ public class Berechnung extends Einheitenumrechner {
 		Rechnung.put("Pfund", 2.205);
 		Rechnung.put("Unze", 35.274);
 
-// if bedingung für Länge 
-		Einheitenumrechner.drop_eingeinheit
 
-if (drop_eingeinheit.getSelectedItem().equals ("Kilometer [km]")){
-	eingwert = eingwert * Rechnung.get("km");
-	
-	
-			if(drop_ausgeinheit.getSelectedItem().equals("mile [mi]"))
-			{
-				ausgwert = eingwert* Rechnung.get("mile");
-				
-			}
-			
-			//if else(drop_ausgeinheit.getSelectedItem().equals("yard [yd]")) {
-			//	ausgwert = eingwert* Rechnung.get("yard");
-			//}
-			
-			
-}
+
+
+
+
+
+
+		// if bedingung für Länge 
+		//Einheitenumrechner.drop_eingeinheit
+
+		//Versuch speichern der eingabeeinheit in variable Ee
+		if (einheite.equals("Millimeter [mm]")){
+			double Ee = 0;
+			Ee = Rechnung.get("mm");
+		}
+		else if (einheite.equals("Zentimeter [cm]")){
+			double Ee;
+			Ee = Rechnung.get("cm");
+		}
+		else if (einheite.equals("Dezimeter [dm]")){
+			double Ee;
+			Ee = Rechnung.get("dm");
+		}
+		else if (einheite.equals("Meter [m]")){
+			double Ee;
+			Ee = Rechnung.get("m");
+		}
+		else if (einheite.equals("Kilometer [km]")){
+			double Ee;
+			Ee = Rechnung.get("km");
+		}
+
+		//Versuch speichern der ausgabeeinheit in variable Ea
+		if (einheita.equals("zoll [in]")){
+			double Ea;
+			Ea = Rechnung.get("zoll");
+		}
+		else if (einheita.equals(Rechnung.get("fuß [ft]"))){
+			double Ea;
+			Ea = Rechnung.get("fuß");
+		}
+		else if (einheita.equals(Rechnung.get("yard [yd]"))){
+			double Ea;
+			Ea = Rechnung.get("yard");
+		}
+		else if (einheita.equals(Rechnung.get("mile [mi]"))){
+			double Ea;
+			Ea = Rechnung.get("mile");
+		}}
+		
+		
+	public double Umrechner(double eingwert, double Ee,double Ea) {
+		double ausgwert = (eingwert * Ee) * Ea; // in die Klammern muss der vom User gewählte
+		return ausgwert;
+
+	}}
+//eingwert = eingwert * Rechnung.get("km");
+
+
+//if(drop_ausgeinheit.getSelectedItem().equals("mile [mi]"))
+//{
+//	ausgwert = eingwert* Rechnung.get("mile");
+//	
+//}
+
+//if else(drop_ausgeinheit.getSelectedItem().equals("yard [yd]")) {
+//	ausgwert = eingwert* Rechnung.get("yard");
+//}
+
+
+
 //	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "dm" ||Rechnung.get == "m" || Rechnung.get == "km") { 
-	//	double lu = (l * Rechnung.get("??")) * Rechnung.get("??"); // in die Klammern muss der vom User gewählte
-	//	System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
-	//	} 
-	
-}}
+//	double lu = (l * Rechnung.get("??")) * Rechnung.get("??"); // in die Klammern muss der vom User gewählte
+//	System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
+//	} 
+
+
+
+
+
+
+
 
