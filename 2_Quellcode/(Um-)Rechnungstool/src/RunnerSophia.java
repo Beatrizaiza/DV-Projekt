@@ -49,9 +49,9 @@ public class RunnerSophia
 				double h = Double.parseDouble(hight.getText());
 				double answer = Flaechen.rectArea(w, h);
 				
-				result.setText("The area is: "+ answer + " square units"); // MAYBE SHOULD ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
-				//insertWidth.setText("Width");	
-				//insertHight.setText("Hight");	
+				result.setText("Die Flaeche ist: "+ answer + " Flaecheneinheiten"); // MAYBE SHOULD ADAPT SO THE PERSON CAN SEE THE UNIT THEY CHOSEN
+				insertWidth.setText("Laenge");	
+				insertHight.setText("Hoehe");	
 				// NEED TO AJUST THE GUI!! need "call the values from Flaeche					
 				
 			}
