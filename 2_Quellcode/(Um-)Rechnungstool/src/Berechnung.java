@@ -35,7 +35,7 @@ public class Berechnung extends Front {
 		Rechnung.put("Pfund", 2.205);
 		Rechnung.put("Unze", 35.274);
 
-//
+// if bedingung für Länge 
 
 	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "m" || Rechnung.get == "km") { 
 		double lu = (l * Rechnung.get("cm")) * Rechnung.get("yards"); // in die Klammern muss der vom User gewählte
