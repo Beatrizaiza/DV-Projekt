@@ -64,7 +64,7 @@ public class Einheitenumrechner extends JFrame {
 		
 		JComboBox drop_groessen = new JComboBox();
 		drop_groessen.setFont(new Font("Tahoma", Font.BOLD, 14));
-		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"Wählen...", "Länge", "Fläche", "Volumen", "Gewicht"}));
+		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"Wï¿½hlen...", "Lï¿½nge", "Flï¿½che", "Volumen", "Gewicht"}));
 		drop_groessen.setBounds(300, 77, 240, 31);
 		contentPane.add(drop_groessen);
 		
@@ -75,7 +75,7 @@ public class Einheitenumrechner extends JFrame {
 		contentPane.add(drop_ausgeinheit);
 		
 		JComboBox drop_eingeinheit = new JComboBox();
-		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"Wähle Eingabeeinheit..."}));
+		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"Wï¿½hle Eingabeeinheit..."}));
 		drop_eingeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		drop_eingeinheit.setBounds(129, 210, 232, 31);
 		contentPane.add(drop_eingeinheit);
@@ -113,7 +113,7 @@ public class Einheitenumrechner extends JFrame {
 		drop_groessen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(drop_groessen.getSelectedItem().equals("Länge"))
+				if(drop_groessen.getSelectedItem().equals("Lï¿½nge"))
 				{
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
@@ -122,8 +122,8 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Dezimeter [dm]");
 					drop_eingeinheit.addItem("Zentimeter [cm]");
 					drop_eingeinheit.addItem("Millimeter [mm]");
-					drop_eingeinheit.addItem("Mikrometer [µm]");
-					drop_eingeinheit.addItem("Nanometer [nm]");
+					//drop_eingeinheit.addItem("Mikrometer [ï¿½m]");
+					//drop_eingeinheit.addItem("Nanometer [nm]");
 					
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
@@ -132,11 +132,11 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Dezimeter [dm]");
 					drop_ausgeinheit.addItem("Zentimeter [cm]");
 					drop_ausgeinheit.addItem("Millimeter [mm]");
-					drop_ausgeinheit.addItem("Mikrometer [µm]");
-					drop_ausgeinheit.addItem("Nanometer [nm]");
+					//drop_ausgeinheit.addItem("Mikrometer [ï¿½m]");
+					//drop_ausgeinheit.addItem("Nanometer [nm]");
 				}
 				
-				else if(drop_groessen.getSelectedItem().equals("Fläche"))
+				else if(drop_groessen.getSelectedItem().equals("Flï¿½che"))
 				{
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
@@ -145,8 +145,12 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Quadratdezimeter [dm^2]");
 					drop_eingeinheit.addItem("Quadratzentimeter [cm^2]");
 					drop_eingeinheit.addItem("Quadratmillimeter [mm^2]");
-					drop_eingeinheit.addItem("Quadratmikrometer [µm^2]");
-					drop_eingeinheit.addItem("Quadratnanometer [nm^2]");
+					//drop_eingeinheit.addItem("Quadratmikrometer [ï¿½m^2]");
+					//drop_eingeinheit.addItem("Quadratnanometer [nm^2]");
+					drop_eingeinheit.addItem("Quadratzoll [in^2]");
+					drop_eingeinheit.addItem("QuadratfuÃŸ [ft^2]");
+					drop_eingeinheit.addItem("Quadratyard [yd^2]");
+					drop_eingeinheit.addItem("Quadratmeile [mi^2]");
 					
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
@@ -155,8 +159,12 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Quadratdezimeter [dm^2]");
 					drop_ausgeinheit.addItem("Quadratzentimeter [cm^2]");
 					drop_ausgeinheit.addItem("Quadratmillimeter [mm^2]");
-					drop_ausgeinheit.addItem("Quadratmikrometer [µm^2]");
-					drop_ausgeinheit.addItem("Quadratnanometer [nm^2]");
+					//drop_ausgeinheit.addItem("Quadratmikrometer [ï¿½m^2]");
+					//drop_ausgeinheit.addItem("Quadratnanometer [nm^2]");
+					drop_ausgeinheit.addItem("Quadratzoll [in^2]");
+					drop_ausgeinheit.addItem("QuadratfuÃŸ [ft^2]");
+					drop_ausgeinheit.addItem("Quadratyard [yd^2]");
+					drop_ausgeinheit.addItem("Quadratmeile [mi^2]");
 				}
 				
 				else if(drop_groessen.getSelectedItem().equals("Volumen"))
@@ -165,26 +173,26 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
 					drop_eingeinheit.addItem("Kubikkilometer [km^3]");
-					drop_eingeinheit.addItem("Hektar [ha]");
-					drop_eingeinheit.addItem("Ar [a]");
+					//drop_eingeinheit.addItem("Hektar [ha]");
+					//drop_eingeinheit.addItem("Ar [a]");
 					drop_eingeinheit.addItem("Kubikmeter [m^3]");
 					drop_eingeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
 					drop_eingeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");
 					drop_eingeinheit.addItem("Kubikmillimeter [mm^3]");
-					drop_eingeinheit.addItem("Kubikmikrometer [µm^3]");
-					drop_eingeinheit.addItem("Kubiknanometer [nm^3]");
+					//drop_eingeinheit.addItem("Kubikmikrometer [ï¿½m^3]");
+					//drop_eingeinheit.addItem("Kubiknanometer [nm^3]");
 					
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Kubikkilometer [km^3]");
-					drop_ausgeinheit.addItem("Hektar [ha]");
-					drop_ausgeinheit.addItem("Ar [a]");
+					//drop_ausgeinheit.addItem("Hektar [ha]");
+					//drop_ausgeinheit.addItem("Ar [a]");
 					drop_ausgeinheit.addItem("Kubikmeter [m^3]");
 					drop_ausgeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
 					drop_ausgeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");
 					drop_ausgeinheit.addItem("Kubikmillimeter [mm^3]");
-					drop_ausgeinheit.addItem("Kubikmikrometer [µm^3]");
-					drop_ausgeinheit.addItem("Kubiknanometer [nm^3]");
+					//drop_ausgeinheit.addItem("Kubikmikrometer [ï¿½m^3]");
+					//drop_ausgeinheit.addItem("Kubiknanometer [nm^3]");
 				}
 				
 				else if(drop_groessen.getSelectedItem().equals("Gewicht"))
@@ -195,8 +203,12 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Kilogramm [kg]");
 					drop_eingeinheit.addItem("Gramm [g]");
 					drop_eingeinheit.addItem("Milligramm [mg]");
-					drop_eingeinheit.addItem("Mikrogramm [µm]");
-					drop_eingeinheit.addItem("Nanogramm [ng]");
+					//drop_eingeinheit.addItem("Mikrogramm [ï¿½m]");
+					//drop_eingeinheit.addItem("Nanogramm [ng]");
+					drop_eingeinheit.addItem("Stone [st]");
+					drop_eingeinheit.addItem("Pfund [lb]");
+					drop_eingeinheit.addItem("Unze [oz]");
+					
 					
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
@@ -204,8 +216,11 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Kilogramm [kg]");
 					drop_ausgeinheit.addItem("Gramm [g]");
 					drop_ausgeinheit.addItem("Milligramm [mg]");
-					drop_ausgeinheit.addItem("Mikrogramm [µm]");
-					drop_ausgeinheit.addItem("Nanogramm [ng]");
+					//drop_ausgeinheit.addItem("Mikrogramm [ï¿½m]");
+					//drop_ausgeinheit.addItem("Nanogramm [ng]");
+					drop_ausgeinheit.addItem("Stone [st]");
+					drop_ausgeinheit.addItem("Pfund [lb]");
+					drop_ausgeinheit.addItem("Unze [oz]");
 				}
 			}
 		});
@@ -255,16 +270,16 @@ public class Einheitenumrechner extends JFrame {
 						ausgwert = eingwert*(10^5);
 						textField_ausg.setText(String.valueOf(ausgwert));
 					}
-					else if(drop_ausgeinheit.getSelectedItem().equals("Mikrometer [µm]"))
-					{
-						ausgwert = eingwert*(10^8);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
-					else if(drop_ausgeinheit.getSelectedItem().equals("Nanometer [nm]"))
-					{
-						ausgwert = eingwert*(10^11);
-						textField_ausg.setText(String.valueOf(ausgwert));
-					}
+					//else if(drop_ausgeinheit.getSelectedItem().equals("Mikrometer [ï¿½m]"))
+					//{
+					//	ausgwert = eingwert*(10^8);
+					//	textField_ausg.setText(String.valueOf(ausgwert));
+					//}
+					//else if(drop_ausgeinheit.getSelectedItem().equals("Nanometer [nm]"))
+					//{
+					//	ausgwert = eingwert*(10^11);
+					//	textField_ausg.setText(String.valueOf(ausgwert));
+					//}
 				}
 			}
 		});
