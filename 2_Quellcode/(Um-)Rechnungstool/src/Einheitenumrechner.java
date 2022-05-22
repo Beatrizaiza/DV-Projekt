@@ -29,7 +29,7 @@ public class Einheitenumrechner extends JFrame {
 	////
 	////
 	double ausgwert = 0.0;
-	
+
 	public double getAusgwert() {
 		return ausgwert;
 	}
@@ -37,10 +37,10 @@ public class Einheitenumrechner extends JFrame {
 	public void setAusgwert(double ausgwert) {
 		this.ausgwert = ausgwert;
 	}
-	
+
 	String einheite ="null";
 	String einheita ="null";
-	
+
 	public String getEinheite() {
 		return einheite;
 	}
@@ -53,9 +53,9 @@ public class Einheitenumrechner extends JFrame {
 	public void setEinheita(String einheita) {
 		this.einheita = einheita;
 	}
-	
+
 	double eingwert = 0;
-	
+
 	public double getEingwert() {
 		return eingwert;
 	}
@@ -93,65 +93,65 @@ public class Einheitenumrechner extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel titel = new JLabel("Einheitenumrechner");
 		titel.setHorizontalAlignment(SwingConstants.CENTER);
 		titel.setBounds(300, 34, 240, 23);
 		titel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titel);
-		
-		
+
+
 		JComboBox drop_groessen = new JComboBox();
 		drop_groessen.setFont(new Font("Tahoma", Font.BOLD, 14));
 		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"W�hlen...", "L�nge", "Fl�che", "Volumen", "Gewicht"}));
 		drop_groessen.setBounds(300, 77, 240, 31);
 		contentPane.add(drop_groessen);
-		
+
 		JComboBox drop_ausgeinheit = new JComboBox();
 		drop_ausgeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		drop_ausgeinheit.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hle Ausgabeeinheit..."}));
 		drop_ausgeinheit.setBounds(499, 212, 232, 29);
 		contentPane.add(drop_ausgeinheit);
-		
+
 		JComboBox drop_eingeinheit = new JComboBox();
 		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"W�hle Eingabeeinheit..."}));
 		drop_eingeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		drop_eingeinheit.setBounds(129, 210, 232, 31);
 		contentPane.add(drop_eingeinheit);
-		
+
 		textField_eing = new JTextField();
 		textField_eing.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		textField_eing.setBounds(129, 170, 232, 31);
 		textField_eing.setColumns(10);
 		contentPane.add(textField_eing);
-		
+
 		textField_ausg = new JTextField();
 		textField_ausg.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		textField_ausg.setBounds(499, 170, 232, 31);
 		textField_ausg.setColumns(10);
 		textField_ausg.setEditable(false);
 		contentPane.add(textField_ausg);
-		
+
 		JLabel tit_eing = new JLabel("Eingabe:");
 		tit_eing.setFont(new Font("Tahoma", Font.BOLD, 14));
 		tit_eing.setBounds(129, 139, 232, 21);
 		contentPane.add(tit_eing);
-		
+
 		JLabel tit_ausg = new JLabel("Ausgabe:");
 		tit_ausg.setFont(new Font("Tahoma", Font.BOLD, 14));
 		tit_ausg.setBounds(499, 139, 232, 21);
 		contentPane.add(tit_ausg);
-		
+
 		JButton btnNewButton = new JButton("START");
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
 		btnNewButton.setBounds(371, 185, 118, 44);
 		contentPane.add(btnNewButton);
-		
+
 		//Eingabe der Funtionen der Drop-Downs und Buttons
-		
+
 		drop_groessen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				if(drop_groessen.getSelectedItem().equals("L�nge"))
 				{
 					drop_eingeinheit.removeAllItems();
@@ -167,7 +167,7 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("fuß [ft]");
 					drop_eingeinheit.addItem("yard [yd]");
 					drop_eingeinheit.addItem("mile [mi]");
-					
+
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Kilometer [km]");
@@ -182,7 +182,7 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("yard [yd]");
 					drop_ausgeinheit.addItem("mile [mi]");
 				}
-				
+
 				else if(drop_groessen.getSelectedItem().equals("Fl�che"))
 				{
 					drop_eingeinheit.removeAllItems();
@@ -198,7 +198,7 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Quadratfuß [ft^2]");
 					drop_eingeinheit.addItem("Quadratyard [yd^2]");
 					drop_eingeinheit.addItem("Quadratmeile [mi^2]");
-					
+
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Quadratkilometer [km^2]");
@@ -213,10 +213,10 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Quadratyard [yd^2]");
 					drop_ausgeinheit.addItem("Quadratmeile [mi^2]");
 				}
-				
+
 				else if(drop_groessen.getSelectedItem().equals("Volumen"))
 				{
-					
+
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
 					drop_eingeinheit.addItem("Kubikkilometer [km^3]");
@@ -228,7 +228,7 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Kubikmillimeter [mm^3]");
 					//drop_eingeinheit.addItem("Kubikmikrometer [�m^3]");
 					//drop_eingeinheit.addItem("Kubiknanometer [nm^3]");
-					
+
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Kubikkilometer [km^3]");
@@ -241,7 +241,7 @@ public class Einheitenumrechner extends JFrame {
 					//drop_ausgeinheit.addItem("Kubikmikrometer [�m^3]");
 					//drop_ausgeinheit.addItem("Kubiknanometer [nm^3]");
 				}
-				
+
 				else if(drop_groessen.getSelectedItem().equals("Gewicht"))
 				{
 					drop_eingeinheit.removeAllItems();
@@ -255,8 +255,8 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Stone [st]");
 					drop_eingeinheit.addItem("Pfund [lb]");
 					drop_eingeinheit.addItem("Unze [oz]");
-					
-					
+
+
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Tonnen [t]");
@@ -269,53 +269,61 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Pfund [lb]");
 					drop_ausgeinheit.addItem("Unze [oz]");
 				}
-			
-		
-		
-		
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				double eingwert, ausgwert;
-				eingwert = 0;
-				ausgwert = 0;
-				
-				String einheite,einheita;
-				einheite ="null";
-				einheita ="null";
-				
-				einheite = drop_eingeinheit.getSelectedItem().toString();
-				einheita = drop_ausgeinheit.getSelectedItem().toString();
-				System.out.println(einheite);
-				System.out.println(einheita);
-			}
-		
-		});
+
+
+
+
+				btnNewButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+
+						double eingwert, ausgwert;
+						eingwert = 0;
+						ausgwert = 0;
+						try {
+							eingwert = Double.parseDouble(textField_eing.getText());
+						} catch (Exception e2) {
+							JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
+						}
+						System.out.println(eingwert);
+
+						String einheite,einheita;
+						einheite ="null";
+						einheita ="null";
+
+						einheite = drop_eingeinheit.getSelectedItem().toString();
+						einheita = drop_ausgeinheit.getSelectedItem().toString();
+						System.out.println(einheite);
+						System.out.println(einheita);
+					}
+
+				});
+
+
 
 			}
 		});
 	}}
 
-			
-		
-		
-				//try {
-			//		eingwert = Double.parseDouble(textField_eing.getText());
-			//	} catch (Exception e2) {
-			//		JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
-			//	}
-				
-				
-			//	if(drop_eingeinheit.getSelectedItem().equals("Kilometer [km]"))
-			//	{
-					
-					
-			//	}
-			//		if(drop_ausgeinheit.getSelectedItem().equals("Kilometer [km]"))
-			//		{
-			//			ausgwert = eingwert;
-			//			textField_ausg.setText(String.valueOf(ausgwert));
-			//		}
-			
-	
+
+
+
+//try {
+//		eingwert = Double.parseDouble(textField_eing.getText());
+//	} catch (Exception e2) {
+//		JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
+//	}
+
+
+//	if(drop_eingeinheit.getSelectedItem().equals("Kilometer [km]"))
+//	{
+
+
+//	}
+//		if(drop_ausgeinheit.getSelectedItem().equals("Kilometer [km]"))
+//		{
+//			ausgwert = eingwert;
+//			textField_ausg.setText(String.valueOf(ausgwert));
+//		}
+
+
 
