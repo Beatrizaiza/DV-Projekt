@@ -74,6 +74,9 @@ public class RunnerJasmin
         JLabel labelauscy = new JLabel("Volumen Zylinder:");
         JLabel labelausco = new JLabel("Volumen Kegel:");
         JLabel labelaussq = new JLabel("Volumen Quader:");
+        JLabel labelaus = new JLabel("");
+       
+        
         
         
        start.addActionListener(new ActionListener() {
@@ -137,6 +140,7 @@ public class RunnerJasmin
         pane.add(labelauscy);
         pane.add(labelausco);
         pane.add(labelaussq);
+        pane.add(labelaus);
         
         
         
