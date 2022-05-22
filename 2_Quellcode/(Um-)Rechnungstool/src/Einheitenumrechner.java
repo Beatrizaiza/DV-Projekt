@@ -278,13 +278,16 @@ public class Einheitenumrechner extends JFrame {
 
 						double eingwert, ausgwert;
 						eingwert = 0;
-						ausgwert = 0;
+						//ausgwert = 0;
 						try {
 							eingwert = Double.parseDouble(textField_eing.getText());
+				
 						} catch (Exception e2) {
 							JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
 						}
 						System.out.println(eingwert);
+						
+						
 
 						String einheite,einheita;
 						einheite ="null";
@@ -292,8 +295,13 @@ public class Einheitenumrechner extends JFrame {
 
 						einheite = drop_eingeinheit.getSelectedItem().toString();
 						einheita = drop_ausgeinheit.getSelectedItem().toString();
+						
 						System.out.println(einheite);
 						System.out.println(einheita);
+						
+						double ausgwert1 = Berechnung.Umrechner(eingwert, einheite, einheita);
+						System.out.println(ausgwert1);
+						//result.setText(answer + " VE");
 					}
 
 				});

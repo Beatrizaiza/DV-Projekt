@@ -121,8 +121,8 @@ public class Berechnung extends Einheitenumrechner {
 		
 		
 	public double Umrechner(double eingwert, double Ee,double Ea) {
-		double ausgwert = (eingwert * Ee) * Ea; // in die Klammern muss der vom User gewählte
-		return ausgwert;
+		return (eingwert * Ee) * Ea; // in die Klammern muss der vom User gewählte
+		//return ausgwert;
 	
 
 	}
