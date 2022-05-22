@@ -6,6 +6,7 @@ public class Volumen {
 		double r; //radius
 		double l; //laenge
 		double h; //hoehe
+		double b; //breite
 		
 		
 		
@@ -36,6 +37,11 @@ public class Volumen {
 	public static double coneVolume(double r, double h) //Kegel
 	{
 		return (h * Math.pow(r, 2) * Math.PI/3);
+	}
+	
+	public static double squareVolume(double l, double b, double h) //Quader
+	{
+		return (l*b*h);
 	}
 
 

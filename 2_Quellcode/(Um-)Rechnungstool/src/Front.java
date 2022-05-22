@@ -10,34 +10,34 @@ public class Front {
 	// LEON's Werkstatt
 	// Bitte stehen lassen 
 	//
-	double l = 4; 
+	//double l = 4; 
 
-	public double getL() {
-		return l;
-	}
+	//public double getL() {
+	//	return l;
+	//}
 
-	public void setL(double l) {
-		this.l = l;
-	}
-	double f = 3;
+	//public void setL(double l) {
+	//	this.l = l;
+	//}
+	//double f = 3;
 
-	public double getF() {
-		return f;
-	}
+	//public double getF() {
+	//	return f;
+	//}
 
-	public void setF(double f) {
-		this.f = f;
-	}
+	//public void setF(double f) {
+	//	this.f = f;
+	//}
 
-	double g = 5;
+	//double g = 5;
 
-	public double getG() {
-		return g;
-	}
+	//public double getG() {
+	//	return g;
+	//}
 
-	public void setG(double g) {
-		this.g = g;
-	}
+	//public void setG(double g) {
+	//	this.g = g;
+	//}
 
 	//
 	//
