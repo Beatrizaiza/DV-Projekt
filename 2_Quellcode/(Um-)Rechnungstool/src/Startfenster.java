@@ -61,6 +61,7 @@ public class Startfenster {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Weiterleitung zum Flächenrechner");
+				
 				new FlaechenrechnerGUI().setVisible(true);
 			}
 		});
@@ -71,7 +72,7 @@ public class Startfenster {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Weiterleitung zum Volumenrechner");
 				
-				new FlaechenrechnerGUI().setVisible(true);
+				new Volumenrechner().setVisible(true);
 			}
 		});
 
@@ -80,6 +81,7 @@ public class Startfenster {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Weiterleitung zum Temperaturumrechner");
+				
 //				new Temperaturumrechener().setVisible(true);
 			}
 		});
