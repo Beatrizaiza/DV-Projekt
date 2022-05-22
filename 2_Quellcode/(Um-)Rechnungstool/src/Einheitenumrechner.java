@@ -124,6 +124,10 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Millimeter [mm]");
 					//drop_eingeinheit.addItem("Mikrometer [�m]");
 					//drop_eingeinheit.addItem("Nanometer [nm]");
+					drop_eingeinheit.addItem("zoll [in]");
+					drop_eingeinheit.addItem("fuß [ft]");
+					drop_eingeinheit.addItem("yard [yd]");
+					drop_eingeinheit.addItem("mile [mi]");
 					
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
@@ -134,6 +138,10 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Millimeter [mm]");
 					//drop_ausgeinheit.addItem("Mikrometer [�m]");
 					//drop_ausgeinheit.addItem("Nanometer [nm]");
+					drop_ausgeinheit.addItem("zoll [in]");
+					drop_ausgeinheit.addItem("fuß [ft]");
+					drop_ausgeinheit.addItem("yard [yd]");
+					drop_ausgeinheit.addItem("mile [mi]");
 				}
 				
 				else if(drop_groessen.getSelectedItem().equals("Fl�che"))
@@ -228,10 +236,12 @@ public class Einheitenumrechner extends JFrame {
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
+				
 				double eingwert, ausgwert;
 				eingwert = 0;
 				ausgwert = 0;
+				
+				
 				try {
 					eingwert = Double.parseDouble(textField_eing.getText());
 				} catch (Exception e2) {
@@ -242,6 +252,8 @@ public class Einheitenumrechner extends JFrame {
 				if(drop_eingeinheit.getSelectedItem().equals("Kilometer [km]"))
 				{
 					
+					
+				}
 					if(drop_ausgeinheit.getSelectedItem().equals("Kilometer [km]"))
 					{
 						ausgwert = eingwert;
@@ -270,18 +282,18 @@ public class Einheitenumrechner extends JFrame {
 						ausgwert = eingwert*(10^5);
 						textField_ausg.setText(String.valueOf(ausgwert));
 					}
-					//else if(drop_ausgeinheit.getSelectedItem().equals("Mikrometer [�m]"))
-					//{
-					//	ausgwert = eingwert*(10^8);
-					//	textField_ausg.setText(String.valueOf(ausgwert));
-					//}
-					//else if(drop_ausgeinheit.getSelectedItem().equals("Nanometer [nm]"))
-					//{
-					//	ausgwert = eingwert*(10^11);
-					//	textField_ausg.setText(String.valueOf(ausgwert));
-					//}
+					else if(drop_ausgeinheit.getSelectedItem().equals("Mikrometer [�m]"))
+					{
+						ausgwert = eingwert*(10^8);
+						textField_ausg.setText(String.valueOf(ausgwert));
+					}
+					else if(drop_ausgeinheit.getSelectedItem().equals("Nanometer [nm]"))
+					{
+						ausgwert = eingwert*(10^11);
+						textField_ausg.setText(String.valueOf(ausgwert));
+					}
 				}
-			}
+			
 		});
 		
 	}

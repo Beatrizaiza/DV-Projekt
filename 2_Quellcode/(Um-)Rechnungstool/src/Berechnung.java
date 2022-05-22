@@ -1,7 +1,8 @@
 import java.util.HashMap;
 
-public class Berechnung extends Front {
+public class Berechnung extends Einheitenumrechner {
 
+	
 	// HashMap
 	public void Umrechnung() {
 
@@ -39,25 +40,28 @@ public class Berechnung extends Front {
 		Rechnung.put("Unze", 35.274);
 
 // if bedingung für Länge 
+		Einheitenumrechner.drop_eingeinheit
 
-	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "dm" ||Rechnung.get == "m" || Rechnung.get == "km") { 
-		double lu = (l * Rechnung.get("??")) * Rechnung.get("??"); // in die Klammern muss der vom User gewählte
-		System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
-		} 
+if (drop_eingeinheit.getSelectedItem().equals ("Kilometer [km]")){
+	eingwert = eingwert * Rechnung.get("km");
 	
-	else if (Rechnung.get == "mm^2" || Rechnung.get == "cm^2" || Rechnung.get == "m^2"|| Rechnung.get == "km^2") { 
-		double fu = (f * Rechnung.get("cm^2")) * Rechnung.get("yards^2"); // in die Klammern muss der vom User
-		System.out.println(f + " " + Rechnung.keySet() + "sind " + fu + " " + Rechnung.get("value4")); 
-		} 
 	
-	else { 
-		double gu = (g * Rechnung.get("kg")) * Rechnung.get("Pfund"); // in die Klammern muss der vom User
-		System.out.println(g + " " + Rechnung.keySet() + "sind " + gu + " " + Rechnung.get("value4")); } }
-
-public static void main(String[] args) {
-	Berechnung Berechnung = new Berechnung();
-	Berechnung.Umrechnung();
-
+			if(drop_ausgeinheit.getSelectedItem().equals("mile [mi]"))
+			{
+				ausgwert = eingwert* Rechnung.get("mile");
+				
+			}
+			
+			//if else(drop_ausgeinheit.getSelectedItem().equals("yard [yd]")) {
+			//	ausgwert = eingwert* Rechnung.get("yard");
+			//}
+			
+			
 }
-}
+//	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "dm" ||Rechnung.get == "m" || Rechnung.get == "km") { 
+	//	double lu = (l * Rechnung.get("??")) * Rechnung.get("??"); // in die Klammern muss der vom User gewählte
+	//	System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
+	//	} 
+	
+}}
 
