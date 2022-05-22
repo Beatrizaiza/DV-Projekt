@@ -8,6 +8,20 @@ public class Berechnung extends Einheitenumrechner {
 	String einheita ="null";
 
 	
+	
+	public String getEinheite() {
+		return einheite;
+	}
+	public void setEinheite(String einheite) {
+		this.einheite = einheite;
+	}
+	public String getEinheita() {
+		return einheita;
+	}
+	public void setEinheita(String einheita) {
+		this.einheita = einheita;
+	}
+
 
 	double eingwert = 0;
 
@@ -19,13 +33,12 @@ public class Berechnung extends Einheitenumrechner {
 	}
 
 	
-	
 	// HashMap
 	public void Umrechnung() {
 
 		HashMap<String, Double> Rechnung = new HashMap<>();
 
-		Rechnung.put("Millimeter [mm]", 0.001);
+		Rechnung.put("mm", 0.001);
 		Rechnung.put("cm", 0.01);
 		Rechnung.put("dm", 0.1);
 		Rechnung.put("m", 1.0);
@@ -110,8 +123,9 @@ public class Berechnung extends Einheitenumrechner {
 	public double Umrechner(double eingwert, double Ee,double Ea) {
 		double ausgwert = (eingwert * Ee) * Ea; // in die Klammern muss der vom User gewählte
 		return ausgwert;
+	
 
-	}}
+	}
 //eingwert = eingwert * Rechnung.get("km");
 
 
@@ -132,6 +146,10 @@ public class Berechnung extends Einheitenumrechner {
 //	System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
 //	} 
 
+
+
+}
+}
 
 
 
