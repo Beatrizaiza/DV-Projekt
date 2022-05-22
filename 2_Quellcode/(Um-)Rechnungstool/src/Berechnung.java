@@ -13,7 +13,7 @@ public class Berechnung extends Front {
 		Rechnung.put("m", 1.0);
 		Rechnung.put("km", 1000.0);
 
-		Rechnung.put("inch", 39.37);
+		Rechnung.put("zoll", 39.37);
 		Rechnung.put("fuß", 3.281);
 		Rechnung.put("yard", 1.094);
 		Rechnung.put("mile", 0.00062150403);
@@ -24,7 +24,7 @@ public class Berechnung extends Front {
 		Rechnung.put("m^2", 1.0);
 		Rechnung.put("km^2", 10000000.0);
 
-		Rechnung.put("inch^2", 1550.0);
+		Rechnung.put("zoll^2", 1550.0);
 		Rechnung.put("fuß^2", 10.764);
 		Rechnung.put("yard^2", 1.196);
 		Rechnung.put("mile^2", 0.00000259);
