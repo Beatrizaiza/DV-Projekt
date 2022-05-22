@@ -25,6 +25,7 @@ import java.awt.event.MouseEvent;
 
 public class Volumenrechner extends JFrame implements Actionlistener {
 
+	private JTextField result;
 	private JPanel contentPane;
 	static JComboBox volumeMenu;
 	static JComboBox einhMenu;
@@ -73,9 +74,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		contentPane.add(lblNewLabel);
 		
 		
-		String volumeList[] = { "Kugel", "Pyramide", "Wuerfel" };
+		String volumeList[] = { "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel" };
 		JComboBox volumeMenu = new JComboBox(volumeList);
-		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Wählen", "Kugel", "Pyramide", "Würfel"}));
+		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Wählen", "Kugel", "Pyramide", "Würfel", "Zylinder", "Kegel", "Quader"}));
 		volumeMenu.setForeground(new Color(0, 0, 0));
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
@@ -91,49 +92,110 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 				L3.setText("");
 
 			}
-			if (Form.equals("Kugel")) {
+			else if (Form.equals("Kugel")) {
 				L1.setText("");
 				L2.setText("Radius");
 				L3.setText("");
-				
-				contentPane.add(tf2);
-				
+				tf1.setVisible(false);
+				tf2.setVisible(true);
+				tf3.setVisible(false);
 			}
-			if (Form.equals("Pyramide")) {
-				L1.setText("Breite");
-				L2.setText("Länge");
+			else if (Form.equals("Pyramide")) {
+				L1.setText("Länge");
+				L2.setText("");
 				L3.setText("Höhe");
-				contentPane.add(tf1);
-				contentPane.add(tf2);
-				contentPane.add(tf3);
+				tf1.setVisible(true);
+				tf2.setVisible(false);
+				tf3.setVisible(true);
 			}
-			if (Form.equals("Würfel")) {
+			else if (Form.equals("Würfel")) {
+				L1.setText("");
+				L2.setText("Länge");
+				L3.setText("");
+				tf1.setVisible(false);
+				tf2.setVisible(true);
+				tf3.setVisible(false);
+			}
+			else if (Form.equals("Zylinder")) {
+				L1.setText("");
+				L2.setText("Radius");
+				L3.setText("Höhe");
+				tf1.setVisible(false);
+				tf2.setVisible(true);
+				tf3.setVisible(true);
+
+			}
+			else if (Form.equals("Kegel")) {
+				L1.setText("");
+				L2.setText("Radius");
+				L3.setText("Höhe");
+				tf1.setVisible(false);
+				tf2.setVisible(true);
+				tf3.setVisible(true);
+			}
+			else if (Form.equals("Quader")) {
 				L1.setText("Länge");
 				L2.setText("Breite");
 				L3.setText("Höhe");
-				contentPane.add(tf1);
-				contentPane.add(tf2);
-				contentPane.add(tf3);
+				tf1.setVisible(true);
+				tf2.setVisible(true);
+				tf3.setVisible(true);
+				
 			}
 		}
 		});
 		
-		
-		JTextPane textPane = new JTextPane();
-		textPane.setBounds(281, 432, 240, 38);
-		contentPane.add(textPane);
-		
 		JButton rechnen = new JButton("Rechnen");
-		rechnen.addMouseListener(new MouseAdapter() {
+		rechnen.addActionListener(new  ActionListener() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				
+			public void actionPerformed(ActionEvent e) {
+				String Form = (String) volumeMenu.getSelectedItem();
+				if (Form.equals("Kugel")) {
+					double r = Double.parseDouble(tf2.getText());
+					double answer = Volumen.sphereVolume (r); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					result.setText(answer + " VE");
+					
+				}
+				if (Form.equals("Pyramide")) {
+					double l = Double.parseDouble(tf1.getText());
+					double h = Double.parseDouble(tf3.getText());
+					double answer = Volumen.pyramidVolume (l, h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					result.setText(answer + " VE");
+				}
+				if (Form.equals("Würfel")) {
+					double l = Double.parseDouble(tf2.getText());
+					double answer = Volumen.cubeVolume (l); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					result.setText(answer + " VE");
+				}
+				if (Form.equals("Zylinder")) {
+					double r = Double.parseDouble(tf2.getText());
+					double h = Double.parseDouble(tf3.getText());
+					double answer = Volumen.cylinderVolume(r,h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					result.setText(answer + " VE");
+				}
+				if (Form.equals("Kegel")) {
+					double r = Double.parseDouble(tf2.getText());
+					double h = Double.parseDouble(tf3.getText());
+					double answer = Volumen.coneVolume (r, h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					result.setText(answer + " VE");
+				}
+				if (Form.equals("Quader")) {
+					double l = Double.parseDouble(tf1.getText());
+					double b = Double.parseDouble(tf2.getText());
+					double h = Double.parseDouble(tf3.getText());
+					double answer = Volumen.squareVolume (l,b,h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					result.setText(answer + " VE");
+				}
 			}
 		});
 		rechnen.setForeground(new Color(0, 128, 0));
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
 		rechnen.setBounds(643, 294, 107, 38);
 		contentPane.add(rechnen);
+		
+		result = new JTextField();
+		result.setBounds(281, 432, 240, 38);
+		contentPane.add(result);
 		
 		L1 = new JLabel("");
 		L1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -181,14 +243,19 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		tf1 = new JTextField();
 		tf1.setBounds(180, 294, 144, 38);
 		tf1.setColumns(10);
+		tf1.setVisible(false);
+		contentPane.add(tf1);
 		
 		tf2 = new JTextField();
 		tf2.setColumns(10);
 		tf2.setBounds(334, 294, 144, 38);
-
+		tf2.setVisible(false);
+		contentPane.add(tf2);
 		
 		tf3 = new JTextField();
 		tf3.setColumns(10);
 		tf3.setBounds(489, 294, 144, 38);
+		tf3.setVisible(false);
+		contentPane.add(tf3);
 	}
 }

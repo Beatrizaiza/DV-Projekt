@@ -72,15 +72,22 @@ public class FlaechenrechnerGUI extends JFrame {
 		// NEED TO CHANGE THE OPTIONS CONNECT TO THE FLAECHEN CLASS
 		
 		JComboBox FlaechenOptionen = new JComboBox();
+		FlaechenOptionen.setModel(new DefaultComboBoxModel(new String[] {"Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat", "Parallelogramm"}));
+		FlaechenOptionen.setBounds(161, 71, 148, 22);
+		contentPane.add(FlaechenOptionen);
+		// trying to adapt code for volume GUI to Flaeche GUI: "callback" i.e. action listener 3 
 		FlaechenOptionen.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent e) { //COULD PROBABLY DELETE THIS PART
 				//Execute when a selection has been made
 				// Need to set how to choose between "Form"  bzw. Flaoptions 
+				
+				
+				
+				
+				
+				
 			}
 		});
-		FlaechenOptionen.setModel(new DefaultComboBoxModel(new String[] {"Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat", "Parallelogramm"}));
-		FlaechenOptionen.setBounds(161, 71, 148, 22);
-		contentPane.add(FlaechenOptionen);
 		
 		// insert Input field for calculation and their Labels:
 		inputHoehe = new JTextField(); 
