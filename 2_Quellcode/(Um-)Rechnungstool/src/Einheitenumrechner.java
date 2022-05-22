@@ -276,11 +276,15 @@ public class Einheitenumrechner extends JFrame {
 				btnNewButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 
-						double eingwert, ausgwert;
+						String eingwert2 = "null";
+						double eingwert;
+						double ausgwert;
 						eingwert = 0;
+						
 						//ausgwert = 0;
 						try {
 							eingwert = Double.parseDouble(textField_eing.getText());
+							String eingewert2 = String.valueOf(eingwert);
 				
 						} catch (Exception e2) {
 							JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
@@ -290,18 +294,16 @@ public class Einheitenumrechner extends JFrame {
 						
 
 						String einheite,einheita;
-						einheite ="null";
-						einheita ="null";
 
-						einheite = drop_eingeinheit.getSelectedItem().toString();
-						einheita = drop_ausgeinheit.getSelectedItem().toString();
+						einheite = (String)drop_eingeinheit.getSelectedItem();
+						einheita = (String)drop_ausgeinheit.getSelectedItem();
 						
 						System.out.println(einheite);
 						System.out.println(einheita);
 						
-						double ausgwert1 = Berechnung.Umrechner(eingwert, einheite, einheita);
-						System.out.println(ausgwert1);
-						//result.setText(answer + " VE");
+						//ausgwert = Berechnung.Umrechner(eingwert2, einheite, einheita);
+						//System.out.println(ausgwert+'.');
+						//result.setText(answer);
 					}
 
 				});

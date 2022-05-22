@@ -4,6 +4,7 @@ public class Berechnung extends Einheitenumrechner {
 
 
 	//Werte aus Einheitenrechner
+	
 	String einheite ="null";
 	String einheita ="null";
 
@@ -35,7 +36,10 @@ public class Berechnung extends Einheitenumrechner {
 	
 	// HashMap
 	public void Umrechnung() {
-
+		
+		public String Umrechner(String eingwert2, String einheite, String einheita) {
+		double eingwert1 = Double.parseDouble(eingwert2);
+					
 		HashMap<String, Double> Rechnung = new HashMap<>();
 
 		Rechnung.put("mm", 0.001);
@@ -69,17 +73,14 @@ public class Berechnung extends Einheitenumrechner {
 		Rechnung.put("Pfund", 2.205);
 		Rechnung.put("Unze", 35.274);
 
-
-
-
-
-
-
+		
 
 		// if bedingung für Länge 
 		//Einheitenumrechner.drop_eingeinheit
 
 		//Versuch speichern der eingabeeinheit in variable Ee
+		
+				
 		if (einheite.equals("Millimeter [mm]")){
 			double Ee = 0;
 			Ee = Rechnung.get("mm");
@@ -117,39 +118,16 @@ public class Berechnung extends Einheitenumrechner {
 		else if (einheita.equals(Rechnung.get("mile [mi]"))){
 			double Ea;
 			Ea = Rechnung.get("mile");
-		}}
-		
-		
-	public double Umrechner(double eingwert, double Ee,double Ea) {
-		return (eingwert * Ee) * Ea; // in die Klammern muss der vom User gewählte
-		//return ausgwert;
+		}
 	
-
-	}
-//eingwert = eingwert * Rechnung.get("km");
-
-
-//if(drop_ausgeinheit.getSelectedItem().equals("mile [mi]"))
-//{
-//	ausgwert = eingwert* Rechnung.get("mile");
-//	
-//}
-
-//if else(drop_ausgeinheit.getSelectedItem().equals("yard [yd]")) {
-//	ausgwert = eingwert* Rechnung.get("yard");
-//}
-
-
-
-//	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "dm" ||Rechnung.get == "m" || Rechnung.get == "km") { 
-//	double lu = (l * Rechnung.get("??")) * Rechnung.get("??"); // in die Klammern muss der vom User gewählte
-//	System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
-//	} 
-
-
-
+		
+		double ausgwert = (eingwert1 * Ee) * Ea; 
+		
+		
+		}
+	
 }
-}
+
 
 
 
