@@ -6,7 +6,8 @@ public class Berechnung extends Einheitenumrechner {
 	//Werte aus Einheitenrechner
 	String einheite ="null";
 	String einheita ="null";
-
+	double Ee = 0;
+	double Ea =0;
 	
 	
 	public String getEinheite() {
@@ -149,7 +150,7 @@ public class Berechnung extends Einheitenumrechner {
 
 
 }
-}
+//} just
 
 
 
