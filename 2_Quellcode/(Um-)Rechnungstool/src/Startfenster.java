@@ -71,7 +71,7 @@ public class Startfenster {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Weiterleitung zum Volumenrechner");
 				
-				new FlaechenrechnerGUI().setVisible(true);
+				new Volumenrechner().setVisible(true);
 			}
 		});
 
@@ -112,5 +112,10 @@ public class Startfenster {
 		hauptfenster.setBounds(350, 100, 850, 600); // legt Größe und Position fest//
 		hauptfenster.setResizable(false);
 
+	}
+
+	public void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+		
 	}
 }
