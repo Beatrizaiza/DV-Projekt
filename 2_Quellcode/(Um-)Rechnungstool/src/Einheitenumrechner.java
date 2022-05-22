@@ -147,10 +147,10 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Quadratmillimeter [mm^2]");
 					//drop_eingeinheit.addItem("Quadratmikrometer [�m^2]");
 					//drop_eingeinheit.addItem("Quadratnanometer [nm^2]");
-					drop_eingeinheit.addItem("Quadratinch [m^2]");
-					drop_eingeinheit.addItem("Quadratfuß [dm^2]");
-					drop_eingeinheit.addItem("Quadratyard [cm^2]");
-					drop_eingeinheit.addItem("Quadratmeile [mm^2]");
+					drop_eingeinheit.addItem("Quadratzoll [in^2]");
+					drop_eingeinheit.addItem("Quadratfuß [ft^2]");
+					drop_eingeinheit.addItem("Quadratyard [yd^2]");
+					drop_eingeinheit.addItem("Quadratmeile [mi^2]");
 					
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
@@ -161,10 +161,10 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Quadratmillimeter [mm^2]");
 					//drop_ausgeinheit.addItem("Quadratmikrometer [�m^2]");
 					//drop_ausgeinheit.addItem("Quadratnanometer [nm^2]");
-					drop_eingeinheit.addItem("Quadratinch [m^2]");
-					drop_eingeinheit.addItem("Quadratfuß [dm^2]");
-					drop_eingeinheit.addItem("Quadratyard [cm^2]");
-					drop_eingeinheit.addItem("Quadratmeile [mm^2]");
+					drop_ausgeinheit.addItem("Quadratzoll [in^2]");
+					drop_ausgeinheit.addItem("Quadratfuß [ft^2]");
+					drop_ausgeinheit.addItem("Quadratyard [yd^2]");
+					drop_ausgeinheit.addItem("Quadratmeile [mi^2]");
 				}
 				
 				else if(drop_groessen.getSelectedItem().equals("Volumen"))
@@ -218,9 +218,9 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Milligramm [mg]");
 					//drop_ausgeinheit.addItem("Mikrogramm [�m]");
 					//drop_ausgeinheit.addItem("Nanogramm [ng]");
-					drop_eingeinheit.addItem("Stone [st]");
-					drop_eingeinheit.addItem("Pfund [lb]");
-					drop_eingeinheit.addItem("Unze [oz]");
+					drop_ausgeinheit.addItem("Stone [st]");
+					drop_ausgeinheit.addItem("Pfund [lb]");
+					drop_ausgeinheit.addItem("Unze [oz]");
 				}
 			}
 		});
