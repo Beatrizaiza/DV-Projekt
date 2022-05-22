@@ -31,14 +31,13 @@ public class Berechnung extends Front {
 		Rechnung.put("g", 0.001);
 		Rechnung.put("kg", 1.0);
 
-		Rechnung.put("stone", 0.15748031496);
+		Rechnung.put("Stone", 0.15748031496);
 		Rechnung.put("Pfund", 2.205);
 		Rechnung.put("Unze", 35.274);
 
-	
+//
 
-
-	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "m" || Rechnung.get == "mile^2") { 
+	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "m" || Rechnung.get == "km") { 
 		double lu = (l * Rechnung.get("cm")) * Rechnung.get("yards"); // in die Klammern muss der vom User gewählte
 		System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
 		} 
