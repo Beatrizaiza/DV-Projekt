@@ -7,6 +7,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Window;
+
 import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import java.awt.Color;
@@ -81,7 +83,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(volumeMenu);
+		
 		// Adapts GUI to the right function input 
+		
 		volumeMenu.addActionListener(new ActionListener() {
 			
 		public void actionPerformed(ActionEvent e) {
@@ -96,6 +100,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 				L1.setText("");
 				L2.setText("Radius");
 				L3.setText("");
+				tf1.setText(null);
+				tf2.setText(null);
+				tf3.setText(null);
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
@@ -104,6 +111,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 				L1.setText("Länge");
 				L2.setText("");
 				L3.setText("Höhe");
+				tf1.setText(null);
+				tf2.setText(null);
+				tf3.setText(null);
 				tf1.setVisible(true);
 				tf2.setVisible(false);
 				tf3.setVisible(true);
@@ -112,6 +122,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 				L1.setText("");
 				L2.setText("Länge");
 				L3.setText("");
+				tf1.setText(null);
+				tf2.setText(null);
+				tf3.setText(null);
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
@@ -120,6 +133,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 				L1.setText("");
 				L2.setText("Radius");
 				L3.setText("Höhe");
+				tf1.setText(null);
+				tf2.setText(null);
+				tf3.setText(null);
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(true);
@@ -129,6 +145,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 				L1.setText("");
 				L2.setText("Radius");
 				L3.setText("Höhe");
+				tf1.setText(null);
+				tf2.setText(null);
+				tf3.setText(null);
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(true);
@@ -137,6 +156,9 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 				L1.setText("Länge");
 				L2.setText("Breite");
 				L3.setText("Höhe");
+				tf1.setText(null);
+				tf2.setText(null);
+				tf3.setText(null);
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(true);
@@ -148,42 +170,44 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		JButton rechnen = new JButton("Rechnen");
 		rechnen.addActionListener(new  ActionListener() {
 			@Override
+			
+		// Calculates based on Volumen.class functions
 			public void actionPerformed(ActionEvent e) {
 				String Form = (String) volumeMenu.getSelectedItem();
 				if (Form.equals("Kugel")) {
-					double r = Double.parseDouble(tf2.getText());
-					double answer = Volumen.sphereVolume (r); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double r = Double.parseDouble(tf2.getText()); // Gets input data 
+					double answer = Volumen.sphereVolume (r); // Applies fetched data to Volumen function
 					result.setText(answer + " VE");
 					
 				}
 				if (Form.equals("Pyramide")) {
 					double l = Double.parseDouble(tf1.getText());
 					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.pyramidVolume (l, h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double answer = Volumen.pyramidVolume (l, h); 
 					result.setText(answer + " VE");
 				}
 				if (Form.equals("Würfel")) {
 					double l = Double.parseDouble(tf2.getText());
-					double answer = Volumen.cubeVolume (l); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double answer = Volumen.cubeVolume (l); 
 					result.setText(answer + " VE");
 				}
 				if (Form.equals("Zylinder")) {
 					double r = Double.parseDouble(tf2.getText());
 					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.cylinderVolume(r,h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double answer = Volumen.cylinderVolume(r,h); 
 					result.setText(answer + " VE");
 				}
 				if (Form.equals("Kegel")) {
 					double r = Double.parseDouble(tf2.getText());
 					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.coneVolume (r, h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double answer = Volumen.coneVolume (r, h); 
 					result.setText(answer + " VE");
 				}
 				if (Form.equals("Quader")) {
 					double l = Double.parseDouble(tf1.getText());
 					double b = Double.parseDouble(tf2.getText());
 					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.squareVolume (l,b,h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double answer = Volumen.squareVolume (l,b,h); 
 					result.setText(answer + " VE");
 				}
 			}
@@ -194,6 +218,8 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		contentPane.add(rechnen);
 		
 		result = new JTextField();
+		result.setForeground(new Color(0, 128, 0));
+		result.setFont(new Font("Tahoma", Font.BOLD, 20));
 		result.setBounds(281, 432, 240, 38);
 		contentPane.add(result);
 		
@@ -257,5 +283,6 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		tf3.setBounds(489, 294, 144, 38);
 		tf3.setVisible(false);
 		contentPane.add(tf3);
+		
 	}
 }
