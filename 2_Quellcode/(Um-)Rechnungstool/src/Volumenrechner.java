@@ -183,8 +183,8 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		einhMenu.setBounds(325, 215, 181, 38);
 		contentPane.add(einhMenu);
 		einhMenu.addActionListener(new ActionListener() {
-			String Einheit = (String) einhMenu.getSelectedItem();
 			public void actionPerformed(ActionEvent e) {
+				String Einheit = (String) einhMenu.getSelectedItem();
 				if (Einheit.equals("m")) {
 				 volEinheit = ("m³");
 				}
