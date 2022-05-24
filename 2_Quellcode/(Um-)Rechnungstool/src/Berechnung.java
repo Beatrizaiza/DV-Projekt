@@ -4,12 +4,12 @@ public class Berechnung extends Einheitenumrechner {
 
 
 	//Werte aus Einheitenrechner
-	
 	String einheite ="null";
 	String einheita ="null";
+	double Ee = 0;
+	double Ea =0;
 
-	
-	
+
 	public String getEinheite() {
 		return einheite;
 	}
@@ -66,25 +66,25 @@ public class Berechnung extends Einheitenumrechner {
 
 		Rechnung.put("Stone", 0.15748031496);
 		Rechnung.put("Pfund", 2.205);
-		Rechnung.put("Unze", 35.274);	
+		Rechnung.put("Unze", 35.274);
 	}
-		
 
-	
+
+
 	// HashMap
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
-		
-					
-		
-		// if bedingung für Länge 
+
+
+
+		// if bedingung für Länge
 		//Einheitenumrechner.drop_eingeinheit
 
 		//Versuch speichern der eingabeeinheit in variable Ee
-		
+
 		double Ee = 0;
 		double Ea = 0;
 		if (einheite.equals("Millimeter [mm]")){
-			
+
 			Ee = Rechnung.get("mm");
 		}
 		else if (einheite.equals("Zentimeter [cm]")){
@@ -114,7 +114,7 @@ public class Berechnung extends Einheitenumrechner {
 			Ea = Rechnung.get("mile");
 		}
 		else if (einheita.equals("Millimeter [mm]")){
-			
+
 			Ea = Rechnung.get("mm");
 		}
 		else if (einheita.equals("Zentimeter [cm]")){
@@ -129,19 +129,36 @@ public class Berechnung extends Einheitenumrechner {
 		else if (einheita.equals("Kilometer [km]")){
 			Ea = Rechnung.get("km");
 		}
-	
-		
-		double ausgwert = (eingwert * Ee) * Ea; 
-		
+
+
+		double ausgwert = (eingwert * Ee) * Ea;
+
 		return ausgwert;
 	}
-	
+
+
+	}
+//eingwert = eingwert * Rechnung.get("km");
+
+
+//if(drop_ausgeinheit.getSelectedItem().equals("mile [mi]"))
+//{
+//	ausgwert = eingwert* Rechnung.get("mile");
+//
+//}
+
+//if else(drop_ausgeinheit.getSelectedItem().equals("yard [yd]")) {
+//	ausgwert = eingwert* Rechnung.get("yard");
+//}
+
+
+
+//	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "dm" ||Rechnung.get == "m" || Rechnung.get == "km") {
+//	double lu = (l * Rechnung.get("??")) * Rechnung.get("??"); // in die Klammern muss der vom User gewählte
+//	System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
+//	}
+
+
+
 }
-
-
-
-
-
-
-
-
+//} just

@@ -277,31 +277,25 @@ public class Einheitenumrechner extends JFrame {
 				btnNewButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 
-						
-						double eingwert;
-						double ausgwert;
+						double eingwert, ausgwert;
 						eingwert = 0;
-						
-						//ausgwert = 0;
+						ausgwert = 0;
 						try {
 							eingwert = Double.parseDouble(textField_eing.getText());
-							
-				
 						} catch (Exception e2) {
 							JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
 						}
 						System.out.println(eingwert);
-						
-						
 
 						String einheite,einheita;
+						einheite ="null";
+						einheita ="null";
 
-						einheite = (String)drop_eingeinheit.getSelectedItem();
-						einheita = (String)drop_ausgeinheit.getSelectedItem();
-						
+						einheite = drop_eingeinheit.getSelectedItem().toString();
+						einheita = drop_ausgeinheit.getSelectedItem().toString();
 						System.out.println(einheite);
 						System.out.println(einheita);
-						
+
 						ausgwert = Berechnung.Umrechner(eingwert, einheite, einheita);
 						System.out.println(ausgwert+'.');
 						textField_ausg.setText(""+ausgwert);
@@ -314,7 +308,6 @@ public class Einheitenumrechner extends JFrame {
 			}
 		});
 	}}
-
 
 
 
@@ -336,6 +329,3 @@ public class Einheitenumrechner extends JFrame {
 //			ausgwert = eingwert;
 //			textField_ausg.setText(String.valueOf(ausgwert));
 //		}
-
-
-

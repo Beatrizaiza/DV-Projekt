@@ -115,9 +115,4 @@ public class Startfenster {
 		hauptfenster.setResizable(false);
 
 	}
-
-	public void setVisible(boolean b) {
-		// TODO Auto-generated method stub
-		
-	}
 }
