@@ -66,10 +66,10 @@ public class Berechnung extends Einheitenumrechner {
 		Rechnung.put("mg", 0.000001);
 		Rechnung.put("g", 0.001);
 		Rechnung.put("kg", 1.0);
-		Rechnung.put("Tonne", 1000.0);
-		Rechnung.put("Stone", 0.15748031496);
-		Rechnung.put("Pfund", 2.205);
-		Rechnung.put("Unze", 35.274);
+		Rechnung.put("t", 1000.0);
+		Rechnung.put("stone", 0.15748031496);
+		Rechnung.put("pfund", 2.205);
+		Rechnung.put("unze", 35.274);
 	}
 
 
@@ -141,64 +141,144 @@ public class Berechnung extends Einheitenumrechner {
 		}
 		
 		//Flaecheneinheiten
-				//Eingabe Ee
-				if (einheite.equals("Quadratmillimeter [mm^2]")){
-					Ee = Rechnung.get("mm^2");
-				}
-				else if (einheite.equals("Quadratzentimeter [cm^2]")){
-					Ee = Rechnung.get("cm^2");
-				}
-				else if (einheite.equals("Quadratdezimeter [dm^2]")){
-					Ee = Rechnung.get("dm^2");
-				}
-				else if (einheite.equals("Quadratmeter [m^2]")){
-					Ee = Rechnung.get("m^2");
-				}
-				else if (einheite.equals("Quadratkilometer [km^2]")){
-					Ee = Rechnung.get("km^2");
-				}
-				else if (einheita.equals("Quadratzoll [in^2]")){
-					Ee = Rechnung.get("zoll^2");
-				}
-				else if (einheita.equals("Quadratfuss [ft^2]")){
-					Ee = Rechnung.get("fuss^2");
-				}
-				else if (einheita.equals("Quadratyard [yd^2]")){
-					Ee = Rechnung.get("yard^2");
-				}
-				else if (einheita.equals("Quadratmeilen [mi^2]")){
-					Ee = Rechnung.get("mile^2");
-				
-				//Ausgabe Ea
-				if (einheite.equals("Quadratmillimeter [mm^2]")){
-					Ea = Rechnung.get("mm^2");
-				}
-				else if (einheite.equals("Quadratzentimeter [cm^2]")){
-					Ea = Rechnung.get("cm^2");
-				}
-				else if (einheite.equals("Quadratdezimeter [dm^2]")){
-					Ea = Rechnung.get("dm^2");
-				}
-				else if (einheite.equals("Quadratmeter [m^2]")){
-					Ea = Rechnung.get("m^2");
-				}
-				else if (einheite.equals("Quadratkilometer [km^2]")){
-					Ea = Rechnung.get("km^2");
-				}
-				else if (einheita.equals("Quadratzoll [in^2]")){
-					Ea = Rechnung.get("zoll^2");
-				}
-				else if (einheita.equals("Quadratfuss [ft^2]")){
-					Ea = Rechnung.get("fuss^2");
-				}
-				else if (einheita.equals("Quadratyard [yd^2]")){
-					Ea = Rechnung.get("yard^2");
-				}
-				else if (einheita.equals("Quadratmeilen [mi^2]")){
-					Ea = Rechnung.get("mile^2");
+		//Eingabe Ee
+		if (einheite.equals("Quadratmillimeter [mm^2]")){
+			Ee = Rechnung.get("mm^2");
+		}
+		else if (einheite.equals("Quadratzentimeter [cm^2]")){
+			Ee = Rechnung.get("cm^2");
+		}
+		else if (einheite.equals("Quadratdezimeter [dm^2]")){
+			Ee = Rechnung.get("dm^2");
+		}
+		else if (einheite.equals("Quadratmeter [m^2]")){
+			Ee = Rechnung.get("m^2");
+		}
+		else if (einheite.equals("Quadratkilometer [km^2]")){
+			Ee = Rechnung.get("km^2");
+		}
+		else if (einheita.equals("Quadratzoll [in^2]")){
+			Ee = Rechnung.get("zoll^2");
+		}
+		else if (einheita.equals("Quadratfuss [ft^2]")){
+			Ee = Rechnung.get("fuss^2");
+		}
+		else if (einheita.equals("Quadratyard [yd^2]")){
+			Ee = Rechnung.get("yard^2");
+		}
+		else if (einheita.equals("Quadratmeilen [mi^2]")){
+			Ee = Rechnung.get("mile^2");
+		
+		//Ausgabe Ea
+		if (einheite.equals("Quadratmillimeter [mm^2]")){
+			Ea = Rechnung.get("mm^2");
+		}
+		else if (einheite.equals("Quadratzentimeter [cm^2]")){
+			Ea = Rechnung.get("cm^2");
+		}
+		else if (einheite.equals("Quadratdezimeter [dm^2]")){
+			Ea = Rechnung.get("dm^2");
+		}
+		else if (einheite.equals("Quadratmeter [m^2]")){
+			Ea = Rechnung.get("m^2");
+		}
+		else if (einheite.equals("Quadratkilometer [km^2]")){
+			Ea = Rechnung.get("km^2");
+		}
+		else if (einheita.equals("Quadratzoll [in^2]")){
+			Ea = Rechnung.get("zoll^2");
+		}
+		else if (einheita.equals("Quadratfuss [ft^2]")){
+			Ea = Rechnung.get("fuss^2");
+		}
+		else if (einheita.equals("Quadratyard [yd^2]")){
+			Ea = Rechnung.get("yard^2");
+		}
+		else if (einheita.equals("Quadratmeilen [mi^2]")){
+			Ea = Rechnung.get("mile^2");
 
-				
-				
+		//Volumeneinheiten
+		//Eingabe Ee
+		if (einheite.equals("Kubikmillimeter [mm^3]")){
+			Ee = Rechnung.get("mm^3");
+		}
+		else if (einheite.equals("Kubikzentimeter [cm^3]")){
+			Ee = Rechnung.get("cm^3");
+		}
+		else if (einheite.equals("Kubikdezimeter [dm^3]")){
+			Ee = Rechnung.get("dm^3");
+		}
+		else if (einheite.equals("Kubikmeter [m^3]")){
+			Ee = Rechnung.get("m^3");
+		}
+		else if (einheite.equals("Kubikkilometer [km^3]")){
+			Ee = Rechnung.get("km^3");
+		}
+					
+		//Ausgabe Ea
+		if (einheite.equals("Kubikmillimeter [mm^3]")){
+			Ea = Rechnung.get("mm^3");
+		}
+		else if (einheite.equals("Kubikzentimeter [cm^3]")){
+			Ea = Rechnung.get("cm^3");
+		}
+		else if (einheite.equals("Kubikdezimeter [dm^3]")){
+			Ea = Rechnung.get("dm^3");
+		}
+		else if (einheite.equals("Kubikmeter [m^3]")){
+			Ea = Rechnung.get("m^3");
+		}
+		else if (einheite.equals("Kubikkilometer [km^3]")){
+			Ea = Rechnung.get("km^3");
+		}
+		
+		//Gewichtseinheiten
+		//Eingabe Ee
+		if (einheite.equals("Milligramm [mg]")){
+			Ee = Rechnung.get("mg");
+		}
+		else if (einheite.equals("Gramm [g]")){
+			Ee = Rechnung.get("g");
+		}
+		else if (einheite.equals("Kilogramm [kg]")){
+			Ee = Rechnung.get("kg");
+		}
+		else if (einheite.equals("Tonnen [t]")){
+			Ee = Rechnung.get("t");
+		}
+		else if (einheite.equals("Stone [st]")){
+			Ee = Rechnung.get("stone");
+		}
+		else if (einheite.equals("Pfund [lb]")){
+			Ee = Rechnung.get("pfund");
+		}
+		else if (einheite.equals("Unze [oz]")){
+			Ee = Rechnung.get("unze");
+		}
+					
+		//Ausgabe Ea
+		if (einheite.equals("Milligramm [mg]")){
+			Ea = Rechnung.get("mg");
+		}
+		else if (einheite.equals("Gramm [g]")){
+			Ea = Rechnung.get("g");
+		}
+		else if (einheite.equals("Kilogramm [kg]")){
+			Ea = Rechnung.get("kg");
+		}
+		else if (einheite.equals("Tonnen [t]")){
+			Ea = Rechnung.get("t");
+		}
+		else if (einheite.equals("Stone [st]")){
+			Ea = Rechnung.get("stone");
+		}
+		else if (einheite.equals("Pfund [lb]")){
+			Ea = Rechnung.get("pfund");
+		}
+		else if (einheite.equals("Unze [oz]")){
+			Ea = Rechnung.get("unze");
+		}
+					
 			
 	
 
