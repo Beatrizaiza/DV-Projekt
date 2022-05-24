@@ -62,7 +62,7 @@ public class Startfenster {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Weiterleitung zum Flächenrechner");
 				
-				new FlaechenrechnerGUI().setVisible(true);
+				new AreaGUI().setVisible(true);
 			}
 		});
 
