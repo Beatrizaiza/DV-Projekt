@@ -85,6 +85,7 @@ public class Einheitenumrechner extends JFrame {
 	 * Create the frame.
 	 */
 	public Einheitenumrechner() {
+		Berechnung.init();
 		setTitle("Einheitenumrechner");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -301,9 +302,9 @@ public class Einheitenumrechner extends JFrame {
 						System.out.println(einheite);
 						System.out.println(einheita);
 						
-						//ausgwert = Berechnung.Umrechner(eingwert2, einheite, einheita);
-						//System.out.println(ausgwert+'.');
-						//result.setText(answer);
+						ausgwert = Berechnung.Umrechner(eingwert, einheite, einheita);
+						System.out.println(ausgwert+'.');
+						textField_ausg.setText(""+ausgwert);
 					}
 
 				});
