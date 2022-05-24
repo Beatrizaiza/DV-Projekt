@@ -141,98 +141,65 @@ public class Berechnung extends Einheitenumrechner {
 		}
 		
 		//Flaecheneinheiten
-		//Eingabe Ee
-		if (einheite.equals("Quadratmillimeter [mm^2]")){
-			Ee = Rechnung.get("mm^2");
-		}
-		else if (einheite.equals("Quadratzentimeter [cm^2]")){
-			Ee = Rechnung.get("cm^2");
-		}
-		else if (einheite.equals("Quadratdezimeter [dm^2]")){
-			Ee = Rechnung.get("dm^2");
-		}
-		else if (einheite.equals("Quadratmeter [m^2]")){
-			Ee = Rechnung.get("m^2");
-		}
-		else if (einheite.equals("Quadratkilometer [km^2]")){
-			Ee = Rechnung.get("km^2");
-		}
-		else if (einheita.equals("Quadratzoll [in^2]")){
-			Ee = Rechnung.get("zoll^2");
-		}
-		else if (einheita.equals("Quadratfuss [ft^2]")){
-			Ee = Rechnung.get("fuss^2");
-		}
-		else if (einheita.equals("Quadratyard [yd^2]")){
-			Ee = Rechnung.get("yard^2");
-		}
-		else if (einheita.equals("Quadratmeilen [mi^2]")){
-			Ee = Rechnung.get("mile^2");
-		
-		//Ausgabe Ea
-		if (einheite.equals("Quadratmillimeter [mm^2]")){
-			Ea = Rechnung.get("mm^2");
-		}
-		else if (einheite.equals("Quadratzentimeter [cm^2]")){
-			Ea = Rechnung.get("cm^2");
-		}
-		else if (einheite.equals("Quadratdezimeter [dm^2]")){
-			Ea = Rechnung.get("dm^2");
-		}
-		else if (einheite.equals("Quadratmeter [m^2]")){
-			Ea = Rechnung.get("m^2");
-		}
-		else if (einheite.equals("Quadratkilometer [km^2]")){
-			Ea = Rechnung.get("km^2");
-		}
-		else if (einheita.equals("Quadratzoll [in^2]")){
-			Ea = Rechnung.get("zoll^2");
-		}
-		else if (einheita.equals("Quadratfuss [ft^2]")){
-			Ea = Rechnung.get("fuss^2");
-		}
-		else if (einheita.equals("Quadratyard [yd^2]")){
-			Ea = Rechnung.get("yard^2");
-		}
-		else if (einheita.equals("Quadratmeilen [mi^2]")){
-			Ea = Rechnung.get("mile^2");
+				//Eingabe Ee
+				if (einheite.equals("Quadratmillimeter [mm^2]")){
+					Ee = Rechnung.get("mm^2");
+				}
+				else if (einheite.equals("Quadratzentimeter [cm^2]")){
+					Ee = Rechnung.get("cm^2");
+				}
+				else if (einheite.equals("Quadratdezimeter [dm^2]")){
+					Ee = Rechnung.get("dm^2");
+				}
+				else if (einheite.equals("Quadratmeter [m^2]")){
+					Ee = Rechnung.get("m^2");
+				}
+				else if (einheite.equals("Quadratkilometer [km^2]")){
+					Ee = Rechnung.get("km^2");
+				}
+				else if (einheita.equals("Quadratzoll [in^2]")){
+					Ee = Rechnung.get("zoll^2");
+				}
+				else if (einheita.equals("Quadratfuss [ft^2]")){
+					Ee = Rechnung.get("fuss^2");
+				}
+				else if (einheita.equals("Quadratyard [yd^2]")){
+					Ee = Rechnung.get("yard^2");
+				}
+				else if (einheita.equals("Quadratmeilen [mi^2]")){
+					Ee = Rechnung.get("mile^2");
+				
+				//Ausgabe Ea
+				if (einheite.equals("Quadratmillimeter [mm^2]")){
+					Ea = Rechnung.get("mm^2");
+				}
+				else if (einheite.equals("Quadratzentimeter [cm^2]")){
+					Ea = Rechnung.get("cm^2");
+				}
+				else if (einheite.equals("Quadratdezimeter [dm^2]")){
+					Ea = Rechnung.get("dm^2");
+				}
+				else if (einheite.equals("Quadratmeter [m^2]")){
+					Ea = Rechnung.get("m^2");
+				}
+				else if (einheite.equals("Quadratkilometer [km^2]")){
+					Ea = Rechnung.get("km^2");
+				}
+				else if (einheita.equals("Quadratzoll [in^2]")){
+					Ea = Rechnung.get("zoll^2");
+				}
+				else if (einheita.equals("Quadratfuss [ft^2]")){
+					Ea = Rechnung.get("fuss^2");
+				}
+				else if (einheita.equals("Quadratyard [yd^2]")){
+					Ea = Rechnung.get("yard^2");
+				}
+				else if (einheita.equals("Quadratmeilen [mi^2]")){
+					Ea = Rechnung.get("mile^2");
 
-		
-		//Volumeneinheiten
-		//Eingabe Ee
-		if (einheite.equals("Kubikmillimeter [mm^3]")){
-			Ee = Rechnung.get("mm^3");
-		}
-		else if (einheite.equals("Kubikzentimeter [cm^3]")){
-			Ee = Rechnung.get("cm^3");
-		}
-		else if (einheite.equals("Kubikdezimeter [dm^3]")){
-			Ee = Rechnung.get("dm^3");
-		}
-		else if (einheite.equals("Kubikmeter [m^3]")){
-			Ee = Rechnung.get("m^3");
-		}
-		else if (einheite.equals("Kubikkilometer [km^3]")){
-			Ee = Rechnung.get("km^3");
-		}
-		
-		//Ausgabe Ea
-		if (einheite.equals("Kubikmillimeter [mm^3]")){
-			Ea = Rechnung.get("mm^3");
-		}
-		else if (einheite.equals("Kubikzentimeter [cm^3]")){
-			Ea = Rechnung.get("cm^3");
-		}
-		else if (einheite.equals("Kubikdezimeter [dm^3]")){
-			Ea = Rechnung.get("dm^3");
-		}
-		else if (einheite.equals("Kubikmeter [m^3]")){
-			Ea = Rechnung.get("m^3");
-		}
-		else if (einheite.equals("Kubikkilometer [km^3]")){
-			Ea = Rechnung.get("km^3");
-		}
-	
+				
+				
+			
 	
 
 		double ausgwert = (eingwert * Ee) * Ea;
