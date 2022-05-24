@@ -33,15 +33,10 @@ public class Berechnung extends Einheitenumrechner {
 		this.eingwert = eingwert;
 	}
 
-	
-	// HashMap
-	public void Umrechnung() {
-		
-		public String Umrechner(String eingwert, String einheite, String einheita) {
-		
-					
-		HashMap<String, Double> Rechnung = new HashMap<>();
+	public static HashMap<String, Double> Rechnung = new HashMap<>();
 
+	public static void init()
+	{
 		Rechnung.put("mm", 0.001);
 		Rechnung.put("cm", 0.01);
 		Rechnung.put("dm", 0.1);
@@ -71,60 +66,75 @@ public class Berechnung extends Einheitenumrechner {
 
 		Rechnung.put("Stone", 0.15748031496);
 		Rechnung.put("Pfund", 2.205);
-		Rechnung.put("Unze", 35.274);
-
+		Rechnung.put("Unze", 35.274);	
+	}
 		
 
+	
+	// HashMap
+	public static double Umrechner(double eingwert, String einheite, String einheita) {
+		
+					
+		
 		// if bedingung für Länge 
 		//Einheitenumrechner.drop_eingeinheit
 
 		//Versuch speichern der eingabeeinheit in variable Ee
 		
-				
+		double Ee = 0;
+		double Ea = 0;
 		if (einheite.equals("Millimeter [mm]")){
-			double Ee = 0;
+			
 			Ee = Rechnung.get("mm");
 		}
 		else if (einheite.equals("Zentimeter [cm]")){
-			double Ee;
 			Ee = Rechnung.get("cm");
 		}
 		else if (einheite.equals("Dezimeter [dm]")){
-			double Ee;
 			Ee = Rechnung.get("dm");
 		}
 		else if (einheite.equals("Meter [m]")){
-			double Ee;
 			Ee = Rechnung.get("m");
 		}
 		else if (einheite.equals("Kilometer [km]")){
-			double Ee;
 			Ee = Rechnung.get("km");
 		}
 
 		//Versuch speichern der ausgabeeinheit in variable Ea
 		if (einheita.equals("zoll [in]")){
-			double Ea;
 			Ea = Rechnung.get("zoll");
 		}
-		else if (einheita.equals(Rechnung.get("fuß [ft]"))){
-			double Ea;
+		else if (einheita.equals(("fuß [ft]"))){
 			Ea = Rechnung.get("fuß");
 		}
-		else if (einheita.equals(Rechnung.get("yard [yd]"))){
-			double Ea;
+		else if (einheita.equals(("yard [yd]"))){
 			Ea = Rechnung.get("yard");
 		}
-		else if (einheita.equals(Rechnung.get("mile [mi]"))){
-			double Ea;
+		else if (einheita.equals("mile [mi]")){
 			Ea = Rechnung.get("mile");
+		}
+		else if (einheita.equals("Millimeter [mm]")){
+			
+			Ea = Rechnung.get("mm");
+		}
+		else if (einheita.equals("Zentimeter [cm]")){
+			Ea = Rechnung.get("cm");
+		}
+		else if (einheita.equals("Dezimeter [dm]")){
+			Ea = Rechnung.get("dm");
+		}
+		else if (einheita.equals("Meter [m]")){
+			Ea = Rechnung.get("m");
+		}
+		else if (einheita.equals("Kilometer [km]")){
+			Ea = Rechnung.get("km");
 		}
 	
 		
-		double ausgwert = (eingwert1 * Ee) * Ea; 
+		double ausgwert = (eingwert * Ee) * Ea; 
 		
-		
-		}
+		return ausgwert;
+	}
 	
 }
 
