@@ -285,20 +285,18 @@ public class Einheitenumrechner extends JFrame {
 						} catch (Exception e2) {
 							JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
 						}
-						System.out.println(eingwert);
+						System.out.println("Eingabewert: "+eingwert);
 
 						String einheite,einheita;
-						einheite ="null";
-						einheita ="null";
 
-						einheite = drop_eingeinheit.getSelectedItem().toString();
-						einheita = drop_ausgeinheit.getSelectedItem().toString();
-						System.out.println(einheite);
-						System.out.println(einheita);
+						einheite = (String) drop_eingeinheit.getSelectedItem();
+						einheita = (String) drop_ausgeinheit.getSelectedItem();
+						System.out.println("Eingabeeinheit: "+einheite);
+						System.out.println("Ausgabeeinheit: "+einheita);
 
 						ausgwert = Berechnung.Umrechner(eingwert, einheite, einheita);
-						System.out.println(ausgwert+'.');
-						textField_ausg.setText(""+ausgwert);
+						System.out.println("Ergebnis: "+ausgwert);
+						textField_ausg.setText(String.valueOf(ausgwert));
 					}
 
 				});
