@@ -7,9 +7,9 @@ public class Berechnung extends Einheitenumrechner {
 	String einheite ="null";
 	String einheita ="null";
 	double Ee = 0;
-	double Ea =0;
+	double Ea = 0;
 
-
+	//Get- und Set-Methoden zur Übergabe der Ein- und Ausgabeeinheiten aus der Klasse Einheitenumrechner
 	public String getEinheite() {
 		return einheite;
 	}
@@ -23,7 +23,7 @@ public class Berechnung extends Einheitenumrechner {
 		this.einheita = einheita;
 	}
 
-
+	// Get- und Set-Methode für den Eingabewert, wird = 0 gesetzt
 	double eingwert = 0;
 
 	public double getEingwert() {
@@ -33,37 +33,40 @@ public class Berechnung extends Einheitenumrechner {
 		this.eingwert = eingwert;
 	}
 
+	//HashMap zum Speichern der Umrechnungsfaktoren der Größen
 	public static HashMap<String, Double> Rechnung = new HashMap<>();
 
 	public static void init()
 	{
+		//Faktoren Länge
 		Rechnung.put("mm", 0.001);
 		Rechnung.put("cm", 0.01);
 		Rechnung.put("dm", 0.1);
 		Rechnung.put("m", 1.0);
 		Rechnung.put("km", 1000.0);
-
 		Rechnung.put("zoll", 39.37);
-		Rechnung.put("fuÃŸ", 3.281);
+		Rechnung.put("fuss", 3.281);
 		Rechnung.put("yard", 1.094);
 		Rechnung.put("mile", 0.00062150403);
 
+		//Faktoren Fläche
 		Rechnung.put("mm^2", 0.00001);
 		Rechnung.put("cm^2", 0.0001);
 		Rechnung.put("dm^2", 0.01);
 		Rechnung.put("m^2", 1.0);
 		Rechnung.put("km^2", 10000000.0);
-
 		Rechnung.put("zoll^2", 1550.0);
-		Rechnung.put("fuÃŸ^2", 10.764);
+		Rechnung.put("fuss^2", 10.764);
 		Rechnung.put("yard^2", 1.196);
 		Rechnung.put("mile^2", 0.00000259);
 
+		//Faktoren Volumen !!!!
+		
+		//Faktoren Gewicht
 		Rechnung.put("mg", 0.000001);
 		Rechnung.put("g", 0.001);
 		Rechnung.put("kg", 1.0);
 		Rechnung.put("Tonne", 1000.0);
-
 		Rechnung.put("Stone", 0.15748031496);
 		Rechnung.put("Pfund", 2.205);
 		Rechnung.put("Unze", 35.274);
@@ -71,20 +74,17 @@ public class Berechnung extends Einheitenumrechner {
 
 
 
-	// HashMap
+	// Methode zum Umrechnen der Größen
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
-
-
-
-		// if bedingung fÃ¼r LÃ¤nge
-		//Einheitenumrechner.drop_eingeinheit
-
-		//Versuch speichern der eingabeeinheit in variable Ee
-
+		
+		// allgemeine Variabel für die Eingabeeinheiten
 		double Ee = 0;
+		// allgemeine Variabel für die Ausgabeeinheiten
 		double Ea = 0;
+		
+		//Längeneinheiten 
+		//Eingabe Ee
 		if (einheite.equals("Millimeter [mm]")){
-
 			Ee = Rechnung.get("mm");
 		}
 		else if (einheite.equals("Zentimeter [cm]")){
@@ -99,22 +99,20 @@ public class Berechnung extends Einheitenumrechner {
 		else if (einheite.equals("Kilometer [km]")){
 			Ee = Rechnung.get("km");
 		}
+		else if (einheita.equals("Zoll [in]")){
+			Ee = Rechnung.get("zoll");
+		}
+		else if (einheita.equals("Fuss [ft]")){
+			Ee = Rechnung.get("fuss");
+		}
+		else if (einheita.equals("Yard [yd]")){
+			Ee = Rechnung.get("yard");
+		}
+		else if (einheita.equals("Meilen [mi]")){
+			Ee = Rechnung.get("mile");
 
-		//Versuch speichern der ausgabeeinheit in variable Ea
-		if (einheita.equals("zoll [in]")){
-			Ea = Rechnung.get("zoll");
-		}
-		else if (einheita.equals(("fuÃŸ [ft]"))){
-			Ea = Rechnung.get("fuÃŸ");
-		}
-		else if (einheita.equals(("yard [yd]"))){
-			Ea = Rechnung.get("yard");
-		}
-		else if (einheita.equals("mile [mi]")){
-			Ea = Rechnung.get("mile");
-		}
-		else if (einheita.equals("Millimeter [mm]")){
-
+		//Ausgabe Ea
+		if (einheita.equals("Millimeter [mm]")){
 			Ea = Rechnung.get("mm");
 		}
 		else if (einheita.equals("Zentimeter [cm]")){
@@ -129,35 +127,119 @@ public class Berechnung extends Einheitenumrechner {
 		else if (einheita.equals("Kilometer [km]")){
 			Ea = Rechnung.get("km");
 		}
+		else if (einheita.equals("Zoll [in]")){
+			Ea = Rechnung.get("zoll");
+		}
+		else if (einheita.equals("Fuss [ft]")){
+			Ea = Rechnung.get("fuss");
+		}
+		else if (einheita.equals("Yard [yd]")){
+			Ea = Rechnung.get("yard");
+		}
+		else if (einheita.equals("Meilen [mi]")){
+			Ea = Rechnung.get("mile");
+		}
+		
+		//Flaecheneinheiten
+		//Eingabe Ee
+		if (einheite.equals("Quadratmillimeter [mm^2]")){
+			Ee = Rechnung.get("mm^2");
+		}
+		else if (einheite.equals("Quadratzentimeter [cm^2]")){
+			Ee = Rechnung.get("cm^2");
+		}
+		else if (einheite.equals("Quadratdezimeter [dm^2]")){
+			Ee = Rechnung.get("dm^2");
+		}
+		else if (einheite.equals("Quadratmeter [m^2]")){
+			Ee = Rechnung.get("m^2");
+		}
+		else if (einheite.equals("Quadratkilometer [km^2]")){
+			Ee = Rechnung.get("km^2");
+		}
+		else if (einheita.equals("Quadratzoll [in^2]")){
+			Ee = Rechnung.get("zoll^2");
+		}
+		else if (einheita.equals("Quadratfuss [ft^2]")){
+			Ee = Rechnung.get("fuss^2");
+		}
+		else if (einheita.equals("Quadratyard [yd^2]")){
+			Ee = Rechnung.get("yard^2");
+		}
+		else if (einheita.equals("Quadratmeilen [mi^2]")){
+			Ee = Rechnung.get("mile^2");
+		
+		//Ausgabe Ea
+		if (einheite.equals("Quadratmillimeter [mm^2]")){
+			Ea = Rechnung.get("mm^2");
+		}
+		else if (einheite.equals("Quadratzentimeter [cm^2]")){
+			Ea = Rechnung.get("cm^2");
+		}
+		else if (einheite.equals("Quadratdezimeter [dm^2]")){
+			Ea = Rechnung.get("dm^2");
+		}
+		else if (einheite.equals("Quadratmeter [m^2]")){
+			Ea = Rechnung.get("m^2");
+		}
+		else if (einheite.equals("Quadratkilometer [km^2]")){
+			Ea = Rechnung.get("km^2");
+		}
+		else if (einheita.equals("Quadratzoll [in^2]")){
+			Ea = Rechnung.get("zoll^2");
+		}
+		else if (einheita.equals("Quadratfuss [ft^2]")){
+			Ea = Rechnung.get("fuss^2");
+		}
+		else if (einheita.equals("Quadratyard [yd^2]")){
+			Ea = Rechnung.get("yard^2");
+		}
+		else if (einheita.equals("Quadratmeilen [mi^2]")){
+			Ea = Rechnung.get("mile^2");
 
+		
+		//Volumeneinheiten
+		//Eingabe Ee
+		if (einheite.equals("Kubikmillimeter [mm^3]")){
+			Ee = Rechnung.get("mm^3");
+		}
+		else if (einheite.equals("Kubikzentimeter [cm^3]")){
+			Ee = Rechnung.get("cm^3");
+		}
+		else if (einheite.equals("Kubikdezimeter [dm^3]")){
+			Ee = Rechnung.get("dm^3");
+		}
+		else if (einheite.equals("Kubikmeter [m^3]")){
+			Ee = Rechnung.get("m^3");
+		}
+		else if (einheite.equals("Kubikkilometer [km^3]")){
+			Ee = Rechnung.get("km^3");
+		}
+		
+		//Ausgabe Ea
+		if (einheite.equals("Kubikmillimeter [mm^3]")){
+			Ea = Rechnung.get("mm^3");
+		}
+		else if (einheite.equals("Kubikzentimeter [cm^3]")){
+			Ea = Rechnung.get("cm^3");
+		}
+		else if (einheite.equals("Kubikdezimeter [dm^3]")){
+			Ea = Rechnung.get("dm^3");
+		}
+		else if (einheite.equals("Kubikmeter [m^3]")){
+			Ea = Rechnung.get("m^3");
+		}
+		else if (einheite.equals("Kubikkilometer [km^3]")){
+			Ea = Rechnung.get("km^3");
+		}
+	
+	
 
 		double ausgwert = (eingwert * Ee) * Ea;
 
 		return ausgwert;
-	}
+		}
+		}
+		}
+	}}
 
-
-	}
-//eingwert = eingwert * Rechnung.get("km");
-
-
-//if(drop_ausgeinheit.getSelectedItem().equals("mile [mi]"))
-//{
-//	ausgwert = eingwert* Rechnung.get("mile");
-//
-//}
-
-//if else(drop_ausgeinheit.getSelectedItem().equals("yard [yd]")) {
-//	ausgwert = eingwert* Rechnung.get("yard");
-//}
-
-
-
-//	if (Rechnung.get == "mm" || Rechnung.get == "cm" || Rechnung.get == "dm" ||Rechnung.get == "m" || Rechnung.get == "km") {
-//	double lu = (l * Rechnung.get("??")) * Rechnung.get("??"); // in die Klammern muss der vom User gewÃ¤hlte
-//	System.out.println(l + " " + Rechnung.keySet() + "sind " + lu + " " + Rechnung.get("value4"));
-//	}
-
-
-
-//} just
