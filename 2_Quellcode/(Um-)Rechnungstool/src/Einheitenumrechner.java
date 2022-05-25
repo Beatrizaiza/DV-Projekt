@@ -104,18 +104,18 @@ public class Einheitenumrechner extends JFrame {
 
 		JComboBox drop_groessen = new JComboBox();
 		drop_groessen.setFont(new Font("Tahoma", Font.BOLD, 14));
-		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"W�hlen...", "L�nge", "Fl�che", "Volumen", "Gewicht"}));
+		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"Waehlen...", "Laenge", "Flaeche", "Volumen", "Gewicht"}));
 		drop_groessen.setBounds(300, 77, 240, 31);
 		contentPane.add(drop_groessen);
 
 		JComboBox drop_ausgeinheit = new JComboBox();
 		drop_ausgeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		drop_ausgeinheit.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hle Ausgabeeinheit..."}));
+		drop_ausgeinheit.setModel(new DefaultComboBoxModel(new String[] {"Waehle Ausgabeeinheit..."}));
 		drop_ausgeinheit.setBounds(499, 212, 232, 29);
 		contentPane.add(drop_ausgeinheit);
 
 		JComboBox drop_eingeinheit = new JComboBox();
-		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"W�hle Eingabeeinheit..."}));
+		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"Waehle Eingabeeinheit..."}));
 		drop_eingeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		drop_eingeinheit.setBounds(129, 210, 232, 31);
 		contentPane.add(drop_eingeinheit);
@@ -153,7 +153,7 @@ public class Einheitenumrechner extends JFrame {
 		drop_groessen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				if(drop_groessen.getSelectedItem().equals("L�nge"))
+				if(drop_groessen.getSelectedItem().equals("Laenge"))
 				{
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
@@ -164,10 +164,10 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Millimeter [mm]");
 					//drop_eingeinheit.addItem("Mikrometer [�m]");
 					//drop_eingeinheit.addItem("Nanometer [nm]");
-					drop_eingeinheit.addItem("zoll [in]");
-					drop_eingeinheit.addItem("fuß [ft]");
-					drop_eingeinheit.addItem("yard [yd]");
-					drop_eingeinheit.addItem("mile [mi]");
+					drop_eingeinheit.addItem("Zoll [in]");
+					drop_eingeinheit.addItem("Fuss [ft]");
+					drop_eingeinheit.addItem("Yard [yd]");
+					drop_eingeinheit.addItem("Meilen [mi]");
 
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
@@ -178,13 +178,13 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Millimeter [mm]");
 					//drop_ausgeinheit.addItem("Mikrometer [�m]");
 					//drop_ausgeinheit.addItem("Nanometer [nm]");
-					drop_ausgeinheit.addItem("zoll [in]");
-					drop_ausgeinheit.addItem("fuß [ft]");
-					drop_ausgeinheit.addItem("yard [yd]");
-					drop_ausgeinheit.addItem("mile [mi]");
+					drop_ausgeinheit.addItem("Zoll [in]");
+					drop_ausgeinheit.addItem("Fuss [ft]");
+					drop_ausgeinheit.addItem("Yard [yd]");
+					drop_ausgeinheit.addItem("Meilen [mi]");
 				}
 
-				else if(drop_groessen.getSelectedItem().equals("Fl�che"))
+				else if(drop_groessen.getSelectedItem().equals("Flaeche"))
 				{
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
@@ -196,9 +196,9 @@ public class Einheitenumrechner extends JFrame {
 					//drop_eingeinheit.addItem("Quadratmikrometer [�m^2]");
 					//drop_eingeinheit.addItem("Quadratnanometer [nm^2]");
 					drop_eingeinheit.addItem("Quadratzoll [in^2]");
-					drop_eingeinheit.addItem("Quadratfuß [ft^2]");
+					drop_eingeinheit.addItem("Quadratfuss [ft^2]");
 					drop_eingeinheit.addItem("Quadratyard [yd^2]");
-					drop_eingeinheit.addItem("Quadratmeile [mi^2]");
+					drop_eingeinheit.addItem("Quadratmeilen [mi^2]");
 
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
@@ -210,9 +210,9 @@ public class Einheitenumrechner extends JFrame {
 					//drop_ausgeinheit.addItem("Quadratmikrometer [�m^2]");
 					//drop_ausgeinheit.addItem("Quadratnanometer [nm^2]");
 					drop_ausgeinheit.addItem("Quadratzoll [in^2]");
-					drop_ausgeinheit.addItem("Quadratfuß [ft^2]");
+					drop_ausgeinheit.addItem("Quadratfuss [ft^2]");
 					drop_ausgeinheit.addItem("Quadratyard [yd^2]");
-					drop_ausgeinheit.addItem("Quadratmeile [mi^2]");
+					drop_ausgeinheit.addItem("Quadratmeilen [mi^2]");
 				}
 
 				else if(drop_groessen.getSelectedItem().equals("Volumen"))
@@ -306,24 +306,3 @@ public class Einheitenumrechner extends JFrame {
 			}
 		});
 	}}
-
-
-
-
-//try {
-//		eingwert = Double.parseDouble(textField_eing.getText());
-//	} catch (Exception e2) {
-//		JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
-//	}
-
-
-//	if(drop_eingeinheit.getSelectedItem().equals("Kilometer [km]"))
-//	{
-
-
-//	}
-//		if(drop_ausgeinheit.getSelectedItem().equals("Kilometer [km]"))
-//		{
-//			ausgwert = eingwert;
-//			textField_ausg.setText(String.valueOf(ausgwert));
-//		}
