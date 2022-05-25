@@ -130,7 +130,10 @@ public class Berechnung extends Einheitenumrechner {
 			Ea = Rechnung.get("km");
 		}
 
-
+		else if (einheita.equals("Kilometer [km]")){// test
+			Ea = Rechnung.get("km");
+		}
+		
 		double ausgwert = (eingwert * Ee) * Ea;
 
 		return ausgwert;
