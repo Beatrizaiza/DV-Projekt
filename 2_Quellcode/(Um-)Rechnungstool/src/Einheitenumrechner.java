@@ -294,6 +294,7 @@ public class Einheitenumrechner extends JFrame {
 						System.out.println("Eingabeeinheit: "+einheite);
 						System.out.println("Ausgabeeinheit: "+einheita);
 
+						//ausgwert = FormelUmrechnung.Umrechner(eingwert, einheite, einheita);
 						ausgwert = Berechnung.Umrechner(eingwert, einheite, einheita);
 						System.out.println("Ergebnis: "+ausgwert);
 						textField_ausg.setText(String.valueOf(ausgwert));
