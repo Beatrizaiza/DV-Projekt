@@ -33,12 +33,13 @@ public class Berechnung extends Einheitenumrechner {
 		this.eingwert = eingwert;
 	}
 
-	//HashMap zum Speichern der Umrechnungsfaktoren der Größen
+	//HashMap zum Speichern der Umrechnungsfaktoren der Groessen
 	public static HashMap<String, Double> Rechnung = new HashMap<>();
 
 	public static void init()
 	{
-		//Faktoren Länge
+		//Faktoren Laenge
+		//Umrechnungsfaktoren NUR bei Ausgabeeinheit "m"!!!
 		Rechnung.put("mm", 0.001);
 		Rechnung.put("cm", 0.01);
 		Rechnung.put("dm", 0.1);
@@ -49,7 +50,8 @@ public class Berechnung extends Einheitenumrechner {
 		Rechnung.put("yard", 1.094);
 		Rechnung.put("mile", 0.00062150403);
 
-		//Faktoren Fläche
+		//Faktoren Flaeche
+		//Umrechnungsfaktoren NUR bei Ausgabeeinheit "m^2"!!!
 		Rechnung.put("mm^2", 0.00001);
 		Rechnung.put("cm^2", 0.0001);
 		Rechnung.put("dm^2", 0.01);
@@ -63,6 +65,7 @@ public class Berechnung extends Einheitenumrechner {
 		//Faktoren Volumen !!!!
 		
 		//Faktoren Gewicht
+		//Umrechnungsfaktoren NUR bei Ausgabeeinheit "kg"!!!
 		Rechnung.put("mg", 0.000001);
 		Rechnung.put("g", 0.001);
 		Rechnung.put("kg", 1.0);
@@ -74,7 +77,13 @@ public class Berechnung extends Einheitenumrechner {
 
 
 
-	// Methode zum Umrechnen der Größen
+	// Methode zum Umrechnen der Groessen
+	
+	
+				// Formel zur Erkennung ob Ausgabeinheit größer oder kleiner als Eingabeeinheit
+				// und davon abhängig mal oder geteilt durch den Faktor!!!???
+	
+	
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
 		
 		// allgemeine Variabel für die Eingabeeinheiten
