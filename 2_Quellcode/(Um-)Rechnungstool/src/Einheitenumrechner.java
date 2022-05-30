@@ -164,8 +164,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Dezimeter [dm]");
 					drop_eingeinheit.addItem("Zentimeter [cm]");
 					drop_eingeinheit.addItem("Millimeter [mm]");
-					//drop_eingeinheit.addItem("Mikrometer [�m]");
-					//drop_eingeinheit.addItem("Nanometer [nm]");
 					drop_eingeinheit.addItem("Zoll [in]");
 					drop_eingeinheit.addItem("Fuss [ft]");
 					drop_eingeinheit.addItem("Yard [yd]");
@@ -178,8 +176,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Dezimeter [dm]");
 					drop_ausgeinheit.addItem("Zentimeter [cm]");
 					drop_ausgeinheit.addItem("Millimeter [mm]");
-					//drop_ausgeinheit.addItem("Mikrometer [�m]");
-					//drop_ausgeinheit.addItem("Nanometer [nm]");
 					drop_ausgeinheit.addItem("Zoll [in]");
 					drop_ausgeinheit.addItem("Fuss [ft]");
 					drop_ausgeinheit.addItem("Yard [yd]");
@@ -197,8 +193,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Quadratdezimeter [dm^2]");
 					drop_eingeinheit.addItem("Quadratzentimeter [cm^2]");
 					drop_eingeinheit.addItem("Quadratmillimeter [mm^2]");
-					//drop_eingeinheit.addItem("Quadratmikrometer [�m^2]");
-					//drop_eingeinheit.addItem("Quadratnanometer [nm^2]");
 					drop_eingeinheit.addItem("Quadratzoll [in^2]");
 					drop_eingeinheit.addItem("Quadratfuss [ft^2]");
 					drop_eingeinheit.addItem("Quadratyard [yd^2]");
@@ -241,8 +235,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
 					drop_ausgeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");
 					drop_ausgeinheit.addItem("Kubikmillimeter [mm^3]");
-					//drop_ausgeinheit.addItem("Kubikmikrometer [�m^3]");
-					//drop_ausgeinheit.addItem("Kubiknanometer [nm^3]");
 				}
 
 				else if(drop_groessen.getSelectedItem().equals("Gewicht"))
@@ -253,8 +245,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Kilogramm [kg]");
 					drop_eingeinheit.addItem("Gramm [g]");
 					drop_eingeinheit.addItem("Milligramm [mg]");
-					//drop_eingeinheit.addItem("Mikrogramm [�m]");
-					//drop_eingeinheit.addItem("Nanogramm [ng]");
 					drop_eingeinheit.addItem("Stone [st]");
 					drop_eingeinheit.addItem("Pfund [lb]");
 					drop_eingeinheit.addItem("Unze [oz]");
@@ -266,8 +256,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Kilogramm [kg]");
 					drop_ausgeinheit.addItem("Gramm [g]");
 					drop_ausgeinheit.addItem("Milligramm [mg]");
-					//drop_ausgeinheit.addItem("Mikrogramm [�m]");
-					//drop_ausgeinheit.addItem("Nanogramm [ng]");
 					drop_ausgeinheit.addItem("Stone [st]");
 					drop_ausgeinheit.addItem("Pfund [lb]");
 					drop_ausgeinheit.addItem("Unze [oz]");
