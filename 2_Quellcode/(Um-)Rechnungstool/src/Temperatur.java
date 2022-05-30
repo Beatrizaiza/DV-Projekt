@@ -21,7 +21,7 @@ public class Temperatur {
 	{
 		return k-273.15;
 	}
-	public static double C2K(double c) 
+	public static double C2k(double c) 
 	{
 		return c+273.15;
 	}
@@ -29,7 +29,7 @@ public class Temperatur {
 	{
 		return (k*1.8)-459.67;
 	}
-	public static double F2K(double f) 
+	public static double F2k(double f) 
 	{
 		return (f+459.67)/1.8;
 	}
