@@ -23,13 +23,13 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class TemperaturechnerGUI extends JFrame implements Actionlistener {
+public class TemperaturechnerGUI2 extends JFrame implements Actionlistener {
 	private JPanel contentPane;
 	static JComboBox tempMenu;
-	static JLabel L1, L2;
-	String volEinheit;
-	private JTextField tf1;
+	static JLabel L1, L2,L3;
+	private JTextField tf2;
 	private JTextField tf3;
+	private JTextField tf1;
 
 
 	/**
@@ -39,7 +39,7 @@ public class TemperaturechnerGUI extends JFrame implements Actionlistener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TemperaturechnerGUI frame = new TemperaturechnerGUI();
+					TemperaturechnerGUI2 frame = new TemperaturechnerGUI2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,7 +50,7 @@ public class TemperaturechnerGUI extends JFrame implements Actionlistener {
 	/**
 	 * Create the frame.
 	 */
-	public TemperaturechnerGUI() {
+	public TemperaturechnerGUI2() {
 		setTitle("Temperaturumrechner");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,13 +67,14 @@ public class TemperaturechnerGUI extends JFrame implements Actionlistener {
 		lblNewLabel.setForeground(new Color(0, 100, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(275, 35, 279, 21);
+		lblNewLabel.setBounds(275, 35, 279, 38);
 		contentPane.add(lblNewLabel);
 
 
+	
 		String tempList[] = {"Einheiten Waehlen", "Celsius zu Kelvin", "Celsius zu Fahrenheit", "Fahrenheit zu Celsius", "Fahrenheit zu Kelvin", "Kelvin zu Celsius", "Kelvin zu Fahrenheit"};
 		JComboBox tempMenu = new JComboBox(tempList);
-		tempMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten Waehlen", "Celsius zu Kelvin", "Celsius zu Fahrenheit", "Fahrenheit zu Celsius", "Fahrenheit zu Kelvin", "Kelvin zu Celsius", "Kelvin zu Fahrenheit"}));
+		tempMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten Waehlen", "Celsius", "Fahrenheit", "Kelvin"}));
 		tempMenu.setForeground(new Color(0, 0, 0));
 		tempMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tempMenu.setBounds(180, 144, 472, 38);
@@ -87,90 +88,69 @@ public class TemperaturechnerGUI extends JFrame implements Actionlistener {
 				L1.setText("");
 				L2.setText("");
 				tf1.setText(null);
+				tf2.setText(null);
 				tf3.setText(null);
 			}
-			else if (Temp.equals("Celsius zu Kelvin")) {
+			else if (Temp.equals("Celsius")) {
 				L1.setText("Celsius");
 				L2.setText("Kelvin");
+				L3.setText("Fahrenheit");
 				tf1.setText(null);
+				tf2.setText(null);
 				tf3.setText(null);
 			}
-			else if (Temp.equals( "Celsius zu Fahrenheit")) {
-				L1.setText("Celsius");
-				L2.setText("Fahrenheit");
-				tf1.setText(null);
-				tf3.setText(null);
-			}
-			else if (Temp.equals("Fahrenheit zu Celsius")) {
+			else if (Temp.equals("Fahrenheit")) {
 				L1.setText("Fahrenheit");
 				L2.setText("Celsius");
+				L3.setText("Kelvin");
 				tf1.setText(null);
+				tf2.setText(null);
 				tf3.setText(null);
 			}
-			else if (Temp.equals("Fahrenheit zu Kelvin")) {
-				L1.setText("Fahrenheit");
-				L2.setText("Kelvin");
-				tf1.setText(null);
-				tf3.setText(null);
-			}
-			else if (Temp.equals("Kelvin zu Celsius")) {
+			else if (Temp.equals("Kelvin")) {
 				L1.setText("Kelvin");
-				L2.setText("Celsius");	
+				L2.setText("Celsius");
+				L3.setText("Fahrenheit");
 				tf1.setText(null);
-				tf3.setText(null);
-			}
-			else if (Temp.equals("Kelvin zu Fahrenheit")) {
-				L1.setText("Kelvin");
-				L2.setText("Fahrenheit");
-				tf1.setText(null);
+				tf2.setText(null);
 				tf3.setText(null);
 			}
 		}
 		});
 
-		volEinheit =(null);
-
+	
 		JButton rechnen = new JButton("Rechnen");
 		rechnen.addActionListener(new  ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String Temp = (String) tempMenu.getSelectedItem();
-				if (Temp.equals("Celsius zu Fahrenheit")) {
+				if (Temp.equals("Celsius")) {
 					double c = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.C2f (c); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
+					double answer2 = Temperatur.C2k (c);
+					double answer = Temperatur.C2f (c);					
+					tf2.setText(answer2 + "");
 					tf3.setText(answer + "");
 
 				}
-				if (Temp.equals("Celsius zu Kelvin")) {
-					double c = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.C2k (c); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
-					tf3.setText(answer + "");
-				}
-				if (Temp.equals("Fahrenheit zu Celsius")) {
+				if (Temp.equals("Fahrenheit")) {
 					double f = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.F2c (f); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
-					tf3.setText(answer + "");
+					double answer = Temperatur.F2c (f);
+					double answer2 = Temperatur.F2k (f);
+					tf2.setText(answer + "");
+					tf3.setText(answer2 + "");
 				}
-				if (Temp.equals("Fahrenheit zu Kelvin")) {
-					double f = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.F2k(f); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
-					tf3.setText(answer + "");
-				}
-				if (Temp.equals("Kelvin zu Celsius")) {
+				if (Temp.equals("Kelvin")) {
 					double k = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.K2c (k); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
-					tf3.setText(answer + "");
-				}
-				if (Temp.equals("Kelvin zu Fahrenheit")) {
-					double k = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.K2f (k);
-					tf3.setText(answer + "");
+					double answer = Temperatur.K2c (k);
+					double answer2 = Temperatur.K2f (k);
+					tf2.setText(answer + "");
+					tf3.setText(answer2 + "");
 				}
 			}
 		});
 		rechnen.setForeground(new Color(0, 128, 0));
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
-		rechnen.setBounds(365, 254, 107, 38);
+		rechnen.setBounds(364, 358, 107, 38);
 		contentPane.add(rechnen);
 
 		L1 = new JLabel("");
@@ -182,14 +162,15 @@ public class TemperaturechnerGUI extends JFrame implements Actionlistener {
 		L2 = new JLabel("");
 		L2.setHorizontalAlignment(SwingConstants.CENTER);
 		L2.setFont(new Font("Tahoma", Font.BOLD, 15));
-		L2.setBounds(508, 207, 144, 38);
+		L2.setBounds(346, 207, 144, 38);
 		contentPane.add(L2);
 
-		tf1 = new JTextField();
-		tf1.setBounds(180, 256, 144, 38);
-		tf1.setColumns(10);
-		tf1.setVisible(true);
-		contentPane.add(tf1);
+		tf2 = new JTextField();
+		tf2.setEditable(false);
+		tf2.setBounds(346, 256, 144, 38);
+		tf2.setColumns(10);
+		tf2.setVisible(true);
+		contentPane.add(tf2);
 
 		tf3 = new JTextField();
 		tf3.setEditable(false);
@@ -197,5 +178,16 @@ public class TemperaturechnerGUI extends JFrame implements Actionlistener {
 		tf3.setBounds(508, 256, 144, 38);
 		tf3.setVisible(true);
 		contentPane.add(tf3);
+		
+		tf1 = new JTextField();
+		tf1.setBounds(180, 256, 144, 38);
+		contentPane.add(tf1);
+		tf1.setColumns(10);
+		
+		L3 = new JLabel("");
+		L3.setHorizontalAlignment(SwingConstants.CENTER);
+		L3.setFont(new Font("Tahoma", Font.BOLD, 15));
+		L3.setBounds(508, 207, 144, 38);
+		contentPane.add(L3);
 	}
 }

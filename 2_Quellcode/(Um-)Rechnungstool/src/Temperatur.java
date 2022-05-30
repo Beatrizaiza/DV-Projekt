@@ -15,7 +15,7 @@ public class Temperatur {
 	}
 	public static double F2c(double f) 
 	{
-		return f-32/1.8;
+		return (f-32)/1.8;
 	}
 	public static double K2c(double k) 
 	{
