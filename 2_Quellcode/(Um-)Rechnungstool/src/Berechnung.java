@@ -9,7 +9,7 @@ public class Berechnung extends Einheitenumrechner {
 	double Ee = 0;
 	double Ea = 0;
 
-	//Get- und Set-Methoden zur Übergabe der Ein- und Ausgabeeinheiten aus der Klasse Einheitenumrechner
+	//Get- und Set-Methoden zur ï¿½bergabe der Ein- und Ausgabeeinheiten aus der Klasse Einheitenumrechner
 	public String getEinheite() {
 		return einheite;
 	}
@@ -23,7 +23,7 @@ public class Berechnung extends Einheitenumrechner {
 		this.einheita = einheita;
 	}
 
-	// Get- und Set-Methode für den Eingabewert, wird = 0 gesetzt
+	// Get- und Set-Methode fï¿½r den Eingabewert, wird = 0 gesetzt
 	double eingwert = 0;
 
 	public double getEingwert() {
@@ -77,6 +77,13 @@ public class Berechnung extends Einheitenumrechner {
 		Rechnung.put("Stone [st]", 6.350);
 		Rechnung.put("Pfund [lb]", 0.454);
 		Rechnung.put("Unze [oz]", 0.0283);
+		
+		//Faktor Temperatur
+		Rechnung.put("Grad Celsius  [Â°C]", 0.000001);
+		Rechnung.put("Grad Fahrenheit [Â°F]", 0.001);
+		Rechnung.put("Kelvin [K]", 1.0);
+		
+		
 	}
 
 
@@ -85,9 +92,9 @@ public class Berechnung extends Einheitenumrechner {
 	
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
 		
-		// allgemeine Variabel für die Eingabeeinheiten wird Faktor uebergeben
+		// allgemeine Variabel fï¿½r die Eingabeeinheiten wird Faktor uebergeben
 		double Ee = Rechnung.get(einheite);
-		// allgemeine Variabel für die Ausgabeeinheiten wird Faktor uebergeben
+		// allgemeine Variabel fï¿½r die Ausgabeeinheiten wird Faktor uebergeben
 		double Ea = Rechnung.get(einheita);
 		
 					
