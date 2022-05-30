@@ -28,7 +28,7 @@ public class Einheitenumrechner extends JFrame {
 	////
 	////
 	////
-	double ausgwert = 0.0;
+	static double ausgwert = 0.0;
 
 	public double getAusgwert() {
 		return ausgwert;
@@ -189,6 +189,8 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
 					drop_eingeinheit.addItem("Quadratkilometer [km^2]");
+					drop_eingeinheit.addItem("Hektar [ha]");
+					drop_eingeinheit.addItem("Ar [a]");
 					drop_eingeinheit.addItem("Quadratmeter [m^2]");
 					drop_eingeinheit.addItem("Quadratdezimeter [dm^2]");
 					drop_eingeinheit.addItem("Quadratzentimeter [cm^2]");
@@ -203,6 +205,8 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Quadratkilometer [km^2]");
+					drop_ausgeinheit.addItem("Hektar [ha]");
+					drop_ausgeinheit.addItem("Ar [a]");
 					drop_ausgeinheit.addItem("Quadratmeter [m^2]");
 					drop_ausgeinheit.addItem("Quadratdezimeter [dm^2]");
 					drop_ausgeinheit.addItem("Quadratzentimeter [cm^2]");
@@ -221,8 +225,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.removeAllItems();
 					drop_eingeinheit.setSelectedItem(null);
 					drop_eingeinheit.addItem("Kubikkilometer [km^3]");
-					//drop_eingeinheit.addItem("Hektar [ha]");
-					//drop_eingeinheit.addItem("Ar [a]");
 					drop_eingeinheit.addItem("Kubikmeter [m^3]");
 					drop_eingeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
 					drop_eingeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");
@@ -233,8 +235,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Kubikkilometer [km^3]");
-					//drop_ausgeinheit.addItem("Hektar [ha]");
-					//drop_ausgeinheit.addItem("Ar [a]");
 					drop_ausgeinheit.addItem("Kubikmeter [m^3]");
 					drop_ausgeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
 					drop_ausgeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");
@@ -294,7 +294,6 @@ public class Einheitenumrechner extends JFrame {
 						System.out.println("Eingabeeinheit: "+einheite);
 						System.out.println("Ausgabeeinheit: "+einheita);
 
-						//ausgwert = FormelUmrechnung.Umrechner(eingwert, einheite, einheita);
 						ausgwert = Berechnung.Umrechner(eingwert, einheite, einheita);
 						System.out.println("Ergebnis: "+ausgwert);
 						textField_ausg.setText(String.valueOf(ausgwert));
