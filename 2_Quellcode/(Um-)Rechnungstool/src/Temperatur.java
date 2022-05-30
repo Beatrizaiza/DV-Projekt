@@ -9,17 +9,28 @@ public class Temperatur {
 		double k; //Kelvin
 	}
 
-	public static double Celsius(double l, double h) 
+	public static double C2f(double c) 
 	{
-		return ((1.0/3.0) * Math.pow(l, 2) * h);
+		return c*1.8+32;
 	}
-	public static double Fahrenheit(double l, double h) 
+	public static double F2c(double f) 
 	{
-		return ((1.0/3.0) * Math.pow(l, 2) * h);
+		return f-32/1.8;
 	}
-	public static double Kelvin(double l, double h) 
+	public static double K2c(double k) 
 	{
-		return ((1.0/3.0) * Math.pow(l, 2) * h);
+		return k-273.15;
 	}
-
+	public static double C2K(double c) 
+	{
+		return c+273.15;
+	}
+	public static double K2f(double k) 
+	{
+		return (k*1.8)-459.67;
+	}
+	public static double F2K(double f) 
+	{
+		return (f+459.67)/1.8;
+	}
 }
