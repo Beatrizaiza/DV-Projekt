@@ -22,6 +22,7 @@ import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.ImageIcon;
 
 public class AreaGUI extends JFrame implements Actionlistener {
 
@@ -60,6 +61,7 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 650);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -200,6 +202,7 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		contentPane.add(rechnen);
 		
 		result = new JTextField();
+		result.setEditable(false);
 		result.setBounds(281, 432, 240, 38);
 		contentPane.add(result);
 		
@@ -263,5 +266,10 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		tf3.setBounds(489, 294, 144, 38);
 		tf3.setVisible(false);
 		contentPane.add(tf3);
+		
+		JLabel bild = new JLabel("");
+		bild.setIcon(new ImageIcon("Bild-Dreieck.png"));
+		bild.setBounds(66, 372, 91, 146);
+		contentPane.add(bild);
 	}
 }
