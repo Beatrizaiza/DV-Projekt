@@ -78,12 +78,6 @@ public class Berechnung extends Einheitenumrechner {
 		Rechnung.put("Pfund [lb]", 0.454);
 		Rechnung.put("Unze [oz]", 0.0283);
 		
-		//Faktor Temperatur
-		Rechnung.put("Grad Celsius  [°C]", 0.000001);
-		Rechnung.put("Grad Fahrenheit [°F]", 0.001);
-		Rechnung.put("Kelvin [K]", 1.0);
-		
-		
 	}
 
 
@@ -92,9 +86,10 @@ public class Berechnung extends Einheitenumrechner {
 	
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
 		
-		// allgemeine Variabel f�r die Eingabeeinheiten wird Faktor uebergeben
+		
+		// allgemeine Variabel für die Eingabeeinheiten wird Faktor uebergeben
 		double Ee = Rechnung.get(einheite);
-		// allgemeine Variabel f�r die Ausgabeeinheiten wird Faktor uebergeben
+		// allgemeine Variabel für die Ausgabeeinheiten wird Faktor uebergeben
 		double Ea = Rechnung.get(einheita);
 		
 					
