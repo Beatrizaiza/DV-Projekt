@@ -59,7 +59,7 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		setTitle("Flaechenrechner");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 650);
+		setBounds(350, 100, 850, 600);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(new Color(0, 0, 0));

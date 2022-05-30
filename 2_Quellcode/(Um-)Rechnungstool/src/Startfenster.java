@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -100,6 +101,8 @@ public class Startfenster {
 		pane.add(labelDreieck);
 		pane.add(labelKugel);
 		pane.add(labelThermometer);
+		
+		pane.setBackground(Color.WHITE);
 		
 		//Festlegen der Positionen
 		label.setBounds(300, 10, 300, 50);

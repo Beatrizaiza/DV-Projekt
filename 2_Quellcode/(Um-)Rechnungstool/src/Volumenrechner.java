@@ -59,9 +59,10 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		setTitle("Volumenumrechner");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 650);
+		setBounds(350, 100, 850, 600);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(0, 0, 0));
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
