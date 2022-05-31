@@ -267,9 +267,10 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		tf3.setVisible(false);
 		contentPane.add(tf3);
 		
-		JLabel bild = new JLabel("");
-		bild.setIcon(new ImageIcon("Bild-Dreieck.png"));
-		bild.setBounds(66, 372, 91, 146);
-		contentPane.add(bild);
+		JLabel DreieckBild = new JLabel("");
+		DreieckBild.setIcon(new ImageIcon("Bild-Dreieck.png"));
+		DreieckBild.setBounds(66, 372, 91, 146);
+		contentPane.add(DreieckBild);
+		
 	}
 }
