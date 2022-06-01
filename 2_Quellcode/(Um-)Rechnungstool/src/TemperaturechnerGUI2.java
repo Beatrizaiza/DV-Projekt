@@ -23,7 +23,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class TemperaturechnerGUI2 extends JFrame  {
+public class TemperaturechnerGUI2 extends JFrame implements Actionlistener {
 	private JPanel contentPane;
 	static JComboBox tempMenu;
 	static JLabel L1, L2,L3;
@@ -62,6 +62,9 @@ public class TemperaturechnerGUI2 extends JFrame  {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		/**
+		 * Sets the Title
+		 */
 		JLabel lblNewLabel = new JLabel("Temperaturumrechner");
 		lblNewLabel.setBackground(new Color(0, 128, 0));
 		lblNewLabel.setForeground(new Color(0, 100, 0));
@@ -71,7 +74,9 @@ public class TemperaturechnerGUI2 extends JFrame  {
 		contentPane.add(lblNewLabel);
 
 
-	
+	/**
+	 * Create the menu to Volume functions
+	 */
 		String tempList[] = {"Einheiten Waehlen", "Celsius zu Kelvin", "Celsius zu Fahrenheit", "Fahrenheit zu Celsius", "Fahrenheit zu Kelvin", "Kelvin zu Celsius", "Kelvin zu Fahrenheit"};
 		JComboBox tempMenu = new JComboBox(tempList);
 		tempMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten Waehlen", "Celsius", "Fahrenheit", "Kelvin"}));
@@ -79,7 +84,10 @@ public class TemperaturechnerGUI2 extends JFrame  {
 		tempMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tempMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(tempMenu);
-		// Adapts GUI to the right function input
+		/**
+		 * Adapts the GUI to adequate inputs to each function
+		 * @author 
+		 */
 		tempMenu.addActionListener(new ActionListener() {
 
 		public void actionPerformed(ActionEvent e) {
@@ -118,7 +126,9 @@ public class TemperaturechnerGUI2 extends JFrame  {
 		}
 		});
 
-	
+	/**
+	 * Calculate based on functions from Temperatur class
+	 */
 		JButton rechnen = new JButton("Rechnen");
 		rechnen.addActionListener(new  ActionListener() {
 			@Override
