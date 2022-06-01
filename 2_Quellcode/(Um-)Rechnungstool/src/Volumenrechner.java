@@ -103,6 +103,7 @@ public class Volumenrechner extends JFrame  {
 				L2.setText("");
 				L3.setText("");
 				result.setText(null);
+				bild.setIcon(new ImageIcon());
 			}
 			else if (Form.equals("Kugel")) {
 				L1.setText("");
