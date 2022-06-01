@@ -30,7 +30,7 @@ public class AreaGUI extends JFrame  {
 	private JPanel contentPane;
 	static JComboBox FlaechenMenu;
 	static JComboBox einhMenu;
-	static JLabel L1, L2 , L3 , volEinheit;
+	static JLabel L1, L2 , L3 , volEinheit, bild1, bild;
 	private JTextField tf1;
 	private JTextField tf2;
 	private JTextField tf3;
@@ -78,7 +78,7 @@ public class AreaGUI extends JFrame  {
 
 		String FlaechenList[] = { "Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat"};
 		JComboBox FlaechenMenu = new JComboBox(FlaechenList);
-		FlaechenMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen W�hlen", "Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat"}));
+		FlaechenMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Waehlen", "Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat"}));
 		FlaechenMenu.setForeground(new Color(0, 0, 0));
 		FlaechenMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		FlaechenMenu.setBounds(180, 144, 472, 38);
@@ -88,7 +88,7 @@ public class AreaGUI extends JFrame  {
 			// would be nice to have a picture so user knows what is meant // TRY IMPLEMENTING THIS
 		public void actionPerformed(ActionEvent e) {
 			String Form = (String) FlaechenMenu.getSelectedItem();
-			if (Form.equals("Formen W�hlen")) {
+			if (Form.equals("Formen Waehlen")) {
 				L1.setText("");
 				L2.setText("");
 				L3.setText("");
@@ -109,22 +109,33 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				bild.setIcon(new ImageIcon("Dreieck.png"));
+				bild.setVisible(true);
+				contentPane.add(bild);
+				bild.setBounds(60, 350, 121, 148);
+				
 			}
 			else if (Form.equals("gleichseitiges Dreieck")) {
-				L1.setText("Laenge");
-				L2.setText("");
+				L1.setText("");
+				L2.setText("Laenge");
 				L3.setText("");
-				tf1.setVisible(true);
-				tf2.setVisible(false);
+				tf1.setVisible(false);
+				tf2.setVisible(true);
 				tf3.setVisible(false);
 			}
 			else if (Form.equals("Kreis")) {
-				L1.setText("Radius");
-				L2.setText("");
+				L1.setText("");
+				L2.setText("Radius");
 				L3.setText("");
-				tf1.setVisible(true);
-				tf2.setVisible(false);
+				tf1.setVisible(false);
+				tf2.setVisible(true);
 				tf3.setVisible(false);
+				bild.setIcon(new ImageIcon("Kreis.png"));
+				bild.setVisible(true);
+				contentPane.add(bild);
+				bild.setBounds(60, 350, 209, 202);
+				
+				bild.setVisible(true);
 
 			}
 			else if (Form.equals("Kreissektor")) {
@@ -136,11 +147,11 @@ public class AreaGUI extends JFrame  {
 				tf3.setVisible(false);
 			}
 			else if (Form.equals("Quadrat")) {
-				L1.setText("Laenge");
-				L2.setText("");
+				L1.setText("");
+				L2.setText("Laenge");
 				L3.setText("");
-				tf1.setVisible(true);
-				tf2.setVisible(false);
+				tf1.setVisible(false);
+				tf2.setVisible(true);
 				tf3.setVisible(false);
 
 			}
@@ -178,6 +189,7 @@ public class AreaGUI extends JFrame  {
 					double r = Double.parseDouble(tf1.getText());
 					double answer =  Flaechen.circArea (r);
 					result.setText(answer + " FE");
+					
 				}
 
 
@@ -267,15 +279,18 @@ public class AreaGUI extends JFrame  {
 		tf3.setVisible(false);
 		contentPane.add(tf3);
 
-		JLabel bild = new JLabel("");
-		bild.setIcon(new ImageIcon("Bild-Dreieck.png"));
-		bild.setBounds(125, -24, 91, 20);
-		contentPane.add(bild);
-
-		JLabel bild1 = new JLabel("");
-		bild.setIcon(new ImageIcon("Bild-Kugel.png"));
-		bild.setBounds(66, 372, 91, 146);
-		contentPane.add(bild1);
+		bild = new JLabel("");
+//		bild.setIcon(new ImageIcon("Dreieck.PNG"));
+//		bild.setBounds(27, 351, 209, 202);
+//		bild.setVisible(false);
+//		contentPane.add(bild);
+//
+//		bild1 = new JLabel("");
+//		bild1.setIcon(new ImageIcon("Kreis.png"));
+//		bild1.setVisible(false);
+//		contentPane.add(bild1);
+//		bild1.setBounds(60, 350, 209, 202);
+		
 
 	}
 }
