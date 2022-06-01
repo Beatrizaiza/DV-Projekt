@@ -189,5 +189,14 @@ public class TemperaturechnerGUI2 extends JFrame implements Actionlistener {
 		L3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		L3.setBounds(508, 207, 144, 38);
 		contentPane.add(L3);
+		
+		JButton mainMenu = new JButton("Menu");
+		mainMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new Startfenster().setVisible(true);
+			}
+		});
+		mainMenu.setBounds(701, 22, 89, 23);
+		contentPane.add(mainMenu);
 	}
 }
