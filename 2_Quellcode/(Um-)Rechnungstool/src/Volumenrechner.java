@@ -24,6 +24,7 @@ import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.ImageIcon;
 
 public class Volumenrechner extends JFrame  {
 
@@ -84,22 +85,24 @@ public class Volumenrechner extends JFrame  {
 
 		String volumeList[] = { "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel" };
 		JComboBox volumeMenu = new JComboBox(volumeList);
-		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen W�hlen", "Kugel", "Pyramide", "W�rfel", "Zylinder", "Kegel", "Quader"}));
+		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Waehlen", "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel", "Quader"}));
 		volumeMenu.setForeground(new Color(0, 0, 0));
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(volumeMenu);
+		
+		JLabel bild = new JLabel("");
+		
 		// Adapts GUI to the right function input
 		volumeMenu.addActionListener(new ActionListener() {
 
 		public void actionPerformed(ActionEvent e) {
 			String Form = (String) volumeMenu.getSelectedItem();
-			if (Form.equals("Formen W�hlen")) {
+			if (Form.equals("Formen Waehlen")) {
 				L1.setText("");
 				L2.setText("");
 				L3.setText("");
 				result.setText(null);
-
 			}
 			else if (Form.equals("Kugel")) {
 				L1.setText("");
@@ -109,54 +112,70 @@ public class Volumenrechner extends JFrame  {
 				tf2.setVisible(true);
 				tf3.setVisible(false);
 				result.setText(null);
+				bild.setIcon(new ImageIcon());
+				bild.setIcon(new ImageIcon("Kugel.PNG"));
+				bild.setBounds(61, 375, 165, 152);
 			}
 			else if (Form.equals("Pyramide")) {
-				L1.setText("L�nge");
+				L1.setText("Laenge");
 				L2.setText("");
-				L3.setText("H�he");
+				L3.setText("Hoehe");
 				tf1.setVisible(true);
 				tf2.setVisible(false);
 				tf3.setVisible(true);
 				result.setText(null);
-
+				bild.setIcon(new ImageIcon());
+				bild.setIcon(new ImageIcon("Pyramide.PNG"));
+				bild.setBounds(61, 375, 165, 152);
 			}
-			else if (Form.equals("W�rfel")) {
+			else if (Form.equals("Wuerfel")) {
 				L1.setText("");
-				L2.setText("L�nge");
+				L2.setText("Laenge");
 				L3.setText("");
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
 				result.setText(null);
+				bild.setIcon(new ImageIcon());
+				bild.setIcon(new ImageIcon("Wuerfel.PNG"));
+				bild.setBounds(61, 375, 165, 152);
 			}
 			else if (Form.equals("Zylinder")) {
 				L1.setText("");
 				L2.setText("Radius");
-				L3.setText("H�he");
+				L3.setText("Hoehe");
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(true);
 				result.setText(null);
+				bild.setIcon(new ImageIcon());
+				bild.setIcon(new ImageIcon("Zylinder.PNG"));
+				bild.setBounds(61, 375, 165, 152);
 
 			}
 			else if (Form.equals("Kegel")) {
 				L1.setText("");
 				L2.setText("Radius");
-				L3.setText("H�he");
+				L3.setText("Hoehe");
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(true);
 				result.setText(null);
+				bild.setIcon(new ImageIcon());
+				bild.setIcon(new ImageIcon("Kegel.PNG"));
+				bild.setBounds(61, 375, 165, 152);
 			}
 			else if (Form.equals("Quader")) {
-				L1.setText("L�nge");
+				L1.setText("Laenge");
 				L2.setText("Breite");
-				L3.setText("H�he");
+				L3.setText("Hoehe");
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(true);
 				result.setText(null);
-
+				bild.setIcon(new ImageIcon());
+				bild.setIcon(new ImageIcon("Quader.PNG"));
+				bild.setBounds(61, 375, 165, 152);
 			}
 		}
 		});
@@ -164,20 +183,20 @@ public class Volumenrechner extends JFrame  {
 		volEinheit =(null);
 		einhMenu = new JComboBox();
 		einhMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
-		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten W\u00E4hlen", "mm", "cm", "m"}));
+		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten Waehlen", "mm", "cm", "m"}));
 		einhMenu.setBounds(325, 215, 181, 38);
 		contentPane.add(einhMenu);
 		einhMenu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Einheit = (String) einhMenu.getSelectedItem();
 				if (Einheit.equals("m")) {
-				 volEinheit = ("m�");
+				 volEinheit = ("m^3");
 				}
 				else if (Einheit.equals("mm")) {
-					volEinheit = ("mm�");
+					volEinheit = ("mm^3");
 					}
 				else if (Einheit.equals("cm")) {
-					volEinheit = ("cm�");
+					volEinheit = ("cm^3");
 					}
 			}
 		});
@@ -199,7 +218,7 @@ public class Volumenrechner extends JFrame  {
 					double answer = Volumen.pyramidVolume (l, h); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
 					result.setText(answer + " VE");
 				}
-				if (Form.equals("W�rfel")) {
+				if (Form.equals("Wuerfel")) {
 					double l = Double.parseDouble(tf2.getText());
 					double answer = Volumen.cubeVolume (l); // NEED TO CHANGE THE WIDTH LABEL TO RADIUS
 					result.setText(answer + " VE");
@@ -231,10 +250,11 @@ public class Volumenrechner extends JFrame  {
 		contentPane.add(rechnen);
 
 		result = new JTextField();
+		result.setEditable(false);
 		result.setHorizontalAlignment(SwingConstants.CENTER);
 		result.setForeground(new Color(0, 128, 0));
 		result.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		result.setBounds(281, 432, 240, 38);
+		result.setBounds(367, 431, 245, 38);
 		contentPane.add(result);
 
 		L1 = new JLabel("");
@@ -262,10 +282,11 @@ public class Volumenrechner extends JFrame  {
 //		einhMenu.setBounds(325, 215, 181, 38);
 //		contentPane.add(einhMenu);
 //		einhMenu.addActionListener(new ActionListener() {
-//			String Einheit = (String) einhMenu.getSelectedItem();
+////			String Einheit = (String) einhMenu.getSelectedItem();
 //			public void actionPerformed(ActionEvent e) {
+//				String Einheit = (String) einhMenu.getSelectedItem();
 //				if (Einheit.equals("m")) {
-//				 volEinheit = ("m�");
+//				 volEinheit = ("m^3");
 //				}
 //				else if (Einheit.equals("mm")) {
 //					volEinheit = ("mm�");
@@ -278,7 +299,7 @@ public class Volumenrechner extends JFrame  {
 
 		JLabel Volume = new JLabel("Volume:");
 		Volume.setFont(new Font("Tahoma", Font.BOLD, 18));
-		Volume.setBounds(180, 432, 91, 38);
+		Volume.setBounds(266, 431, 346, 38);
 		contentPane.add(Volume);
 
 		tf1 = new JTextField();
@@ -298,6 +319,9 @@ public class Volumenrechner extends JFrame  {
 		tf3.setBounds(489, 294, 144, 38);
 		tf3.setVisible(false);
 		contentPane.add(tf3);
+		
+		
+		contentPane.add(bild);
 		
 	
 	}
