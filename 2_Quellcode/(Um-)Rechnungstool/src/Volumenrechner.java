@@ -25,7 +25,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Volumenrechner extends JFrame implements Actionlistener {
+public class Volumenrechner extends JFrame  {
 
 	private JTextField result;
 	private JPanel contentPane;

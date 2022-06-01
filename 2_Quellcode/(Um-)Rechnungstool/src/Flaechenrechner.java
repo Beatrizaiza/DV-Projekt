@@ -53,11 +53,11 @@ public class Flaechenrechner extends JFrame {
 		lblFlchenrechner.setBounds(287, 57, 240, 23);
 		contentPane.add(lblFlchenrechner);
 		
-		JComboBox Dropdown_Größen = new JComboBox();
-		Dropdown_Größen.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hlen...", "Beliebiges Dreieck", "Gleichseitiges Dreieck", "Rechtwinkliges Dreieck", "Quadrat", "Rechteck", "Raute", "Parallelogramm", "Trapez", "Kreis", "Kreisausschnitt"}));
-		Dropdown_Größen.setFont(new Font("Tahoma", Font.BOLD, 14));
-		Dropdown_Größen.setBounds(287, 90, 240, 31);
-		contentPane.add(Dropdown_Größen);
+		JComboBox Dropdown_Groessen = new JComboBox();
+		Dropdown_Groessen.setModel(new DefaultComboBoxModel(new String[] {"W\u00E4hlen...", "Beliebiges Dreieck", "Gleichseitiges Dreieck", "Rechtwinkliges Dreieck", "Quadrat", "Rechteck", "Raute", "Parallelogramm", "Trapez", "Kreis", "Kreisausschnitt"}));
+		Dropdown_Groessen.setFont(new Font("Tahoma", Font.BOLD, 14));
+		Dropdown_Groessen.setBounds(287, 90, 240, 31);
+		contentPane.add(Dropdown_Groessen);
 		
 		JLabel lblNewLabel = new JLabel("Fl\u00E4cheninhalt A :");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);

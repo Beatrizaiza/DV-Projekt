@@ -24,7 +24,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
 
-public class AreaGUI extends JFrame implements Actionlistener {
+public class AreaGUI extends JFrame  {
 
 	private JTextField result;
 	private JPanel contentPane;

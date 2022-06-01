@@ -36,7 +36,7 @@ public class Startfenster {
 			}
 		});
 
-		JLabel labelMassband = new JLabel(new ImageIcon("Bild-Maßband.png"));
+		JLabel labelMassband = new JLabel(new ImageIcon("Bild-Maï¿½band.png"));
 		JLabel labelDreieck = new JLabel(new ImageIcon("Bild-Dreieck.png"));
 		JLabel labelKugel = new JLabel(new ImageIcon("Bild-Kugel.png"));
 		JLabel labelThermometer = new JLabel(new ImageIcon("Bild-Thermometer.png"));
