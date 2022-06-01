@@ -7,6 +7,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Window;
+
 import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import java.awt.Color;
@@ -54,6 +56,10 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 	}
 	/**
 	 * Create the frame.
+	 */
+	
+	/**
+	 * 
 	 */
 	public Volumenrechner() {
 		setTitle("Volumenumrechner");
@@ -292,5 +298,7 @@ public class Volumenrechner extends JFrame implements Actionlistener {
 		tf3.setBounds(489, 294, 144, 38);
 		tf3.setVisible(false);
 		contentPane.add(tf3);
+		
+	
 	}
 }

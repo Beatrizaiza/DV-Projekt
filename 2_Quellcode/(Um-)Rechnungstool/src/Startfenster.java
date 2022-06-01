@@ -14,6 +14,8 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
 
 public class Startfenster {
 
@@ -34,20 +36,30 @@ public class Startfenster {
 			}
 		});
 
-		JLabel labelMassband = new JLabel(new ImageIcon("Bild-Maï¿½band.png"));
+		JLabel labelMassband = new JLabel(new ImageIcon("Bild-Maßband.png"));
 		JLabel labelDreieck = new JLabel(new ImageIcon("Bild-Dreieck.png"));
 		JLabel labelKugel = new JLabel(new ImageIcon("Bild-Kugel.png"));
 		JLabel labelThermometer = new JLabel(new ImageIcon("Bild-Thermometer.png"));
 
 		// --- create a label, a text field, a fly button and a custom drawing canvas
 		// ---//
-		JLabel label = new JLabel("Wï¿½hlen Sie zwischen folgenden Rechnern:");
+		JLabel lblWhlenSieZwischen = new JLabel("Waehlen Sie zwischen folgenden Rechnern:");
+		lblWhlenSieZwischen.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblWhlenSieZwischen.setHorizontalAlignment(SwingConstants.CENTER);
 		JButton einheitenumrechner = new JButton("Einheitenumrechner");
-		JButton flaechenrechner = new JButton("Flï¿½chenrechner");
+		einheitenumrechner.setForeground(new Color(0, 128, 0));
+		einheitenumrechner.setFont(new Font("Tahoma", Font.BOLD, 15));
+		JButton flaechenrechner = new JButton("Flaechenrechner");
+		flaechenrechner.setForeground(new Color(0, 128, 0));
+		flaechenrechner.setFont(new Font("Tahoma", Font.BOLD, 15));
 		JButton volumenrechner = new JButton("Volumenrechner");
+		volumenrechner.setForeground(new Color(0, 128, 0));
+		volumenrechner.setFont(new Font("Tahoma", Font.BOLD, 15));
 		JButton temperaturumrechner = new JButton("Temperaturumrechner");
+		temperaturumrechner.setForeground(new Color(0, 128, 0));
+		temperaturumrechner.setFont(new Font("Tahoma", Font.BOLD, 15));
 
-		// Befehl zum ï¿½ffnen des Einheitenumrechners//
+		// Befehl zum oeffnen des Einheitenumrechners//
 		einheitenumrechner.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -57,7 +69,7 @@ public class Startfenster {
 			}
 		});
 
-		// Befehl zum ï¿½ffnen des Flï¿½chenrechners//
+		// Befehl zum Oeffnen des Flaechenrechners//
 		flaechenrechner.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -67,7 +79,7 @@ public class Startfenster {
 			}
 		});
 
-		// Befehl zum ï¿½ffnen des Volumenrechners//
+		// Befehl zum Oeffnen des Volumenrechners//
 		volumenrechner.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -83,7 +95,7 @@ public class Startfenster {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Weiterleitung zum Temperaturumrechner");
 				
-//				new Temperaturumrechener().setVisible(true);
+				new TemperaturechnerGUI2().setVisible(true);
 			}
 		});
 
@@ -91,7 +103,7 @@ public class Startfenster {
 		Container pane = hauptfenster.getContentPane();
 		pane.setLayout(null);
 		
-		pane.add(label);
+		pane.add(lblWhlenSieZwischen);
 		pane.add(einheitenumrechner);
 		pane.add(flaechenrechner);
 		pane.add(volumenrechner);
@@ -105,17 +117,18 @@ public class Startfenster {
 		pane.setBackground(Color.WHITE);
 		
 		//Festlegen der Positionen
-		label.setBounds(300, 10, 300, 50);
-		einheitenumrechner.setBounds(275,70, 300, 30);
-		flaechenrechner.setBounds(275,110, 300, 30);
-		volumenrechner.setBounds(275,150, 300, 30);
-		temperaturumrechner.setBounds(275,190, 300, 30);
-		labelMassband.setBounds(170, 240, 164, 113);
-		labelDreieck.setBounds(350, 240, 89, 138);
-		labelKugel.setBounds(450, 240, 135, 123);
-		labelThermometer.setBounds(605, 240, 56, 131);
-		hauptfenster.setBounds(350, 100, 850, 600); // legt Grï¿½ï¿½e und Position fest//
+		lblWhlenSieZwischen.setBounds(216, 31, 399, 50);
+		einheitenumrechner.setBounds(216,102, 404, 61);
+		flaechenrechner.setBounds(216,174, 404, 66);
+		volumenrechner.setBounds(216,251, 404, 66);
+		temperaturumrechner.setBounds(216,323, 404, 66);
+		labelMassband.setBounds(81, 421, 164, 113);
+		labelDreieck.setBounds(348, 425, 89, 138);
+		labelKugel.setBounds(513, 425, 135, 123);
+		labelThermometer.setBounds(696, 425, 56, 131);
+		hauptfenster.setBounds(350, 100, 850, 600); // legt Groesse und Position fest//
 		hauptfenster.setResizable(false);
 
 	}
+
 }

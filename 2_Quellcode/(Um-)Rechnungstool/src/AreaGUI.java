@@ -72,7 +72,7 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		lblNewLabel.setForeground(new Color(0, 100, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(266, 36, 240, 21);
+		lblNewLabel.setBounds(281, 52, 240, 21);
 		contentPane.add(lblNewLabel);
 		
 		
@@ -203,7 +203,7 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		
 		result = new JTextField();
 		result.setEditable(false);
-		result.setBounds(281, 432, 240, 38);
+		result.setBounds(357, 432, 240, 38);
 		contentPane.add(result);
 		
 		L1 = new JLabel("");
@@ -241,7 +241,7 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		
 		JLabel Flaeche = new JLabel("Flaeche:");
 		Flaeche.setFont(new Font("Tahoma", Font.BOLD, 18));
-		Flaeche.setBounds(180, 432, 91, 38);
+		Flaeche.setBounds(256, 432, 91, 38);
 		contentPane.add(Flaeche);
 		
 		volEinheit = new JLabel("");
@@ -269,7 +269,13 @@ public class AreaGUI extends JFrame implements Actionlistener {
 		
 		JLabel bild = new JLabel("");
 		bild.setIcon(new ImageIcon("Bild-Dreieck.png"));
-		bild.setBounds(66, 372, 91, 146);
+		bild.setBounds(125, -24, 91, 20);
 		contentPane.add(bild);
+		
+		JLabel bild1 = new JLabel("");
+		bild.setIcon(new ImageIcon("Bild-Kugel.png"));
+		bild.setBounds(66, 372, 91, 146);
+		contentPane.add(bild1);
+		
 	}
 }

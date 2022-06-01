@@ -98,6 +98,7 @@ public class Einheitenumrechner extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel titel = new JLabel("Einheitenumrechner");
+		titel.setForeground(new Color(0, 128, 0));
 		titel.setHorizontalAlignment(SwingConstants.CENTER);
 		titel.setBounds(300, 34, 240, 23);
 		titel.setFont(new Font("Tahoma", Font.BOLD, 18));
