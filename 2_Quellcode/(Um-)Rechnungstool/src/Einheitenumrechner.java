@@ -274,7 +274,7 @@ public class Einheitenumrechner extends JFrame {
 						try {
 							eingwert = Double.parseDouble(textField_eing.getText());
 						} catch (Exception e2) {
-							JOptionPane.showMessageDialog(null,"keine Zahl", "Error", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 						}
 						System.out.println("Eingabewert: "+eingwert);
 
