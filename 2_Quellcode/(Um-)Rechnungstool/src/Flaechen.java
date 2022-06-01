@@ -12,32 +12,47 @@ public class Flaechen {
 	}
 	
 	// Areas user might need to compute:
+	
 	public static double rectArea(double w, double h)
 	{
 		return w*h;
 	}
-	
+	/**
+	 * calculates the area of a circle to a chosen radius
+	 * @param r 
+	 * r radius 
+	 * @return
+	 */
 	public static double circArea(double r)
 	{
 		return Math.PI*r*r;
+		
 	}
 	
+	/**
+	 * calculates a circle sector for chosen radius and central angle 
+	 * @param r
+	 * r radius
+	 * @param alpha
+	 * alpha is the central angle
+	 * @return
+	 */
 	public static double sectorCircArea(double r, double alpha) // Circular sector = Kreissektor =  Kreisausschnitt
 	{
 		double alphaRad = Math.toRadians(alpha);
 		return 0.5*Math.pow(r, 2)*alphaRad;
 	}
 	
+	/**
+	 * 
+	 * @param h
+	 * @return
+	 */
 	public static double squareArea(double h) // yes I'm calling it h...it doesn't matter
 	{
 		return h*h;
 	}
 	
-	public static double parallelogArea(double a, double b, double alpha) // Parallelogram Area - put a diagram so user knows what is 
-	{																		// meant with the a, b and alpha 
-		double inRadians = Math.toRadians(alpha); // transform degree to radiant Java's uses radiant for sine calculation 
-		return a*b*Math.sin(inRadians);
-	}
 		
 	public static double triangleArea(double b, double h) 
 	{
