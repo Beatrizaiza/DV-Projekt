@@ -180,7 +180,9 @@ public class Volumenrechner extends JFrame  {
 			}
 		}
 		});
-
+		/**
+		 * Selects the length unit and converts to volume unit
+		 */
 		volEinheit =(null);
 		einhMenu = new JComboBox();
 		einhMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
@@ -201,7 +203,7 @@ public class Volumenrechner extends JFrame  {
 					}
 			}
 		});
-
+		
 		JButton rechnen = new JButton("Rechnen");
 		rechnen.addActionListener(new  ActionListener() {
 			@Override
