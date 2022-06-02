@@ -40,7 +40,7 @@ public class AreaGUI extends JFrame  {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		String volPar[] = {"Winkel", "Radius", "Breite", "Laenge", "Hoehe"}; // need to change volPar to AreaPar this are the parameters to calculate the area
+		String volPar[] = {"Winkel", "Radius", "Breite", "Laenge", "Hoehe"}; 
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -85,7 +85,7 @@ public class AreaGUI extends JFrame  {
 		contentPane.add(FlaechenMenu);
 		// Adapts GUI to the right function input
 		FlaechenMenu.addActionListener(new ActionListener() {
-			// would be nice to have a picture so user knows what is meant // TRY IMPLEMENTING THIS
+			// picture is shown so user knows what is meant // is implemented 
 		public void actionPerformed(ActionEvent e) {
 			String Form = (String) FlaechenMenu.getSelectedItem();
 						
@@ -199,7 +199,7 @@ public class AreaGUI extends JFrame  {
 					result.setText(answer + " FE");
 				}
 				if (Form.equals("gleichseitiges Dreieck")) {
-					double l = Double.parseDouble(tf1.getText());
+					double l = Double.parseDouble(tf2.getText());
 					double answer = Flaechen.equilatTriaArea (l);
 					result.setText(answer + " FE");
 				}
