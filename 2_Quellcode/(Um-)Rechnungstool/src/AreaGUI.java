@@ -126,6 +126,10 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				bild.setIcon(new ImageIcon("gleichseitiges Dreieck.png")); //  equilateral triangle image
+				bild.setVisible(true);
+				contentPane.add(bild);
+				bild.setBounds(60, 350, 121, 148);
 			}
 			else if (Form.equals("Kreis")) {
 				L1.setText("");
@@ -138,7 +142,6 @@ public class AreaGUI extends JFrame  {
 				bild.setVisible(true);
 				contentPane.add(bild);
 				bild.setBounds(60, 350, 209, 202);
-				
 				bild.setVisible(true);
 
 			}
@@ -149,6 +152,10 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				bild.setIcon(new ImageIcon("Kreissektor.png")); //  circular sector image
+				bild.setVisible(true);
+				contentPane.add(bild);
+				bild.setBounds(60, 350, 121, 148);
 			}
 			else if (Form.equals("Quadrat")) {
 				L1.setText("");
@@ -157,6 +164,10 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				bild.setIcon(new ImageIcon("Quadrat.png")); //  square image
+				bild.setVisible(true);
+				contentPane.add(bild);
+				bild.setBounds(60, 350, 121, 148);
 
 			}
 
