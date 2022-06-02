@@ -88,10 +88,15 @@ public class AreaGUI extends JFrame  {
 			// would be nice to have a picture so user knows what is meant // TRY IMPLEMENTING THIS
 		public void actionPerformed(ActionEvent e) {
 			String Form = (String) FlaechenMenu.getSelectedItem();
+						
 			if (Form.equals("Formen Waehlen")) {
 				L1.setText("");
 				L2.setText("");
 				L3.setText("");
+				bild.setIcon(new ImageIcon("AreaOptions.png"));
+				bild.setVisible(true);
+				contentPane.add(bild);
+				bild.setBounds(60, 350, 121, 148);
 
 			}
 			else if (Form.equals("Rechteck")) {
