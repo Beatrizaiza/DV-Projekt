@@ -23,13 +23,14 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class TemperaturechnerGUI2 extends JFrame implements Actionlistener {
+public class TemperaturechnerGUI2 extends JFrame {
 	private JPanel contentPane;
 	static JComboBox tempMenu;
 	static JLabel L1, L2,L3;
 	private JTextField tf2;
 	private JTextField tf3;
 	private JTextField tf1;
+	private JButton menubutton;
 
 
 	/**
@@ -200,13 +201,15 @@ public class TemperaturechnerGUI2 extends JFrame implements Actionlistener {
 		L3.setBounds(508, 207, 144, 38);
 		contentPane.add(L3);
 		
-//		JButton mainMenu = new JButton("Menu");
-//		mainMenu.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				new Startfenster().setVisible(true);
-//			}
-//		});
-//		mainMenu.setBounds(701, 22, 89, 23);
-//		contentPane.add(mainMenu);
+		menubutton = new JButton("Hauptmenue");
+		menubutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				new Startfenster().setVisible(true);
+			}
+		});
+		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		menubutton.setBounds(653, 25, 150, 31);
+		contentPane.add(menubutton);
 	}
 }

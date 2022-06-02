@@ -37,6 +37,7 @@ public class Volumenrechner extends JFrame  {
 	private JTextField tf1;
 	private JTextField tf2;
 	private JTextField tf3;
+	private JButton menubutton;
 
 
 	/**
@@ -325,6 +326,19 @@ public class Volumenrechner extends JFrame  {
 		
 		
 		contentPane.add(bild);
+		
+		menubutton = new JButton("Hauptmenue");
+		menubutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				new Startfenster().setVisible(true);
+			}
+		});
+		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		menubutton.setBounds(643, 26, 150, 31);
+		contentPane.add(menubutton);
+		
+		
 		
 	
 	}

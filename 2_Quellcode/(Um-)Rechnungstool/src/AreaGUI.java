@@ -298,6 +298,18 @@ public class AreaGUI extends JFrame  {
 		tf3.setBounds(489, 294, 144, 38);
 		tf3.setVisible(false);
 		contentPane.add(tf3);
+		
+		JButton menubutton = new JButton("Hauptmenue");
+		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		menubutton.setBounds(654, 25, 150, 31);
+		contentPane.add(menubutton);
+		
+		menubutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				new Startfenster().setVisible(true);
+			}
+		});
 
 		bild = new JLabel("");
 //		bild.setIcon(new ImageIcon("Dreieck.PNG"));
