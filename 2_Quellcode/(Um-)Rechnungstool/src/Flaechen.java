@@ -18,9 +18,9 @@ public class Flaechen {
 		return w*h;
 	}
 	/**
-	 * calculates the area of a circle to a chosen radius
+	 * Berechnet die Flaeche eines Kreises mit einem gewählten Radius
 	 * @param r 
-	 * r radius 
+	 * r Radius 
 	 * @return
 	 */
 	public static double circArea(double r)
@@ -30,11 +30,11 @@ public class Flaechen {
 	}
 	
 	/**
-	 * calculates a circle sector for chosen radius and central angle 
+	 * Berechnet einen Kreissektor für den gewählten Radius und den Mittelpunktswinkel 
 	 * @param r
-	 * r radius
+	 * r Radius
 	 * @param alpha
-	 * alpha is the central angle
+	 * alpha ist der Mittelpunktswinkel
 	 * @return
 	 */
 	public static double sectorCircArea(double r, double alpha) // Circular sector = Kreissektor =  Kreisausschnitt
@@ -44,9 +44,9 @@ public class Flaechen {
 	}
 	
 	/**
-	 * calculates the area of the square for a chosen length l
+	 * Berechnet den Flächeninhalt des Quadrats für eine bestimmte Länge 
 	 * @param l
-	 * side length l
+	 * Seitenlänge l
 	 * @return
 	 */
 	public static double squareArea(double l)
@@ -55,11 +55,11 @@ public class Flaechen {
 	}
 	
 	/**
-	 * calculates the area of the triangle for chosen base and height
+	 * Berechnet den Flaecheninhalt des Dreiecks für die gewaehlte Basis und Hoehe
 	 * @param b
-	 * base length b 
+	 * Basislänge b 
 	 * @param h
-	 * height h 
+	 * Hoehe h 
 	 * @return
 	 */
 	public static double triangleArea(double b, double h) 
@@ -67,10 +67,10 @@ public class Flaechen {
 		return (b*h)/2;
 	}
 	/**
-	 * calculates the area of an equilateral triangle
-	 * i.e. triangle in which all three sides have the same length
+	 * Berechnet den Flaecheninhalt eines gleichseitigen Dreiecks
+	 *d. h. ein Dreieck, bei dem alle drei Seiten gleich lang sind
 	 * @param b
-	 * side length b
+	 * Seitenlänge b
 	 * @return
 	 */
 	public static double equilatTriaArea(double b)  // Equilateral triangle = gleichseitiges Dreieck
