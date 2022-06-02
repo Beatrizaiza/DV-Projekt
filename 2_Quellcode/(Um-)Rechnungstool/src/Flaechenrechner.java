@@ -11,6 +11,9 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Flaechenrechner extends JFrame {
 
@@ -38,6 +41,7 @@ public class Flaechenrechner extends JFrame {
 	 * Create the frame.
 	 */
 	public Flaechenrechner() {
+		setBackground(Color.WHITE);
 		setResizable(false);
 		setTitle("Fl\u00E4chenrechner");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,5 +91,17 @@ public class Flaechenrechner extends JFrame {
 		lblFormel.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblFormel.setBounds(332, 158, 140, 31);
 		contentPane.add(lblFormel);
+		
+		JButton menubutton = new JButton("Hauptmenue");
+		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		menubutton.setBounds(638, 34, 150, 31);
+		contentPane.add(menubutton);
+		
+		menubutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				new Startfenster().setVisible(true);
+			}
+		});
 	}
 }
