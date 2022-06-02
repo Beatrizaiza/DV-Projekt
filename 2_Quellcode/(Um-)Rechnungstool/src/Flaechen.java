@@ -44,21 +44,35 @@ public class Flaechen {
 	}
 	
 	/**
-	 * 
-	 * @param h
+	 * calculates the area of the square for a chosen length l
+	 * @param l
+	 * side length l
 	 * @return
 	 */
-	public static double squareArea(double h) // yes I'm calling it h...it doesn't matter
+	public static double squareArea(double l)
 	{
-		return h*h;
+		return l*l;
 	}
 	
-		
+	/**
+	 * calculates the area of the triangle for chosen base and height
+	 * @param b
+	 * base length b 
+	 * @param h
+	 * height h 
+	 * @return
+	 */
 	public static double triangleArea(double b, double h) 
 	{
 		return (b*h)/2;
 	}
-	
+	/**
+	 * calculates the area of an equilateral triangle
+	 * i.e. triangle in which all three sides have the same length
+	 * @param b
+	 * side length b
+	 * @return
+	 */
 	public static double equilatTriaArea(double b)  // Equilateral triangle = gleichseitiges Dreieck
 	{
 		return (Math.sqrt(3)/4)*Math.pow(b,2);

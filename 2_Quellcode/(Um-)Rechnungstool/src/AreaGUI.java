@@ -101,6 +101,10 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				bild.setIcon(new ImageIcon("Rechteck.png")); // rectangle image
+				bild.setVisible(true);
+				contentPane.add(bild);
+				bild.setBounds(60, 350, 121, 148);
 			}
 			else if (Form.equals("Dreieck")) {
 				L1.setText("Laenge");
@@ -109,7 +113,7 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
-				bild.setIcon(new ImageIcon("Dreieck.png"));
+				bild.setIcon(new ImageIcon("Dreieck.png")); //  triangle image
 				bild.setVisible(true);
 				contentPane.add(bild);
 				bild.setBounds(60, 350, 121, 148);
