@@ -146,10 +146,10 @@ public class Einheitenumrechner extends JFrame {
 		tit_ausg.setBounds(499, 139, 232, 21);
 		contentPane.add(tit_ausg);
 
-		JButton btnNewButton = new JButton("START");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
-		btnNewButton.setBounds(371, 185, 118, 44);
-		contentPane.add(btnNewButton);
+		JButton startButton = new JButton("START");
+		startButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
+		startButton.setBounds(371, 185, 118, 44);
+		contentPane.add(startButton);
 
 		//Eingabe der Funtionen der Drop-Downs und Buttons
 
@@ -265,7 +265,7 @@ public class Einheitenumrechner extends JFrame {
 
 
 
-				btnNewButton.addActionListener(new ActionListener() {
+				startButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 
 						double eingwert, ausgwert;

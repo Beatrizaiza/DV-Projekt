@@ -248,6 +248,7 @@ public class Volumenrechner extends JFrame  {
 				}
 			}
 		});
+		
 		rechnen.setForeground(new Color(0, 128, 0));
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
 		rechnen.setBounds(643, 294, 107, 38);
