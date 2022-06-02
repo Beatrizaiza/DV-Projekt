@@ -206,7 +206,7 @@ public class AreaGUI extends JFrame  {
 
 
 				if (Form.equals("Kreis")) {
-					double r = Double.parseDouble(tf1.getText());
+					double r = Double.parseDouble(tf2.getText());
 					double answer =  Flaechen.circArea (r);
 					result.setText(answer + " FE");
 					
@@ -221,7 +221,7 @@ public class AreaGUI extends JFrame  {
 				}
 
 				if (Form.equals("Quadrat")) {
-					double b = Double.parseDouble(tf1.getText());
+					double b = Double.parseDouble(tf2.getText());
 					double answer =  Flaechen.squareArea (b);
 					result.setText(answer + " FE");
 				}
