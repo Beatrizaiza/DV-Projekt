@@ -19,6 +19,12 @@ import java.awt.Font;
 
 
 //Extends JFrame nötig damit andere Startfenster aufrufen können! Alternative?
+/**
+ * Klasse Startfenster erzeugt die GUI fuer das Startfenster des Umrechnungstools
+ * class Startfenster creates a GUI for the main window of the conversion tool
+ * @author Luca Wieland
+ *
+ */
 public class Startfenster extends JFrame {
 	public Startfenster() {
 	}
