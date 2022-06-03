@@ -22,7 +22,13 @@ import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
+/**
+ * 
+ * @author leonwelker
+ * In der Klasse "TemperaturrechnerGUI2" wird sowohl die GUI erstellt und formatiert, sondern auch die nötigen eingabe Parameter vom Nutzer erfragt und 
+ * an die Klasse "Temperatur" weitergegeben. Nach der Berechnung wird das Ergebniis dem Nutzer über das Ausgabefeld zurückgegeben.
+ *
+ */
 public class TemperaturechnerGUI2 extends JFrame {
 	private JPanel contentPane;
 	static JComboBox tempMenu;
@@ -34,7 +40,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 
 
 	/**
-	 * Launch the application.
+	 * Start der Anwendung
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -49,7 +55,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 		});
 	}
 	/**
-	 * Create the frame.
+	 * Die Nutzeroberfläche wird erstellt.
 	 */
 	public TemperaturechnerGUI2() {
 		setTitle("Temperaturumrechner");
@@ -63,9 +69,6 @@ public class TemperaturechnerGUI2 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		/**
-		 * Sets the Title
-		 */
 		JLabel lblNewLabel = new JLabel("Temperaturumrechner");
 		lblNewLabel.setBackground(new Color(0, 128, 0));
 		lblNewLabel.setForeground(new Color(0, 100, 0));
@@ -76,7 +79,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 
 
 	/**
-	 * Create the menu to Volume functions
+	 * Das Dropdown-Menu wird erstellt
 	 */
 		String tempList[] = {"Einheiten Waehlen", "Celsius zu Kelvin", "Celsius zu Fahrenheit", "Fahrenheit zu Celsius", "Fahrenheit zu Kelvin", "Kelvin zu Celsius", "Kelvin zu Fahrenheit"};
 		JComboBox tempMenu = new JComboBox(tempList);
@@ -85,15 +88,15 @@ public class TemperaturechnerGUI2 extends JFrame {
 		tempMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tempMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(tempMenu);
-		/**
-		 * Adapts the GUI to adequate inputs to each function
-		 * @author 
-		 */
-		tempMenu.addActionListener(new ActionListener() {
 
+		tempMenu.addActionListener(new ActionListener() {
+/**
+ * Die Funktion "actionPerformed" ruft basierend auf der gewählten Einheit die passende Benutzeroberfläche aus.Also eelches der Eingabe Felder aktiv ist.
+ * @param e
+ */
 		public void actionPerformed(ActionEvent e) {
 			String Temp = (String) tempMenu.getSelectedItem();
-			if (Temp.equals("Formen W�hlen")) {
+			if (Temp.equals("Formen Wählen")) {
 				L1.setText("");
 				L2.setText("");
 				tf1.setText(null);
@@ -128,7 +131,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 		});
 
 	/**
-	 * Calculate based on functions from Temperatur class
+	 * Die eingegebenen Werte werden mittels der Methoden aus Klasse "Temperatur" berechnet und auf dem Bildschirm ausgegeben.
 	 */
 		JButton rechnen = new JButton("Rechnen");
 		rechnen.addActionListener(new  ActionListener() {
@@ -159,6 +162,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 				}
 			}
 		});
+		
 		rechnen.setForeground(new Color(0, 128, 0));
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
 		rechnen.setBounds(364, 358, 107, 38);

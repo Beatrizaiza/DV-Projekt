@@ -94,13 +94,12 @@ public class Volumenrechner extends JFrame  {
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(volumeMenu);
-
 		JLabel bild = new JLabel("");
 
 		// Adapts GUI to the right function input
 		volumeMenu.addActionListener(new ActionListener() {
 			/**
-			 * Die Funktion "actionPerformed" ruft basierend auf dem gewählten Objekt die passende Benutzeroberfläche aus.( Was soll wo angezeigt werden 
+			 * Die Funktion "actionPerformed" ruft basierend auf dem gewählten Objekt die passende Benutzeroberfläche aus.(Was soll wo angezeigt werden) 
 			 * @param e (Eingabe Wert)
 			 * 
 			 */
