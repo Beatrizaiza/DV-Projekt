@@ -1,12 +1,21 @@
 
 public class Flaechen {
 	
+	public static void main(String[] args) {
+
+		Flaechen.rectArea(4.4, 2.1);
+		Flaechen.squareArea(4.1);
+		Flaechen.circArea(3.2);
+		Flaechen.triangleArea(2, 1.4);
+
+}
+
 
 	// Areas user might need to compute:
 	/**
-	 * Berechnet den Flächeninhalt des Rechtecks für die gewaehlte Basis und Hoehe
+	 * Berechnet den Flaecheninhalt des Rechtecks für die gewaehlte Basis und Hoehe
 	 * @param b
-	 * Basislänge b 
+	 * Basislaenge b 
 	 * @param h
 	 * Hoehe h
 	 * @return
@@ -16,7 +25,7 @@ public class Flaechen {
 		return b*h;
 	}
 	/**
-	 * Berechnet die Flaeche eines Kreises mit einem gewählten Radius
+	 * Berechnet die Flaeche eines Kreises mit einem gewaehlten Radius
 	 * @param r 
 	 * r Radius 
 	 * @return
@@ -28,7 +37,7 @@ public class Flaechen {
 	}
 	
 	/**
-	 * Berechnet einen Kreissektor für den gewählten Radius und den Mittelpunktswinkel 
+	 * Berechnet einen Kreissektor für den gewaehlten Radius und den Mittelpunktswinkel 
 	 * @param r
 	 * r Radius
 	 * @param alpha
@@ -42,9 +51,9 @@ public class Flaechen {
 	}
 	
 	/**
-	 * Berechnet den Flächeninhalt des Quadrats für eine bestimmte Länge 
+	 * Berechnet den Flaecheninhalt des Quadrats fuer eine bestimmte Laenge 
 	 * @param l
-	 * Seitenlänge l
+	 * Seitenlaenge l
 	 * @return
 	 */
 	public static double squareArea(double l)
@@ -55,7 +64,7 @@ public class Flaechen {
 	/**
 	 * Berechnet den Flaecheninhalt des Dreiecks für die gewaehlte Basis und Hoehe
 	 * @param b
-	 * Basislänge b 
+	 * Basislaenge b 
 	 * @param h
 	 * Hoehe h 
 	 * @return
@@ -68,7 +77,7 @@ public class Flaechen {
 	 * Berechnet den Flaecheninhalt eines gleichseitigen Dreiecks
 	 *d. h. ein Dreieck, bei dem alle drei Seiten gleich lang sind
 	 * @param b
-	 * Seitenlänge b
+	 * Seitenlaenge b
 	 * @return
 	 */
 	public static double equilatTriaArea(double b)  // Equilateral triangle = gleichseitiges Dreieck
