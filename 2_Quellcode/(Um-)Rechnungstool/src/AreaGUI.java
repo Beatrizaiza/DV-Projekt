@@ -23,7 +23,12 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
-
+/**
+ * 
+ * @author sophi
+ * In der Klasse "AreaGUI" wird sowohl die GUI erstellt und formatiert, sondern auch die noetigen Eingabeparameter vom Nutzer erfragt und 
+ * an die Klasse "Flaechen" weitergegeben. Nach der Berechnung wird das Ergebniis dem Nutzer ueber das Ausgabefeld zurueckgegeben.
+ */
 public class AreaGUI extends JFrame  {
 
 	private JTextField result;
@@ -37,7 +42,7 @@ public class AreaGUI extends JFrame  {
 
 
 	/**
-	 * Launch the application.
+	 * Start der Anwendung
 	 */
 	public static void main(String[] args) {
 		String volPar[] = {"Winkel", "Radius", "Breite", "Laenge", "Hoehe"}; 
@@ -53,7 +58,7 @@ public class AreaGUI extends JFrame  {
 		});
 	}
 	/**
-	 * Create the frame.
+	 *  Die GUI wird erstellt und das Dropdown-Menu wird implementiert.
 	 */
 	public AreaGUI() {
 		setTitle("Flaechenrechner");
@@ -86,6 +91,10 @@ public class AreaGUI extends JFrame  {
 		// Adapts GUI to the right function input
 		FlaechenMenu.addActionListener(new ActionListener() {
 			// picture is shown so user knows what is meant // is implemented 
+			/**
+			 * Die Funktion "actionPerformed" ruft basierend auf dem gewaehlten Objekt die passende Benutzeroberflaeche aus.(Was soll wo angezeigt werden)
+			 * @param e (Eingabe Wert)
+			 */
 		public void actionPerformed(ActionEvent e) {
 			String Form = (String) FlaechenMenu.getSelectedItem();
 						
