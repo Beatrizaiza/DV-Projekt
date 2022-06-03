@@ -1,15 +1,24 @@
-import java.util.HashMap;
-
+ import java.util.HashMap;
+/**
+ * 
+ * @author leonwelker
+ * Die Klasse "Berechnung" erstellt die GUI für den Einheitenrechner und gibt mittels der Funktionen aus der Klasse "einheitenumrechner" dem Nutzer den Wert in deer gewünschten Zieleinheit aus.
+ *
+ */
 public class Berechnung extends Einheitenumrechner {
 
 
-	//Werte aus Einheitenrechner
+	/**
+	 * Werte aus "Einheitenrechner"
+	 */
 	String einheite ="null";
 	String einheita ="null";
 	double Ee = 0;
 	double Ea = 0;
 
-	//Get- und Set-Methoden zur �bergabe der Ein- und Ausgabeeinheiten aus der Klasse Einheitenumrechner
+	/**
+	 * Get- und Set-Methoden zur �bergabe der Ein- und Ausgabeeinheiten aus der Klasse "Einheitenumrechner"
+	 */
 	public String getEinheite() {
 		return einheite;
 	}
@@ -23,7 +32,9 @@ public class Berechnung extends Einheitenumrechner {
 		this.einheita = einheita;
 	}
 
-	// Get- und Set-Methode f�r den Eingabewert, wird = 0 gesetzt
+	/** 
+	 * Get- und Set-Methode für den Eingabewert, wird = 0 gesetzt
+	 */
 	double eingwert = 0;
 
 	public double getEingwert() {
@@ -33,7 +44,9 @@ public class Berechnung extends Einheitenumrechner {
 		this.eingwert = eingwert;
 	}
 
-	//HashMap zum Speichern der Umrechnungsfaktoren der Groessen
+	/**
+	 * Implementierung einer HashMap zum Speichern der Umrechnungsfaktoren der Groessen
+	 */
 	public static HashMap<String, Double> Rechnung = new HashMap<>();
 
 	public static void init()
@@ -83,7 +96,14 @@ public class Berechnung extends Einheitenumrechner {
 
 
 	// Methode zum Umrechnen der Groessen	
-	
+	/**
+	 * Die Funktion "Umrechner" berechnet, basierend auf die vom Nutzer gewählten Einheiten, den gewünschten Wert. 
+	 * 
+	 * @param eingwert (Eingabewert)
+	 * @param einheite (Eingabeeinheit)
+	 * @param einheita (Ausgabeeinheit)
+	 * @return Ausgabewert (ausgwert) als Ergebnis der Einheiten spezifischen Umrechnung
+	 */
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
 		
 		
