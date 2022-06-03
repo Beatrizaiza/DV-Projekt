@@ -265,20 +265,6 @@ public class AreaGUI extends JFrame  {
 		L3.setBounds(488, 342, 144, 38);
 		contentPane.add(L3);
 
-		einhMenu = new JComboBox(); 	// NEED TO DECIDE IF THIS IS REALLY NECESSARY
-		einhMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
-		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten W\u00E4hlen", "mm", "cm", "m"}));
-		einhMenu.setBounds(325, 215, 181, 38);
-		contentPane.add(einhMenu);
-		einhMenu.addActionListener(new ActionListener() {
-			String Einheit = (String) einhMenu.getSelectedItem();
-			public void actionPerformed(ActionEvent e) {
-				if (Einheit.equals("m")) {
-				volEinheit.setText("m�");
-				contentPane.add(volEinheit);
-				}
-			}
-		});
 
 		JLabel Flaeche = new JLabel("Flaeche:");
 		Flaeche.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -321,17 +307,6 @@ public class AreaGUI extends JFrame  {
 		});
 
 		bild = new JLabel("");
-//		bild.setIcon(new ImageIcon("Dreieck.PNG"));
-//		bild.setBounds(27, 351, 209, 202);
-//		bild.setVisible(false);
-//		contentPane.add(bild);
-//
-//		bild1 = new JLabel("");
-//		bild1.setIcon(new ImageIcon("Kreis.png"));
-//		bild1.setVisible(false);
-//		contentPane.add(bild1);
-//		bild1.setBounds(60, 350, 209, 202);
-		
 
 	}
 }
