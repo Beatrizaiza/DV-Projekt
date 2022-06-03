@@ -155,6 +155,18 @@ public class Einheitenumrechner extends JFrame {
 		startButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
 		startButton.setBounds(371, 185, 118, 44);
 		contentPane.add(startButton);
+		
+		JButton menubutton = new JButton("Hauptmenue");
+		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		menubutton.setBounds(644, 26, 150, 31);
+		contentPane.add(menubutton);
+		
+		menubutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				new Startfenster().setVisible(true);
+			}
+		});
 
 		drop_groessen.addActionListener(new ActionListener() {
 
@@ -304,4 +316,5 @@ public class Einheitenumrechner extends JFrame {
 
 			}
 		});
-	}}
+	}	
+}
