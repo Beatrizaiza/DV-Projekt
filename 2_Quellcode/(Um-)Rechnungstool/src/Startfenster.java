@@ -46,10 +46,10 @@ public class Startfenster extends JFrame {
 			}
 		});
 
-		JLabel labelMassband = new JLabel(new ImageIcon("Bild-Massband.png"));
-		JLabel labelDreieck = new JLabel(new ImageIcon("Bild-Dreieck.png"));
-		JLabel labelKugel = new JLabel(new ImageIcon("Bild-Kugel.png"));
-		JLabel labelThermometer = new JLabel(new ImageIcon("Bild-Thermometer.png"));
+		JLabel labelMassband = new JLabel(new ImageIcon("Massband.png"));
+		JLabel labelDreieck = new JLabel(new ImageIcon("Dreieck.png"));
+		JLabel labelKugel = new JLabel(new ImageIcon("Kugel.png"));
+		JLabel labelThermometer = new JLabel(new ImageIcon("Thermometer.png"));
 
 		// --- create a label, a text field, a fly button and a custom drawing canvas
 		// ---//
