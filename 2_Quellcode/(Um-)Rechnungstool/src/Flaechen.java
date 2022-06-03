@@ -12,10 +12,17 @@ public class Flaechen {
 	}
 	
 	// Areas user might need to compute:
-	
-	public static double rectArea(double w, double h)
+	/**
+	 * Berechnet den Flächeninhalt des Rechtecks für die gewaehlte Basis und Hoehe
+	 * @param b
+	 * Basislänge b 
+	 * @param h
+	 * Hoehe h
+	 * @return
+	 */
+	public static double rectArea(double b, double h)
 	{
-		return w*h;
+		return b*h;
 	}
 	/**
 	 * Berechnet die Flaeche eines Kreises mit einem gewählten Radius
