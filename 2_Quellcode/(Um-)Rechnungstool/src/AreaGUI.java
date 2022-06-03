@@ -92,7 +92,8 @@ public class AreaGUI extends JFrame  {
 		FlaechenMenu.addActionListener(new ActionListener() {
 			// picture is shown so user knows what is meant // is implemented 
 			/**
-			 * Die Funktion "actionPerformed" ruft basierend auf dem gewaehlten Objekt die passende Benutzeroberflaeche aus.(Was soll wo angezeigt werden)
+			 * Die Funktion "actionPerformed" ruft basierend auf dem gewaehlten Objekt die passende Benutzeroberflaeche aus.
+			 * Sie zeigt, welche Werte fuer jede Formel benoetigt werden, sowie ein erklaerendes Bild.
 			 * @param e 
 			 */
 		public void actionPerformed(ActionEvent e) {
