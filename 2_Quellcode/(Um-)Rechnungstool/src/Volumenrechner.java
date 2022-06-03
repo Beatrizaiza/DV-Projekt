@@ -25,7 +25,13 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
-
+/**
+ * 
+ * @author leonwelker
+ * In der Klasse "Volumenrechner" wird sowohl die GUI erstellt und formatiert, sondern auch die nötigen eingabe Parameter vom Nutzer erfragt und 
+ * an die Klasse "Volumen" weitergegeben. Nach der Berechnung wird das Ergebniis dem Nutzer über das Ausgabefeld zurückgegeben.
+ * 
+ */
 public class Volumenrechner extends JFrame  {
 
 	private JTextField result;
@@ -41,7 +47,7 @@ public class Volumenrechner extends JFrame  {
 
 
 	/**
-	 * Launch the application.
+	 * Start der Anwendung
 	 */
 	public static void main(String[] args) {
 		String volPar[] = {"Radius", "Durchmesser", "Breite", "Laenge", "Hoehe"};
@@ -57,12 +63,9 @@ public class Volumenrechner extends JFrame  {
 		});
 	}
 	/**
-	 * Create the frame.
+	 * Die GUI wird erstellt und das Dropdown-Menu implementiert.
 	 */
-	
-	/**
-	 * 
-	 */
+
 	public Volumenrechner() {
 		setTitle("Volumenumrechner");
 		setResizable(false);
@@ -91,95 +94,98 @@ public class Volumenrechner extends JFrame  {
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(volumeMenu);
-		
+
 		JLabel bild = new JLabel("");
-		
+
 		// Adapts GUI to the right function input
 		volumeMenu.addActionListener(new ActionListener() {
-
-		public void actionPerformed(ActionEvent e) {
-			String Form = (String) volumeMenu.getSelectedItem();
-			if (Form.equals("Formen Waehlen")) {
-				L1.setText("");
-				L2.setText("");
-				L3.setText("");
-				result.setText(null);
-				bild.setIcon(new ImageIcon());
+			/**
+			 * Die Funktion "actionPerformed" ruft basierend auf dem gewählten Objekt die passende Benutzeroberfläche aus.( Was soll wo angezeigt werden 
+			 * @param e (Eingabe Wert)
+			 * 
+			 */
+			public void actionPerformed(ActionEvent e) {
+				String Form = (String) volumeMenu.getSelectedItem();
+				if (Form.equals("Formen Waehlen")) {
+					L1.setText("");
+					L2.setText("");
+					L3.setText("");
+					result.setText(null);
+					bild.setIcon(new ImageIcon());
+				}
+				else if (Form.equals("Kugel")) {
+					L1.setText("");
+					L2.setText("Radius");
+					L3.setText("");
+					tf1.setVisible(false);
+					tf2.setVisible(true);
+					tf3.setVisible(false);
+					result.setText(null);
+					bild.setIcon(new ImageIcon());
+					bild.setIcon(new ImageIcon("Kugel.PNG"));
+					bild.setBounds(61, 375, 165, 152);
+				}
+				else if (Form.equals("Pyramide")) {
+					L1.setText("Laenge");
+					L2.setText("");
+					L3.setText("Hoehe");
+					tf1.setVisible(true);
+					tf2.setVisible(false);
+					tf3.setVisible(true);
+					result.setText(null);
+					bild.setIcon(new ImageIcon());
+					bild.setIcon(new ImageIcon("Pyramide.PNG"));
+					bild.setBounds(61, 375, 165, 152);
+				}
+				else if (Form.equals("Wuerfel")) {
+					L1.setText("");
+					L2.setText("Laenge");
+					L3.setText("");
+					tf1.setVisible(false);
+					tf2.setVisible(true);
+					tf3.setVisible(false);
+					result.setText(null);
+					bild.setIcon(new ImageIcon());
+					bild.setIcon(new ImageIcon("Wuerfel.PNG"));
+					bild.setBounds(61, 375, 165, 152);
+				}
+				else if (Form.equals("Zylinder")) {
+					L1.setText("");
+					L2.setText("Radius");
+					L3.setText("Hoehe");
+					tf1.setVisible(false);
+					tf2.setVisible(true);
+					tf3.setVisible(true);
+					result.setText(null);
+					bild.setIcon(new ImageIcon());
+					bild.setIcon(new ImageIcon("Zylinder.PNG"));
+					bild.setBounds(61, 375, 165, 152);
+				}
+				else if (Form.equals("Kegel")) {
+					L1.setText("");
+					L2.setText("Radius");
+					L3.setText("Hoehe");
+					tf1.setVisible(false);
+					tf2.setVisible(true);
+					tf3.setVisible(true);
+					result.setText(null);
+					bild.setIcon(new ImageIcon());
+					bild.setIcon(new ImageIcon("Kegel.PNG"));
+					bild.setBounds(61, 375, 165, 152);
+				}
+				else if (Form.equals("Quader")) {
+					L1.setText("Laenge");
+					L2.setText("Breite");
+					L3.setText("Hoehe");
+					tf1.setVisible(true);
+					tf2.setVisible(true);
+					tf3.setVisible(true);
+					result.setText(null);
+					bild.setIcon(new ImageIcon());
+					bild.setIcon(new ImageIcon("Quader.PNG"));
+					bild.setBounds(61, 375, 165, 152);
+				}
 			}
-			else if (Form.equals("Kugel")) {
-				L1.setText("");
-				L2.setText("Radius");
-				L3.setText("");
-				tf1.setVisible(false);
-				tf2.setVisible(true);
-				tf3.setVisible(false);
-				result.setText(null);
-				bild.setIcon(new ImageIcon());
-				bild.setIcon(new ImageIcon("Kugel.PNG"));
-				bild.setBounds(61, 375, 165, 152);
-			}
-			else if (Form.equals("Pyramide")) {
-				L1.setText("Laenge");
-				L2.setText("");
-				L3.setText("Hoehe");
-				tf1.setVisible(true);
-				tf2.setVisible(false);
-				tf3.setVisible(true);
-				result.setText(null);
-				bild.setIcon(new ImageIcon());
-				bild.setIcon(new ImageIcon("Pyramide.PNG"));
-				bild.setBounds(61, 375, 165, 152);
-			}
-			else if (Form.equals("Wuerfel")) {
-				L1.setText("");
-				L2.setText("Laenge");
-				L3.setText("");
-				tf1.setVisible(false);
-				tf2.setVisible(true);
-				tf3.setVisible(false);
-				result.setText(null);
-				bild.setIcon(new ImageIcon());
-				bild.setIcon(new ImageIcon("Wuerfel.PNG"));
-				bild.setBounds(61, 375, 165, 152);
-			}
-			else if (Form.equals("Zylinder")) {
-				L1.setText("");
-				L2.setText("Radius");
-				L3.setText("Hoehe");
-				tf1.setVisible(false);
-				tf2.setVisible(true);
-				tf3.setVisible(true);
-				result.setText(null);
-				bild.setIcon(new ImageIcon());
-				bild.setIcon(new ImageIcon("Zylinder.PNG"));
-				bild.setBounds(61, 375, 165, 152);
-
-			}
-			else if (Form.equals("Kegel")) {
-				L1.setText("");
-				L2.setText("Radius");
-				L3.setText("Hoehe");
-				tf1.setVisible(false);
-				tf2.setVisible(true);
-				tf3.setVisible(true);
-				result.setText(null);
-				bild.setIcon(new ImageIcon());
-				bild.setIcon(new ImageIcon("Kegel.PNG"));
-				bild.setBounds(61, 375, 165, 152);
-			}
-			else if (Form.equals("Quader")) {
-				L1.setText("Laenge");
-				L2.setText("Breite");
-				L3.setText("Hoehe");
-				tf1.setVisible(true);
-				tf2.setVisible(true);
-				tf3.setVisible(true);
-				result.setText(null);
-				bild.setIcon(new ImageIcon());
-				bild.setIcon(new ImageIcon("Quader.PNG"));
-				bild.setBounds(61, 375, 165, 152);
-			}
-		}
 		});
 		/**
 		 * Selects the length unit and converts to volume unit
@@ -194,17 +200,17 @@ public class Volumenrechner extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 				String Einheit = (String) einhMenu.getSelectedItem();
 				if (Einheit.equals("m")) {
-				 volEinheit = ("m^3");
+					volEinheit = ("m^3");
 				}
 				else if (Einheit.equals("mm")) {
 					volEinheit = ("mm^3");
-					}
+				}
 				else if (Einheit.equals("cm")) {
 					volEinheit = ("cm^3");
-					}
+				}
 			}
 		});
-		
+
 		JButton rechnen = new JButton("Rechnen");
 		rechnen.addActionListener(new  ActionListener() {
 			@Override
@@ -248,7 +254,6 @@ public class Volumenrechner extends JFrame  {
 				}
 			}
 		});
-		
 		rechnen.setForeground(new Color(0, 128, 0));
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
 		rechnen.setBounds(643, 294, 107, 38);
@@ -281,26 +286,26 @@ public class Volumenrechner extends JFrame  {
 		contentPane.add(L3);
 
 
-//		einhMenu = new JComboBox();
-//		einhMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
-//		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten W\u00E4hlen", "mm", "cm", "m"}));
-//		einhMenu.setBounds(325, 215, 181, 38);
-//		contentPane.add(einhMenu);
-//		einhMenu.addActionListener(new ActionListener() {
-////			String Einheit = (String) einhMenu.getSelectedItem();
-//			public void actionPerformed(ActionEvent e) {
-//				String Einheit = (String) einhMenu.getSelectedItem();
-//				if (Einheit.equals("m")) {
-//				 volEinheit = ("m^3");
-//				}
-//				else if (Einheit.equals("mm")) {
-//					volEinheit = ("mm�");
-//					}
-//				else if (Einheit.equals("cm")) {
-//					volEinheit = ("cm�");
-//					}
-//			}
-//		});
+		//		einhMenu = new JComboBox();
+		//		einhMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
+		//		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten W\u00E4hlen", "mm", "cm", "m"}));
+		//		einhMenu.setBounds(325, 215, 181, 38);
+		//		contentPane.add(einhMenu);
+		//		einhMenu.addActionListener(new ActionListener() {
+		////			String Einheit = (String) einhMenu.getSelectedItem();
+		//			public void actionPerformed(ActionEvent e) {
+		//				String Einheit = (String) einhMenu.getSelectedItem();
+		//				if (Einheit.equals("m")) {
+		//				 volEinheit = ("m^3");
+		//				}
+		//				else if (Einheit.equals("mm")) {
+		//					volEinheit = ("mm�");
+		//					}
+		//				else if (Einheit.equals("cm")) {
+		//					volEinheit = ("cm�");
+		//					}
+		//			}
+		//		});
 
 		JLabel Volume = new JLabel("Volume:");
 		Volume.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -324,10 +329,10 @@ public class Volumenrechner extends JFrame  {
 		tf3.setBounds(489, 294, 144, 38);
 		tf3.setVisible(false);
 		contentPane.add(tf3);
-		
-		
+
+
 		contentPane.add(bild);
-		
+
 		menubutton = new JButton("Hauptmenue");
 		menubutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -338,9 +343,9 @@ public class Volumenrechner extends JFrame  {
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		menubutton.setBounds(643, 26, 150, 31);
 		contentPane.add(menubutton);
-		
-		
-		
-	
+
+
+
+
 	}
 }
