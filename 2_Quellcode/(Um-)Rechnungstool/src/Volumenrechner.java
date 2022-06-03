@@ -98,6 +98,7 @@ public class Volumenrechner extends JFrame  {
 
 		// Adapts GUI to the right function input
 		volumeMenu.addActionListener(new ActionListener() {
+			
 			/**
 			 * Die Funktion "actionPerformed" ruft basierend auf dem gewählten Objekt die passende Benutzeroberfläche aus.(Was soll wo angezeigt werden) 
 			 * @param e (Eingabe Wert)

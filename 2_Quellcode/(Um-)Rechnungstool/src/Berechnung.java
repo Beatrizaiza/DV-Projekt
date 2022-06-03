@@ -17,7 +17,7 @@ public class Berechnung extends Einheitenumrechner {
 	double Ea = 0;
 
 	/**
-	 * Get- und Set-Methoden zur �bergabe der Ein- und Ausgabeeinheiten aus der Klasse "Einheitenumrechner"
+	 * Get- und Set-Methoden zur Übergabe der Ein- und Ausgabeeinheiten aus der Klasse "Einheitenumrechner"
 	 */
 	public String getEinheite() {
 		return einheite;

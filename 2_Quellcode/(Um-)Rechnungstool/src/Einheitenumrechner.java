@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -20,7 +19,11 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
-
+/**
+ * 
+ * @author leonwelker
+ * In der Klasse "Einheitenumrechner" wird die Nutzeroberfläche erzeugt 
+ */
 public class Einheitenumrechner extends JFrame {
 
 	private JPanel contentPane;
@@ -60,6 +63,7 @@ public class Einheitenumrechner extends JFrame {
 	public double getEingwert() {
 		return eingwert;
 	}
+
 	public void setEingwert(double eingwert) {
 		this.eingwert = eingwert;
 	}
@@ -67,7 +71,7 @@ public class Einheitenumrechner extends JFrame {
 	////
 	////
 	/**
-	 * Launch the application.
+	 * Start der Anwendung
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -83,8 +87,9 @@ public class Einheitenumrechner extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Die GUI wird erstellt und die Dropdown Menus implementiert
 	 */
+
 	public Einheitenumrechner() {
 		Berechnung.init();
 		setTitle("Einheitenumrechner");
@@ -151,11 +156,15 @@ public class Einheitenumrechner extends JFrame {
 		startButton.setBounds(371, 185, 118, 44);
 		contentPane.add(startButton);
 
-		//Eingabe der Funtionen der Drop-Downs und Buttons
-
 		drop_groessen.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
 
+			/**
+			 * Die Funktion "actionPerformed" ruft basierend auf dem gewählten Objekt die passenden Dropdown-Menus und den gewählten Eingabe Wert aus der HashMap aus.
+			 * @param e (gewählte Ein- und Ausgabeeinheit je nach gewählter Maaseinheit)
+			 */
+			public void actionPerformed(ActionEvent e) {
+				
+				//Laenge
 				if(drop_groessen.getSelectedItem().equals("Laenge"))
 				{
 					drop_eingeinheit.removeAllItems();
@@ -183,6 +192,7 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Meilen [mi]");
 				}
 
+				//Flaeche 
 				else if(drop_groessen.getSelectedItem().equals("Flaeche"))
 				{
 					drop_eingeinheit.removeAllItems();
@@ -208,14 +218,13 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Quadratdezimeter [dm^2]");
 					drop_ausgeinheit.addItem("Quadratzentimeter [cm^2]");
 					drop_ausgeinheit.addItem("Quadratmillimeter [mm^2]");
-					//drop_ausgeinheit.addItem("Quadratmikrometer [�m^2]");
-					//drop_ausgeinheit.addItem("Quadratnanometer [nm^2]");
 					drop_ausgeinheit.addItem("Quadratzoll [in^2]");
 					drop_ausgeinheit.addItem("Quadratfuss [ft^2]");
 					drop_ausgeinheit.addItem("Quadratyard [yd^2]");
 					drop_ausgeinheit.addItem("Quadratmeilen [mi^2]");
 				}
 
+				//Volumen
 				else if(drop_groessen.getSelectedItem().equals("Volumen"))
 				{
 
@@ -226,9 +235,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Kubikdezimeter/Liter [dm^3/l]");
 					drop_eingeinheit.addItem("Kubikzentimeter/Milliliter [cm^3/ml]");
 					drop_eingeinheit.addItem("Kubikmillimeter [mm^3]");
-					//drop_eingeinheit.addItem("Kubikmikrometer [�m^3]");
-					//drop_eingeinheit.addItem("Kubiknanometer [nm^3]");
-
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Kubikkilometer [km^3]");
@@ -238,6 +244,7 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Kubikmillimeter [mm^3]");
 				}
 
+				//Gewicht
 				else if(drop_groessen.getSelectedItem().equals("Gewicht"))
 				{
 					drop_eingeinheit.removeAllItems();
@@ -249,8 +256,6 @@ public class Einheitenumrechner extends JFrame {
 					drop_eingeinheit.addItem("Stone [st]");
 					drop_eingeinheit.addItem("Pfund [lb]");
 					drop_eingeinheit.addItem("Unze [oz]");
-
-
 					drop_ausgeinheit.removeAllItems();
 					drop_ausgeinheit.setSelectedItem(null);
 					drop_ausgeinheit.addItem("Tonnen [t]");
@@ -262,10 +267,11 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Unze [oz]");
 				}
 
-
-
-
 				startButton.addActionListener(new ActionListener() {
+					/**
+					 * Die Funktion "actionPerformed" ermittelt die Eingabe des Nutzers und berechnet mit Hilfe der Funktionen aus der Klasse "Berechnung" den Ausgabewert in der gewünschten Einheit 
+					 * @param e (Eingabe Wert)
+					 */
 					public void actionPerformed(ActionEvent e) {
 
 						double eingwert, ausgwert;
@@ -276,6 +282,7 @@ public class Einheitenumrechner extends JFrame {
 						} catch (Exception e2) {
 							JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 						}
+
 						System.out.println("Eingabewert: "+eingwert);
 
 						String einheite,einheita;
@@ -285,6 +292,7 @@ public class Einheitenumrechner extends JFrame {
 						System.out.println("Eingabeeinheit: "+einheite);
 						System.out.println("Ausgabeeinheit: "+einheita);
 
+						//Ausgabe im Textfeld
 						ausgwert = Berechnung.Umrechner(eingwert, einheite, einheita);
 						System.out.println("Ergebnis: "+ausgwert);
 						textField_ausg.setText(String.valueOf(ausgwert));
