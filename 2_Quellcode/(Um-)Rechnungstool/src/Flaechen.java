@@ -1,16 +1,7 @@
 
 public class Flaechen {
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-        Flaechen.rectArea(4.4, 2.1);
-        Flaechen.squareArea(4.1);
-        Flaechen.circArea(3.2);
-        Flaechen.triangleArea(2, 1.4);
-       
-	}
-	
 	// Areas user might need to compute:
 	/**
 	 * Berechnet den Flächeninhalt des Rechtecks für die gewaehlte Basis und Hoehe
