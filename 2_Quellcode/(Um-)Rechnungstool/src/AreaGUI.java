@@ -35,7 +35,7 @@ public class AreaGUI extends JFrame  {
 	private JPanel contentPane;
 	static JComboBox FlaechenMenu;
 	static JComboBox einhMenu;
-	static JLabel L1, L2 , L3 , volEinheit, bild1, bild;
+	static JLabel L1, L2 , L3 , volEinheit, bild1, bild; 
 	private JTextField tf1;
 	private JTextField tf2;
 	private JTextField tf3;
@@ -249,24 +249,24 @@ public class AreaGUI extends JFrame  {
 		result.setEditable(false);
 		result.setBounds(357, 432, 240, 38);
 		contentPane.add(result);
-
+		// L1, L2, L3 are the Labels that later will show for example "Laenge" and "Breite" when Rechteck is chosen.
 		L1 = new JLabel("");
 		L1.setHorizontalAlignment(SwingConstants.CENTER);
 		L1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		L1.setBounds(180, 342, 144, 38);
-		contentPane.add(L1);
+		contentPane.add(L1); // first position right under tf1
 
 		L2 = new JLabel("");
 		L2.setHorizontalAlignment(SwingConstants.CENTER);
 		L2.setFont(new Font("Tahoma", Font.BOLD, 15));
 		L2.setBounds(334, 342, 144, 38);
-		contentPane.add(L2);
+		contentPane.add(L2); // middle position right under tf2
 
 		L3 = new JLabel("");
 		L3.setHorizontalAlignment(SwingConstants.CENTER);
 		L3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		L3.setBounds(488, 342, 144, 38);
-		contentPane.add(L3);
+		contentPane.add(L3); // last position right under tf3
 
 
 		JLabel Flaeche = new JLabel("Flaeche:");
@@ -274,16 +274,16 @@ public class AreaGUI extends JFrame  {
 		Flaeche.setBounds(256, 432, 91, 38);
 		contentPane.add(Flaeche);
 
-		volEinheit = new JLabel("");
+		volEinheit = new JLabel(""); // maybe delete
 		volEinheit.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volEinheit.setBounds(531, 432, 91, 38);
 		contentPane.add(volEinheit);
-
-		tf1 = new JTextField();
+		//tf1, tf2, tf3 are the JTextFields that allow the user to give input values for the chose area shape.
+		tf1 = new JTextField(); 
 		tf1.setBounds(180, 294, 144, 38);
 		tf1.setColumns(10);
 		tf1.setVisible(false);
-		contentPane.add(tf1);
+		contentPane.add(tf1); // place components you want to display
 
 		tf2 = new JTextField();
 		tf2.setColumns(10);
@@ -297,7 +297,7 @@ public class AreaGUI extends JFrame  {
 		tf3.setVisible(false);
 		contentPane.add(tf3);
 		
-		JButton menubutton = new JButton("Hauptmenue");
+		JButton menubutton = new JButton("Hauptmenue"); //should direct the user back to main menu
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		menubutton.setBounds(654, 25, 150, 31);
 		contentPane.add(menubutton);
