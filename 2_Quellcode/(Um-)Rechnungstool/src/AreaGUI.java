@@ -93,7 +93,7 @@ public class AreaGUI extends JFrame  {
 			// picture is shown so user knows what is meant // is implemented 
 			/**
 			 * Die Funktion "actionPerformed" ruft basierend auf dem gewaehlten Objekt die passende Benutzeroberflaeche aus.(Was soll wo angezeigt werden)
-			 * @param e (Eingabe Wert)
+			 * @param e 
 			 */
 		public void actionPerformed(ActionEvent e) {
 			String Form = (String) FlaechenMenu.getSelectedItem();
@@ -188,7 +188,9 @@ public class AreaGUI extends JFrame  {
 
 		}
 		});
-
+		/**
+		 * 
+		 */
 		JButton rechnen = new JButton("Rechnen"); // when user pushes button "Rechnen" it will calculate using the formulas from Flaechen
 		rechnen.addActionListener(new  ActionListener() {
 			@Override
