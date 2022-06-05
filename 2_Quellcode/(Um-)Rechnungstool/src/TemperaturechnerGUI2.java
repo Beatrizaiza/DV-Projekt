@@ -83,7 +83,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 	 */
 		String tempList[] = {"Einheiten Waehlen", "Celsius zu Kelvin", "Celsius zu Fahrenheit", "Fahrenheit zu Celsius", "Fahrenheit zu Kelvin", "Kelvin zu Celsius", "Kelvin zu Fahrenheit"};
 		JComboBox tempMenu = new JComboBox(tempList);
-		tempMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten Waehlen", "Celsius", "Fahrenheit", "Kelvin"}));
+		tempMenu.setModel(new DefaultComboBoxModel(new String[] {"Eingabeeinheit waehlen...", "Celsius", "Fahrenheit", "Kelvin"}));
 		tempMenu.setForeground(new Color(0, 0, 0));
 		tempMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tempMenu.setBounds(180, 144, 472, 38);

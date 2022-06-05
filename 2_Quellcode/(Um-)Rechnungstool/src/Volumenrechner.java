@@ -89,7 +89,7 @@ public class Volumenrechner extends JFrame  {
 
 		String volumeList[] = { "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel" };
 		JComboBox volumeMenu = new JComboBox(volumeList);
-		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Waehlen", "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel", "Quader"}));
+		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Form waehlen...", "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel", "Quader"}));
 		volumeMenu.setForeground(new Color(0, 0, 0));
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
@@ -193,7 +193,7 @@ public class Volumenrechner extends JFrame  {
 		volEinheit =(null);
 		einhMenu = new JComboBox();
 		einhMenu.setFont(new Font("Tahoma", Font.BOLD, 15));
-		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten Waehlen", "mm", "cm", "m"}));
+		einhMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheit waehlen...", "mm", "cm", "m"}));
 		einhMenu.setBounds(325, 215, 181, 38);
 		contentPane.add(einhMenu);
 		einhMenu.addActionListener(new ActionListener() {

@@ -83,7 +83,7 @@ public class AreaGUI extends JFrame  {
 
 		String FlaechenList[] = { "Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat"};
 		JComboBox FlaechenMenu = new JComboBox(FlaechenList);
-		FlaechenMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Waehlen", "Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat"}));
+		FlaechenMenu.setModel(new DefaultComboBoxModel(new String[] {"Form waehlen...", "Rechteck", "Dreieck", "gleichseitiges Dreieck", "Kreis", "Kreissektor", "Quadrat"}));
 		FlaechenMenu.setForeground(new Color(0, 0, 0));
 		FlaechenMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		FlaechenMenu.setBounds(180, 144, 472, 38);
