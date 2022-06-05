@@ -74,7 +74,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 		lblNewLabel.setForeground(new Color(0, 100, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(275, 35, 279, 38);
+		lblNewLabel.setBounds(275, 27, 279, 38);
 		contentPane.add(lblNewLabel);
 
 
@@ -213,7 +213,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 			}
 		});
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
-		menubutton.setBounds(653, 25, 150, 31);
+		menubutton.setBounds(652, 35, 150, 31);
 		contentPane.add(menubutton);
 	}
 }

@@ -105,7 +105,7 @@ public class Einheitenumrechner extends JFrame {
 		JLabel titel = new JLabel("Einheitenumrechner");
 		titel.setForeground(new Color(0, 128, 0));
 		titel.setHorizontalAlignment(SwingConstants.CENTER);
-		titel.setBounds(300, 34, 240, 23);
+		titel.setBounds(300, 29, 240, 23);
 		titel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titel);
 
@@ -113,47 +113,47 @@ public class Einheitenumrechner extends JFrame {
 		JComboBox drop_groessen = new JComboBox();
 		drop_groessen.setFont(new Font("Tahoma", Font.BOLD, 14));
 		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"Waehlen...", "Laenge", "Flaeche", "Volumen", "Gewicht"}));
-		drop_groessen.setBounds(300, 77, 240, 31);
+		drop_groessen.setBounds(299, 125, 240, 31);
 		contentPane.add(drop_groessen);
 
 		JComboBox drop_ausgeinheit = new JComboBox();
 		drop_ausgeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		drop_ausgeinheit.setModel(new DefaultComboBoxModel(new String[] {"Waehle Ausgabeeinheit..."}));
-		drop_ausgeinheit.setBounds(499, 212, 232, 29);
+		drop_ausgeinheit.setBounds(498, 260, 232, 29);
 		contentPane.add(drop_ausgeinheit);
 
 		JComboBox drop_eingeinheit = new JComboBox();
 		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"Waehle Eingabeeinheit..."}));
 		drop_eingeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		drop_eingeinheit.setBounds(129, 210, 232, 31);
+		drop_eingeinheit.setBounds(128, 258, 232, 31);
 		contentPane.add(drop_eingeinheit);
 
 		textField_eing = new JTextField();
 		textField_eing.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		textField_eing.setBounds(129, 170, 232, 31);
+		textField_eing.setBounds(128, 218, 232, 31);
 		textField_eing.setColumns(10);
 		contentPane.add(textField_eing);
 
 		textField_ausg = new JTextField();
 		textField_ausg.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		textField_ausg.setBounds(499, 170, 232, 31);
+		textField_ausg.setBounds(498, 218, 232, 31);
 		textField_ausg.setColumns(10);
 		textField_ausg.setEditable(false);
 		contentPane.add(textField_ausg);
 
 		JLabel tit_eing = new JLabel("Eingabe:");
 		tit_eing.setFont(new Font("Tahoma", Font.BOLD, 14));
-		tit_eing.setBounds(129, 139, 232, 21);
+		tit_eing.setBounds(128, 187, 232, 21);
 		contentPane.add(tit_eing);
 
 		JLabel tit_ausg = new JLabel("Ausgabe:");
 		tit_ausg.setFont(new Font("Tahoma", Font.BOLD, 14));
-		tit_ausg.setBounds(499, 139, 232, 21);
+		tit_ausg.setBounds(498, 187, 232, 21);
 		contentPane.add(tit_ausg);
 
 		JButton startButton = new JButton("START");
 		startButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
-		startButton.setBounds(371, 185, 118, 44);
+		startButton.setBounds(370, 233, 118, 44);
 		contentPane.add(startButton);
 		
 		JButton menubutton = new JButton("Hauptmenue");

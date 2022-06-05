@@ -67,7 +67,7 @@ public class Volumenrechner extends JFrame  {
 	 */
 
 	public Volumenrechner() {
-		setTitle("Volumenumrechner");
+		setTitle("Volumenrechner");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(350, 100, 850, 600);
@@ -78,12 +78,12 @@ public class Volumenrechner extends JFrame  {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("Volumenumrechner");
+		JLabel lblNewLabel = new JLabel("Volumenrechner");
 		lblNewLabel.setBackground(new Color(0, 128, 0));
 		lblNewLabel.setForeground(new Color(0, 100, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(266, 36, 240, 21);
+		lblNewLabel.setBounds(293, 27, 240, 21);
 		contentPane.add(lblNewLabel);
 
 
@@ -307,7 +307,7 @@ public class Volumenrechner extends JFrame  {
 		//			}
 		//		});
 
-		JLabel Volume = new JLabel("Volume:");
+		JLabel Volume = new JLabel("Volumen:");
 		Volume.setFont(new Font("Tahoma", Font.BOLD, 18));
 		Volume.setBounds(266, 431, 346, 38);
 		contentPane.add(Volume);

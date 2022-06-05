@@ -77,7 +77,7 @@ public class AreaGUI extends JFrame  {
 		lblNewLabel.setForeground(new Color(0, 100, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(281, 52, 240, 21);
+		lblNewLabel.setBounds(294, 29, 240, 21);
 		contentPane.add(lblNewLabel);
 
 
@@ -299,7 +299,7 @@ public class AreaGUI extends JFrame  {
 		
 		JButton menubutton = new JButton("Hauptmenue"); //should direct the user back to main menu
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
-		menubutton.setBounds(654, 25, 150, 31);
+		menubutton.setBounds(643, 28, 150, 31);
 		contentPane.add(menubutton);
 		
 		menubutton.addActionListener(new ActionListener() {
