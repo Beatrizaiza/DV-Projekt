@@ -210,7 +210,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 		
 		
 		
-		//addWindowListener(new WindowClosingListener());
+		addWindowListener(new WindowClosingListener());
 
 		setVisible(true);
 	}

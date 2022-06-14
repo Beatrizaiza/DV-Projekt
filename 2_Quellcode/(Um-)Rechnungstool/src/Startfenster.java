@@ -128,7 +128,7 @@ public class Startfenster {
 
 		// Window Closer
 		//
-		//hauptfenster.addWindowListener(new WindowClosingListener());
+		hauptfenster.addWindowListener(new WindowClosingListener());
 		hauptfenster.setVisible(true);
 	}
 
