@@ -284,7 +284,7 @@ public class Einheitenumrechner extends JFrame {
 		});
 		
 		// Window Closer
-		addWindowListener(new WindowClosingListener());
+		//addWindowListener(new WindowClosingListener());
 		setVisible(true);
 	}
 }

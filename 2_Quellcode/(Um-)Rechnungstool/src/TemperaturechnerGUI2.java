@@ -1,59 +1,28 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JComboBox;
 import java.awt.Color;
-import javax.swing.JTextPane;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JButton;
-import javax.swing.event.AncestorListener;
-import javax.swing.text.JTextComponent;
-import javax.swing.event.AncestorEvent;
-import java.awt.event.ActionListener;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-/**
- * 
- * @author leonwelker
- * In der Klasse "TemperaturrechnerGUI2" wird sowohl die GUI erstellt und formatiert, sondern auch die nötigen eingabe Parameter vom Nutzer erfragt und 
- * an die Klasse "Temperatur" weitergegeben. Nach der Berechnung wird das Ergebniis dem Nutzer über das Ausgabefeld zurückgegeben.
- *
- */
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
+/**@author leonwelker
+* In der Klasse "TemperaturrechnerGUI2" wird sowohl die GUI erstellt
+* und formatiert, sondern auch die nötigen eingabe Parameter vom 
+* Nutzer erfragt und 
+* an die Klasse "Temperatur" weitergegeben.
+* Nach der Berechnung wird das Ergebniis dem Nutzer über das 
+* Ausgabefeld zurückgegeben.
+* @version 1.3
+*/
 public class TemperaturechnerGUI2 extends JFrame {
+	//Objektvariablen
 	private JPanel contentPane;
-	static JComboBox tempMenu;
-	static JLabel L1, L2,L3;
-	private JTextField tf2;
-	private JTextField tf3;
-	private JTextField tf1;
-	private JButton menubutton;
-
-
-	/**
-	 * Start der Anwendung
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TemperaturechnerGUI2 frame = new TemperaturechnerGUI2();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JComboBox tempMenu;
+	private JLabel L1, L2,L3,lblNewLabel;
+	private JTextField tf1,tf2,tf3;
+	private JButton menubutton,rechnen;
+	
 	/**
 	 * Die Nutzeroberfläche wird erstellt.
 	 */
@@ -68,106 +37,32 @@ public class TemperaturechnerGUI2 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-		JLabel lblNewLabel = new JLabel("Temperaturumrechner");
+		
+		lblNewLabel = new JLabel("Temperaturumrechner");
 		lblNewLabel.setBackground(new Color(0, 128, 0));
 		lblNewLabel.setForeground(new Color(0, 100, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
 		lblNewLabel.setBounds(275, 27, 279, 38);
 		contentPane.add(lblNewLabel);
-
-
-	/**
-	 * Das Dropdown-Menu wird erstellt
-	 */
+		
+		/**
+		 * Das Dropdown-Menu wird erstellt
+		 */
 		String tempList[] = {"Einheiten Waehlen", "Celsius zu Kelvin", "Celsius zu Fahrenheit", "Fahrenheit zu Celsius", "Fahrenheit zu Kelvin", "Kelvin zu Celsius", "Kelvin zu Fahrenheit"};
 		JComboBox tempMenu = new JComboBox(tempList);
-		tempMenu.setModel(new DefaultComboBoxModel(new String[] {"Eingabeeinheit waehlen...", "Celsius", "Fahrenheit", "Kelvin"}));
+		tempMenu.setModel(new DefaultComboBoxModel(new String[] {"Einheiten Waehlen", "Celsius", "Fahrenheit", "Kelvin"}));
 		tempMenu.setForeground(new Color(0, 0, 0));
 		tempMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tempMenu.setBounds(180, 144, 472, 38);
 		contentPane.add(tempMenu);
-
-		tempMenu.addActionListener(new ActionListener() {
-/**
- * Die Funktion "actionPerformed" ruft basierend auf der gewählten Einheit die passende Benutzeroberfläche aus.Also eelches der Eingabe Felder aktiv ist.
- * @param e
- */
-		public void actionPerformed(ActionEvent e) {
-			String Temp = (String) tempMenu.getSelectedItem();
-			if (Temp.equals("Formen Wählen")) {
-				L1.setText("");
-				L2.setText("");
-				tf1.setText(null);
-				tf2.setText(null);
-				tf3.setText(null);
-			}
-			else if (Temp.equals("Celsius")) {
-				L1.setText("Celsius");
-				L2.setText("Kelvin");
-				L3.setText("Fahrenheit");
-				tf1.setText(null);
-				tf2.setText(null);
-				tf3.setText(null);
-			}
-			else if (Temp.equals("Fahrenheit")) {
-				L1.setText("Fahrenheit");
-				L2.setText("Celsius");
-				L3.setText("Kelvin");
-				tf1.setText(null);
-				tf2.setText(null);
-				tf3.setText(null);
-			}
-			else if (Temp.equals("Kelvin")) {
-				L1.setText("Kelvin");
-				L2.setText("Celsius");
-				L3.setText("Fahrenheit");
-				tf1.setText(null);
-				tf2.setText(null);
-				tf3.setText(null);
-			}
-		}
-		});
-
-	/**
-	 * Die eingegebenen Werte werden mittels der Methoden aus Klasse "Temperatur" berechnet und auf dem Bildschirm ausgegeben.
-	 */
-		JButton rechnen = new JButton("Rechnen");
-		rechnen.addActionListener(new  ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String Temp = (String) tempMenu.getSelectedItem();
-				if (Temp.equals("Celsius")) {
-					double c = Double.parseDouble(tf1.getText());
-					double answer2 = Temperatur.C2k (c);
-					double answer = Temperatur.C2f (c);					
-					tf2.setText(answer2 + "");
-					tf3.setText(answer + "");
-
-				}
-				if (Temp.equals("Fahrenheit")) {
-					double f = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.F2c (f);
-					double answer2 = Temperatur.F2k (f);
-					tf2.setText(answer + "");
-					tf3.setText(answer2 + "");
-				}
-				if (Temp.equals("Kelvin")) {
-					double k = Double.parseDouble(tf1.getText());
-					double answer = Temperatur.K2c (k);
-					double answer2 = Temperatur.K2f (k);
-					tf2.setText(answer + "");
-					tf3.setText(answer2 + "");
-				}
-			}
-		});
 		
+		rechnen = new JButton("Rechnen");
 		rechnen.setForeground(new Color(0, 128, 0));
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
 		rechnen.setBounds(364, 358, 107, 38);
 		contentPane.add(rechnen);
-
+		
 		L1 = new JLabel("");
 		L1.setHorizontalAlignment(SwingConstants.CENTER);
 		L1.setFont(new Font("Tahoma", Font.BOLD, 15));
@@ -206,14 +101,119 @@ public class TemperaturechnerGUI2 extends JFrame {
 		contentPane.add(L3);
 		
 		menubutton = new JButton("Hauptmenue");
-		menubutton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-				new Startfenster().setVisible(true);
-			}
-		});
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		menubutton.setBounds(652, 35, 150, 31);
 		contentPane.add(menubutton);
+		
+		//ActionListener
+		/**
+		 * Die eingegebenen Werte werden mittels der Methoden aus Klasse "Temperatur" berechnet und auf dem Bildschirm ausgegeben.
+		 */
+		tempMenu.addActionListener(new ActionListener() {
+			/**
+			 * Die Funktion "actionPerformed" ruft basierend auf der gewählten Einheit die passende Benutzeroberfläche aus.Also eelches der Eingabe Felder aktiv ist.
+			 * @param e
+			 */
+					public void actionPerformed(ActionEvent e) {
+						String Temp = (String) tempMenu.getSelectedItem();
+						if (Temp.equals("Formen Wählen")) {
+							L1.setText("");
+							L2.setText("");
+							tf1.setText(null);
+							tf2.setText(null);
+							tf3.setText(null);
+						}
+						else if (Temp.equals("Celsius")) {
+							L1.setText("Celsius");
+							L2.setText("Kelvin");
+							L3.setText("Fahrenheit");
+							tf1.setText(null);
+							tf2.setText(null);
+							tf3.setText(null);
+						}
+						else if (Temp.equals("Fahrenheit")) {
+							L1.setText("Fahrenheit");
+							L2.setText("Celsius");
+							L3.setText("Kelvin");
+							tf1.setText(null);
+							tf2.setText(null);
+							tf3.setText(null);
+						}
+						else if (Temp.equals("Kelvin")) {
+							L1.setText("Kelvin");
+							L2.setText("Celsius");
+							L3.setText("Fahrenheit");
+							tf1.setText(null);
+							tf2.setText(null);
+							tf3.setText(null);
+						}
+					}
+					});
+		
+		rechnen.addActionListener(new  ActionListener() {
+			@Override
+			/**
+			 * Die Funktion "actionPerformed" ruft basierend auf der gewählten Einheit die passende Benutzeroberfläche aus.Also eelches der Eingabe Felder aktiv ist.
+			 * @param e
+			 */
+			public void actionPerformed(ActionEvent e) {
+				String Temp = (String) tempMenu.getSelectedItem();
+				
+				if (tf1.getText().indexOf(",")>0 || tf2.getText().indexOf(",")>0 || tf3.getText().indexOf(",")>0)
+					JOptionPane.showMessageDialog(null,"Formatierungs Fehler \'.\' statt \',\' verwenden", "Error", JOptionPane.ERROR_MESSAGE);
+				
+				
+				else if (Temp.equals("Celsius")) {
+					try {
+					double c = Double.parseDouble(tf1.getText());
+					double answer2 = Temperatur.C2k (c);
+					double answer = Temperatur.C2f (c);					
+					tf2.setText(answer2 + "");
+					tf3.setText(answer + "");
+					}catch (Exception e2) {
+						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
+					}
+
+				}
+				else if (Temp.equals("Fahrenheit")) {
+					try {
+					double f = Double.parseDouble(tf1.getText());
+					double answer = Temperatur.F2c (f);
+					double answer2 = Temperatur.F2k (f);
+					tf2.setText(answer + "");
+					tf3.setText(answer2 + "");
+					}catch (Exception e2) {
+						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+				else if (Temp.equals("Kelvin")) {
+					try {
+					double k = Double.parseDouble(tf1.getText());
+					double answer = Temperatur.K2c (k);
+					double answer2 = Temperatur.K2f (k);
+					tf2.setText(answer + "");
+					tf3.setText(answer2 + "");
+					}catch (Exception e2) {
+						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+			}
+		});
+		
+		menubutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Startfenster b=new Startfenster();
+				setVisible(false);
+			}
+		});
+
+		
+		
+		
+		//addWindowListener(new WindowClosingListener());
+
+		setVisible(true);
 	}
+	
+
 }

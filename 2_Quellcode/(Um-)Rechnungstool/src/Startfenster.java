@@ -121,13 +121,14 @@ public class Startfenster {
 			 * @param e  ist das Action Event damit die GUI sich oeffnet
 			 */
 			public void actionPerformed(ActionEvent e) {
-				new TemperaturechnerGUI();
+				new TemperaturechnerGUI2();
 				hauptfenster.setVisible(false);
 			}
 		});
 
 		// Window Closer
-		hauptfenster.addWindowListener(new WindowClosingListener());
+		//
+		//hauptfenster.addWindowListener(new WindowClosingListener());
 		hauptfenster.setVisible(true);
 	}
 
