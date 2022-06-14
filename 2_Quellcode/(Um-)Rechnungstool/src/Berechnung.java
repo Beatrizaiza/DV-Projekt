@@ -2,22 +2,27 @@
 /**
  * 
  * @author leonwelker
- * Die Klasse "Berechnung" erstellt die GUI für den Einheitenrechner und gibt mittels der Funktionen aus der Klasse "einheitenumrechner" dem Nutzer den Wert in deer gewünschten Zieleinheit aus.
+ * Die Klasse "Berechnung" erstellt die GUI für den
+ * Einheitenrechner und gibt mittels der Funktionen
+ * aus der Klasse "einheitenumrechner" dem Nutzer den Wert
+ * in der gewünschten Zieleinheit aus.
  *
+ *@version 1.0
  */
-public class Berechnung extends Einheitenumrechner {
+public class Berechnung {
 
 
 	/**
 	 * Werte aus "Einheitenrechner"
 	 */
-	String einheite ="null";
-	String einheita ="null";
-	double Ee = 0;
-	double Ea = 0;
+	private String einheite;
+	private String einheita;
+	private double eingwert;
 
 	/**
-	 * Get- und Set-Methoden zur Übergabe der Ein- und Ausgabeeinheiten aus der Klasse "Einheitenumrechner"
+	 * Get- und Set-Methoden zur Übergabe
+	 * der Ein- und Ausgabeeinheiten aus der 
+	 * Klasse "Einheitenumrechner"
 	 */
 	public String getEinheite() {
 		return einheite;
@@ -33,9 +38,9 @@ public class Berechnung extends Einheitenumrechner {
 	}
 
 	/** 
-	 * Get- und Set-Methode für den Eingabewert, wird = 0 gesetzt
+	 * Get- und Set-Methode für den Eingabewert
 	 */
-	double eingwert = 0;
+	
 
 	public double getEingwert() {
 		return eingwert;
@@ -45,7 +50,8 @@ public class Berechnung extends Einheitenumrechner {
 	}
 
 	/**
-	 * Implementierung einer HashMap zum Speichern der Umrechnungsfaktoren der Groessen
+	 * Implementierung einer HashMap zum Speichern 
+	 * der Umrechnungsfaktoren der Groessen
 	 */
 	public static HashMap<String, Double> Rechnung = new HashMap<>();
 
@@ -97,12 +103,15 @@ public class Berechnung extends Einheitenumrechner {
 
 	// Methode zum Umrechnen der Groessen	
 	/**
-	 * Die Funktion "Umrechner" berechnet, basierend auf die vom Nutzer gewählten Einheiten, den gewünschten Wert. 
+	 * Die Funktion "Umrechner" berechnet,
+	 * basierend auf die vom Nutzer gewählten Einheiten, 
+	 * den gewünschten Wert. 
 	 * 
 	 * @param eingwert (Eingabewert)
 	 * @param einheite (Eingabeeinheit)
 	 * @param einheita (Ausgabeeinheit)
-	 * @return Ausgabewert (ausgwert) als Ergebnis der Einheiten spezifischen Umrechnung
+	 * @return Ausgabewert (ausgwert) als Ergebnis der Einheiten
+	 * spezifischen Umrechnung
 	 */
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
 		
