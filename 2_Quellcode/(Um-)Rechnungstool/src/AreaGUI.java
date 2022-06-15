@@ -165,6 +165,12 @@ public class AreaGUI extends JFrame  {
 				L1.setText("");
 				L2.setText("");
 				L3.setText("");
+				//"clearing up old input" - in case the user already calculated something 
+				tf1.setText(null); 
+				tf2.setText(null);
+				tf3.setText(null);	
+				result.setText(null);
+				//
 				bild.setIcon(new ImageIcon("AreaOptions.png"));
 				bild.setVisible(true);
 				contentPane.add(bild);
@@ -178,6 +184,9 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				tf1.setText(null);
+				tf2.setText(null);
+				result.setText(null);
 				bild.setIcon(new ImageIcon("Rechteck.png")); // rectangle image
 				bild.setVisible(true);
 				contentPane.add(bild);
@@ -191,6 +200,9 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				tf1.setText(null);
+				tf2.setText(null);
+				result.setText(null);
 				bild.setIcon(new ImageIcon("Dreieck.png")); //  triangle image
 				bild.setVisible(true);
 				contentPane.add(bild);
@@ -204,6 +216,8 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				tf2.setText(null);
+				result.setText(null);  
 				bild.setIcon(new ImageIcon("gleichseitiges Dreieck.png")); //  equilateral triangle image
 				bild.setVisible(true);
 				contentPane.add(bild);
@@ -216,6 +230,8 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				tf2.setText(null);
+				result.setText(null);
 				bild.setIcon(new ImageIcon("Kreis.png"));
 				bild.setVisible(true);
 				contentPane.add(bild);
@@ -230,6 +246,9 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(true);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				tf1.setText(null);
+				tf2.setText(null);
+				result.setText(null);
 				bild.setIcon(new ImageIcon("Kreissektor.png")); //  circular sector image
 				bild.setVisible(true);
 				contentPane.add(bild);
@@ -242,6 +261,8 @@ public class AreaGUI extends JFrame  {
 				tf1.setVisible(false);
 				tf2.setVisible(true);
 				tf3.setVisible(false);
+				tf2.setText(null);
+				result.setText(null);
 				bild.setIcon(new ImageIcon("Quadrat.png")); //  square image
 				bild.setVisible(true);
 				contentPane.add(bild);
