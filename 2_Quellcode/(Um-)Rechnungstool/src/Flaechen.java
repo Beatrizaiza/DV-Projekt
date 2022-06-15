@@ -1,7 +1,12 @@
-
+/**
+ * 
+ * @author Sophi
+ * @version 1.1
+ *
+ */
 public class Flaechen {
 	
-	public static void main(String[] args) {
+	public Flaechen () {
 
 		Flaechen.rectArea(4.4, 2.1);
 		Flaechen.squareArea(4.1);
@@ -13,7 +18,8 @@ public class Flaechen {
 
 	// Areas user might need to compute:
 	/**
-	 * Berechnet den Flaecheninhalt des Rechtecks für die gewaehlte Basis und Hoehe
+	 * Berechnet den Flaecheninhalt des Rechtecks fuer die 
+	 * gewaehlte Basis und Hoehe
 	 * @param b
 	 * Basislaenge b 
 	 * @param h
@@ -26,9 +32,8 @@ public class Flaechen {
 	}
 	/**
 	 * Berechnet die Flaeche eines Kreises mit einem gewaehlten Radius
-	 * @param r 
-	 * r Radius 
-	 * @return
+	 * @param r Radius 
+	 * @return Flaechen Inhalt Kreis
 	 */
 	public static double circArea(double r)
 	{
@@ -37,12 +42,10 @@ public class Flaechen {
 	}
 	
 	/**
-	 * Berechnet einen Kreissektor für den gewaehlten Radius und den Mittelpunktswinkel 
-	 * @param r
-	 * r Radius
-	 * @param alpha
-	 * alpha ist der Mittelpunktswinkel
-	 * @return
+	 * Berechnet einen Kreissektor fuer den gewaehlten Radius und den Mittelpunktswinkel 
+	 * @param r Radius
+	 * @param alpha ist der Mittelpunktswinkel
+	 * @return Kreissektor fuer den gewaehlten Radius und den Mittelpunktswinkel
 	 */
 	public static double sectorCircArea(double r, double alpha) // Circular sector = Kreissektor =  Kreisausschnitt
 	{
@@ -52,9 +55,8 @@ public class Flaechen {
 	
 	/**
 	 * Berechnet den Flaecheninhalt des Quadrats fuer eine bestimmte Laenge 
-	 * @param l
-	 * Seitenlaenge l
-	 * @return
+	 * @param l Seitenlaenge
+	 * @return Flaeche Quadrat
 	 */
 	public static double squareArea(double l)
 	{
@@ -63,11 +65,9 @@ public class Flaechen {
 	
 	/**
 	 * Berechnet den Flaecheninhalt des Dreiecks für die gewaehlte Basis und Hoehe
-	 * @param b
-	 * Basislaenge b 
-	 * @param h
-	 * Hoehe h 
-	 * @return
+	 * @param b Basislaenge
+	 * @param h Hoehe
+	 * @return Flaecheninhalt Dreieck
 	 */
 	public static double triangleArea(double b, double h) 
 	{
@@ -76,9 +76,8 @@ public class Flaechen {
 	/**
 	 * Berechnet den Flaecheninhalt eines gleichseitigen Dreiecks
 	 *d. h. ein Dreieck, bei dem alle drei Seiten gleich lang sind
-	 * @param b
-	 * Seitenlaenge b
-	 * @return
+	 * @param b Seitenlaenge
+	 * @return Flaecheninhalt gleichseitigen Dreieck
 	 */
 	public static double equilatTriaArea(double b)  // Equilateral triangle = gleichseitiges Dreieck
 	{
@@ -86,9 +85,3 @@ public class Flaechen {
 	}
 	
 }
-
-
-
-
-
-	
