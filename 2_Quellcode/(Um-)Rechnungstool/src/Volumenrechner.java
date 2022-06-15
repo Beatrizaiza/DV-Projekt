@@ -338,7 +338,7 @@ public class Volumenrechner extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
 				//
-				new Startfenster().setVisible(true);
+				//new Startfenster().setVisible(true);
 			}
 		});
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
