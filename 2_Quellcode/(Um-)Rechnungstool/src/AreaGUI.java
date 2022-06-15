@@ -1,28 +1,10 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JComboBox;
 import java.awt.Color;
-import javax.swing.JTextPane;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JButton;
-import javax.swing.event.AncestorListener;
-import javax.swing.text.JTextComponent;
-import javax.swing.event.AncestorEvent;
-import java.awt.event.ActionListener;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 /**
  * 
  * @author sophi
