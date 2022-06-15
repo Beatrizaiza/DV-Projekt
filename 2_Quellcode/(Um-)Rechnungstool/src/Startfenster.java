@@ -17,7 +17,7 @@ import javax.swing.*;
  */
 public class Startfenster {
 	//Objektvariablen
-	public JFrame hauptfenster = new JFrame("Umrechnungstool");
+	private JFrame hauptfenster = new JFrame("Umrechnungstool");
 	private JLabel labelMassband = new JLabel(new ImageIcon("Massband.png"));
 	private JLabel labelDreieck = new JLabel(new ImageIcon("Dreieck.png"));
 	private JLabel labelKugel = new JLabel(new ImageIcon("Kugel.png"));
@@ -133,9 +133,7 @@ public class Startfenster {
 	}
 
 	public static void main(String[] args) {
-		Startfenster h=new Startfenster();
-		String test="124,24";
-		System.out.println(test.indexOf(","));
+		new Startfenster();
 	}
 
 }
