@@ -1,7 +1,8 @@
 /**
  * 
  * @author leonwelker
- * In der Klassse "Volumen" wird basierend auf den eingegeben Werten (r,l,h,b) das entsprechende Volumen berechnet.
+ * In der Klassse "Volumen" wird basierend auf 
+ * den eingegebenen Werten (r,l,h,b) das entsprechende Volumen berechnet (Darstellung in Volumenrechner).
  */
 public class Volumen {
 
@@ -15,7 +16,7 @@ public class Volumen {
  * 
  * @param l (laenge)
  * @param h (hoehe)
- * @return Das erechnete Pyramiden Volumen
+ * @return Das errechnete Pyramiden Volumen
  */
 	public static double pyramidVolume(double l, double h) //Pyramide
 	{
@@ -25,7 +26,7 @@ public class Volumen {
 	/**
 	 * 
 	 * @param l (laenge)
-	 * @return Das erechnete Würfel Volumen
+	 * @return Das errechnete Wuerfel Volumen
 	 */
 	public static double cubeVolume(double l) //Wuerfel
 	{
@@ -34,7 +35,7 @@ public class Volumen {
 /**
  * 
  * @param r (radius)
- * @return Das erechnete Kugel Volumen
+ * @return Das errechnete Kugel Volumen
  */
 	public static double sphereVolume(double r) //Kugel
 	{
@@ -44,7 +45,7 @@ public class Volumen {
  * 
  * @param r (radius)
  * @param h (hoehe)
- * @return Das erechnete Zylinder Volumen
+ * @return Das errechnete Zylinder Volumen
  */
 	public static double cylinderVolume(double r, double h) //Zylinder
 	{
@@ -54,7 +55,7 @@ public class Volumen {
  * 
  * @param r (radius)
  * @param h (hoehe)
- * @return Das erechnete Kegel Volumen
+ * @return Das errechnete Kegel Volumen
  */
 	public static double coneVolume(double r, double h) //Kegel
 	{
@@ -65,7 +66,7 @@ public class Volumen {
  * @param l (laenge)
  * @param b (breite)
  * @param h (hoehe)
- * @return Das erechnete Quader Volumen
+ * @return Das errechnete Quader Volumen
  */
 	public static double squareVolume(double l, double b, double h) //Quader
 	{
