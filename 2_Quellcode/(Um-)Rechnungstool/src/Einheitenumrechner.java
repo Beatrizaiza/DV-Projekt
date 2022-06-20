@@ -8,9 +8,9 @@ import javax.swing.border.EmptyBorder;
 
 /**
  * 
- * @author leonwelker
- * In der Klasse "Einheitenumrechner" wird die Nutzeroberfläche
- * fuer die Einheiten Umrechnung erzeugt 
+ * Die Klasse "Einheitenumrechner" erzeugt die GUI fuer den Einheitenumrechner
+ * 
+ * @author Luca Wieland, Leon Welker
  * 
  * @version 1.2
  *
@@ -18,7 +18,7 @@ import javax.swing.border.EmptyBorder;
 
 public class Einheitenumrechner extends JFrame {
 	
-	//Objekt Variablen werden Deklariert
+	//Objekt Variablen werden deklariert
 	private double eingwert, ausgwert;
 	private String einheite,einheita;
 	
@@ -39,13 +39,14 @@ public class Einheitenumrechner extends JFrame {
 	private JButton menubutton = new JButton("Hauptmenue");
 	
 /**
- * Im Klassenkonstruktor wird die GUI wird erstellt
- * und die Dropdown Menus implementiert
+ * Im Klassenkonstruktor wird die GUI f�r den Einheitenumrechner erstellt.
+ * Es werden die Buttons, Bilder und Drop-Down-Elemente formatiert und der "Hauptmenue"-Button
+ * zur Rueckkehr zum Startfenster implementiert.
  */
 	
 	public Einheitenumrechner() {
 		
-		//Startup und layout
+		//Startup und Layout
 		setTitle("Einheitenumrechner");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -56,7 +57,7 @@ public class Einheitenumrechner extends JFrame {
 		contentPane.setLayout(null);
 		Berechnung.init();
 		
-		//Überschrift
+		//Ueberschrift
 		titel.setForeground(new Color(0, 128, 0));
 		titel.setHorizontalAlignment(SwingConstants.CENTER);
 		titel.setBounds(300, 29, 240, 23);
@@ -127,9 +128,11 @@ public class Einheitenumrechner extends JFrame {
 
 			/**
 			 * Die Funktion "actionPerformed" ruft basierend auf 
-			 * dem gewählten Objekt die passenden Dropdown-Menus und
-			 * den gewählten Eingabe Wert aus der HashMap aus.
-			 * @param e (Führt das Event aus)
+			 * dem gewaehlten Objekt und der gewaehlten Einheit die passenden Dropdown-Menus
+			 * zur Wahl der entsprechenden Einheit auf und hohlt den an die entsprechende Einheit
+			 * gebundenen Wert aus der HashMap aus der Klasse "Berechnung" f�r die darauf folgende Berechnung.
+			 * 
+			 * @param e fuehrt das Event aus
 			 */
 			public void actionPerformed(ActionEvent e) {
 				
@@ -238,12 +241,11 @@ public class Einheitenumrechner extends JFrame {
 
 				startButton.addActionListener(new ActionListener() {
 					/**
-					 * Die Funktion "actionPerformed" ermittelt die
-					 * Eingabe des Nutzers und berechnet
-					 * mit Hilfe der Funktionen aus der Klasse 
-					 * "Berechnung" den Ausgabewert in der 
-					 * gewünschten Einheit 
-					 * @param e (Führt das Event aus)
+					 * Die Funktion "actionPerformed" ermittelt die Eingabe des Nutzers und berechnet
+					 * mit Hilfe der Funktionen aus der Klasse "Berechnung" den Ausgabewert in der 
+					 * gewaehlten Einheit.
+					 * 
+					 * @param e fuehrt das Event aus
 					 */
 					public void actionPerformed(ActionEvent e) {
 
@@ -251,7 +253,6 @@ public class Einheitenumrechner extends JFrame {
 						eingwert = 0;
 						ausgwert = 0;
 						if(textField_eing.getText().indexOf(",")>0) {
-							//throw new IllegalArgumentException("Formatierungs Fehler \'.\' statt \',\' verwenden");
 							JOptionPane.showMessageDialog(null,"Formatierungs Fehler \'.\' statt \',\' verwenden", "Error", JOptionPane.ERROR_MESSAGE);
 						}else {
 						try {

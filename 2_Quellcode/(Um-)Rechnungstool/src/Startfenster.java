@@ -7,10 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- * Klasse Startfenster erzeugt die GUI fuer das Startfenster
- * des Umrechnungstools
- * class Startfenster creates a GUI for the main window of 
- * the conversion tool
+ * Die Klasse "Startfenster" erzeugt die GUI fuer das Startfenster des Umrechnungstools
+ * 
  * @author Luca Wieland
  * @version 1.3
  *
@@ -30,8 +28,9 @@ public class Startfenster {
 	private Panel pane = new Panel();
 
 	/**
-	 * Im KlassenKonstruktor wird die GUI Designet und 
-	 * Die Ablaeufe werden erstellt
+	 * Im Klassenkonstruktor wird die GUI für das Startfenster erstellt.
+	 * Es werden die Buttons und Bilder formatiert und die Ablaufe zur Weiterleitung der
+	 * zu den entsprechenden Berechnungstools erstellt.
 	 */
 	public Startfenster() {
 		hauptfenster.setBounds(350, 100, 850, 600);
@@ -84,8 +83,8 @@ public class Startfenster {
 		//ActionListener
 		einheitenumrechner.addActionListener(new ActionListener() {
 			/**
-			 * Verlinkung zur einheiten Umrechungs GUI
-			 * @param e  ist das Action Event damit die GUI sich oeffnet
+			 * Verlinkung zur Einheitenumrechungs-GUI
+			 * @param e  ist das Action-Event damit die GUI sich oeffnet
 			 */
 			public void actionPerformed(ActionEvent e) {
 				new Einheitenumrechner();
@@ -95,8 +94,8 @@ public class Startfenster {
 		
 		flaechenrechner.addActionListener(new ActionListener() {
 			/**
-			 * Verlinkung zur Flaechen Rechung GUI
-			 * @param e  ist das Action Event damit die GUI sich oeffnet
+			 * Verlinkung zur Flaechenrechner-GUI
+			 * @param e  ist das Action-Event damit die GUI sich oeffnet
 			 */
 			public void actionPerformed(ActionEvent e) {
 				new AreaGUI();
@@ -106,8 +105,8 @@ public class Startfenster {
 		
 		volumenrechner.addActionListener(new ActionListener() {
 			/**
-			 * Verlinkung zur Volumen berechnungs GUI
-			 * @param e  ist das Action Event damit die GUI sich oeffnet
+			 * Verlinkung zur Volumenrechner-GUI
+			 * @param e  ist das Action-Event damit die GUI sich oeffnet
 			 */
 			public void actionPerformed(ActionEvent e) {
 				new Volumenrechner();
@@ -117,8 +116,8 @@ public class Startfenster {
 		
 		temperaturumrechner.addActionListener(new ActionListener() {
 			/**
-			 * Verlinkung zur Tempreatur berechnungs GUI
-			 * @param e  ist das Action Event damit die GUI sich oeffnet
+			 * Verlinkung zur Temperaturumrechner-GUI
+			 * @param e  ist das Action-Event damit die GUI sich oeffnet
 			 */
 			public void actionPerformed(ActionEvent e) {
 				new TemperaturechnerGUI2();
