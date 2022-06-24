@@ -2,12 +2,13 @@ import javax.swing.*;
 import java.awt.event.*;
 
 /**
+ *  Die Klasse "WindowClosingListener" schliesst die GUI des Startfensters und bringt die Meldung
+ *  "Das Programm wird beendet!" vor dem Schlieﬂen.
  * 
- * @author Leon Welker, Sophi, Luca Wieland, Beatrix Aiza
+ * @author Leon Welker, Sophia Hug, Luca Wieland, Beatriz Aiza
+ * 
  * @version 1.0
  *
- *   Klasse schlie√üt die GUI und bringt eine Info dass es funktioniert
- *   hat.
  */
 public class WindowClosingListener extends WindowAdapter {
 	@Override
