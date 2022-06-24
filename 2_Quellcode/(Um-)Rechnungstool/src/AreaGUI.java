@@ -32,8 +32,8 @@ public class AreaGUI extends JFrame  {
 	private JButton menubutton = new JButton("Hauptmenue");
 
 	/**
-	 * Im KlassenKonstruktor wird die GUI Designet und 
-	 * Die Ablaeufe werden erstellt
+	 * Im Klassen Konstruktor "AreaGUI" wird die GUI für Flaechen Designet und 
+	 * die Ablaeufe werden erstellt
 	 */
 	public AreaGUI() {
 		//StartUp/ Grundeinstellungen
