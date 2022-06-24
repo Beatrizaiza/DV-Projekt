@@ -10,9 +10,9 @@ import javax.swing.border.EmptyBorder;
  * @author Sophia
  * @version 1.3
  * In der Klasse "AreaGUI" wird sowohl die GUI erstellt und formatiert,
- * sondern auch die noetigen Eingabeparameter vom Nutzer erfragt und
+ * als auch die noetigen Eingabeparameter vom Nutzer erfragt und
  * an die Klasse "Flaechen" weitergegeben.
- * Nach der Berechnung wird das Ergebniis dem Nutzer ueber
+ * Nach der Berechnung wird das Ergebnis dem Nutzer ueber
  * das Ausgabefeld zurueckgegeben.
  */
 public class AreaGUI extends JFrame  {
@@ -136,7 +136,7 @@ public class AreaGUI extends JFrame  {
 			 * Sie zeigt, welche Werte fuer jede Formel benoetigt
 			 * werden, sowie ein erklaerendes Bild.
 			 * 
-			 * @param e ist das Action Event damit die GUI sich oeffnet
+			 * @param e ist das Action-Event damit die GUI sich oeffnet
 			 */
 			public void actionPerformed(ActionEvent e) {
 				Startfenster b=new Startfenster();
@@ -148,7 +148,7 @@ public class AreaGUI extends JFrame  {
 			// picture is shown so user knows what is meant // is implemented 
 			/**
 			 * Die Funktion "actionPerformed" ruft basierend auf
-			 * dem gewaehlten Objekt die passende Benutzeroberflaeche
+			 * dem gewaehlten Objekt die passende Benutzeroberflaeche 
 			 * aus.
 			 * Sie zeigt, welche Werte fuer jede Formel benoetigt 
 			 * werden, sowie ein erklaerendes Bild.

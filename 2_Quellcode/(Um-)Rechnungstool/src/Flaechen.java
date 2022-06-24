@@ -1,8 +1,8 @@
 /**
- * 
+ * In der Klassse "Flaechen" wird basierend auf 
+ * den eingegebenen Werten (b,h,r,alpha) die entsprechende Flaeche berechnet (Darstellung in AreaGUI).
  * @author Sophia
  * @version 1.1
- *
  */
 public class Flaechen {
 	
