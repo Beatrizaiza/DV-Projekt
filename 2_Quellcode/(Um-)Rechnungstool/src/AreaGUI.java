@@ -7,7 +7,6 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 /**
- * 
  * @author Sophia
  * @version 1.3
  * In der Klasse "AreaGUI" wird sowohl die GUI erstellt und formatiert,
@@ -15,9 +14,7 @@ import javax.swing.border.EmptyBorder;
  * an die Klasse "Flaechen" weitergegeben.
  * Nach der Berechnung wird das Ergebniis dem Nutzer ueber
  * das Ausgabefeld zurueckgegeben.
- * 
  */
-
 public class AreaGUI extends JFrame  {
 
 	//Objektvariablen - object variables:
