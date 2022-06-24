@@ -1,6 +1,6 @@
 /**
  * 
- * @author Sophi
+ * @author Sophia
  * @version 1.1
  *
  */
@@ -14,8 +14,6 @@ public class Flaechen {
 		Flaechen.triangleArea(2, 1.4);
 
 }
-
-
 	// Areas user might need to compute:
 	/**
 	 * Berechnet den Flaecheninhalt des Rechtecks fuer die 
@@ -24,7 +22,7 @@ public class Flaechen {
 	 * Basislaenge b 
 	 * @param h
 	 * Hoehe h
-	 * @return
+	 * @return Flaechen Inhalt Rechteck
 	 */
 	public static double rectArea(double b, double h)
 	{
@@ -38,7 +36,6 @@ public class Flaechen {
 	public static double circArea(double r)
 	{
 		return Math.PI*r*r;
-		
 	}
 	
 	/**
@@ -75,7 +72,7 @@ public class Flaechen {
 	}
 	/**
 	 * Berechnet den Flaecheninhalt eines gleichseitigen Dreiecks
-	 *d. h. ein Dreieck, bei dem alle drei Seiten gleich lang sind
+	 * d. h. ein Dreieck, bei dem alle drei Seiten gleich lang sind
 	 * @param b Seitenlaenge
 	 * @return Flaecheninhalt gleichseitigen Dreieck
 	 */
