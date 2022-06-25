@@ -240,7 +240,7 @@ public class Einheitenumrechner extends JFrame {
 					/**
 					 * Die Funktion "actionPerformed" ermittelt die Eingabe des Nutzers und berechnet
 					 * mit Hilfe der Funktionen aus der Klasse "Berechnung" den Ausgabewert in der 
-					 * gewaehlten Einheit. Außerdem erscheint eine Fehlermeldung, wenn der Nutzer einen Punkt "." anstatt eines Kommas"," verwendet um Dezimahlzahlen darzustellen.
+					 * gewaehlten Einheit. Außerdem erscheint eine Fehlermeldung, wenn der Nutzer ein Komma "," anstatt eines Punktes "." verwendet um Dezimahlzahlen darzustellen.
 					 * 
 					 * @param e fuehrt das Event aus
 					 */
