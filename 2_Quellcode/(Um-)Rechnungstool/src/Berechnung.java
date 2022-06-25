@@ -104,7 +104,7 @@ public class Berechnung {
 	// Methode zum Umrechnen der Groessen	
 	/**
 	 * Die Funktion "Umrechner" berechnet,
-	 * basierend auf die vom Nutzer gewählten Einheiten, 
+	 * basierend auf die vom Nutzer gewählten Ein- und Ausgabeeinheiten, 
 	 * den gewünschten Wert. 
 	 * 
 	 * @param eingwert (Eingabewert)

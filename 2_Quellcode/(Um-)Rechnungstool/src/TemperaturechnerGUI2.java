@@ -48,7 +48,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 		contentPane.add(lblNewLabel);
 
 		/**
-		 * Das Dropdown-Menu wird erstellt
+		 * Das Dropdown-Menu mit  den drei Optionen Celsius°, Fahrenheit° und Kelvin wird erstellt.
 		 */
 		String tempList[] = {"Einheiten Waehlen", "Celsius zu Kelvin", "Celsius zu Fahrenheit", "Fahrenheit zu Celsius", "Fahrenheit zu Kelvin", "Kelvin zu Celsius", "Kelvin zu Fahrenheit"};
 		JComboBox tempMenu = new JComboBox(tempList);
@@ -108,11 +108,11 @@ public class TemperaturechnerGUI2 extends JFrame {
 
 		//ActionListener
 		/**
-		 * Die eingegebenen Werte werden mittels der Methoden aus Klasse "Temperatur" berechnet und auf dem Bildschirm ausgegeben.
+		 * Die eingegebenen Werte werden mittels der Methoden aus Klasse "Temperatur" berechnet und auf dem Bildschirm in den übrigen beiden Ausgabefeldern ausgegeben.
 		 */
 		tempMenu.addActionListener(new ActionListener() {
 			/**
-			 * Die Funktion "actionPerformed" ruft basierend auf der gewählten Einheit die passende Benutzeroberfläche aus.Also eelches der Eingabe Felder aktiv ist.
+			 * Die Funktion "actionPerformed" ruft basierend auf der gewählten Einheit die passende Benutzeroberfläche aus.Also welches der Eingabe Felder aktiv ist.
 			 * @param e
 			 */
 			public void actionPerformed(ActionEvent e) {
@@ -154,7 +154,8 @@ public class TemperaturechnerGUI2 extends JFrame {
 		rechnen.addActionListener(new  ActionListener() {
 			@Override
 			/**
-			 * Die Funktion "actionPerformed" ruft basierend auf der gewählten Einheit die passende Benutzeroberfläche aus.Also eelches der Eingabe Felder aktiv ist.
+			 * Die Funktion "actionPerformed" gibt dem Nutzer bei einer falschen Eingabe eine Fehlermeldung als Pop Up Fenster aus. 
+			 * Eine Fehleremeldung kommt dann, wenn kein Zahlenwert eingegeben wurde oder wenn Dezimalstellen nicht mit einem Komma sondern mit einem Punkt abgetrennt wurden.
 			 * @param e
 			 */
 			public void actionPerformed(ActionEvent e) {
