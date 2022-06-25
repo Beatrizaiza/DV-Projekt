@@ -14,35 +14,35 @@ import javax.swing.border.EmptyBorder;
  */
 
 public class Einheitenumrechner extends JFrame {
-	
+
 	//Objekt Variablen werden deklariert
 	private double eingwert, ausgwert;
 	private String einheite,einheita;
-	
+
 	private JPanel contentPane = new JPanel();
-	
+
 	private JTextField textField_eing=new JTextField();
 	private JTextField textField_ausg=new JTextField();
-	
+
 	private JComboBox drop_groessen = new JComboBox();
 	private JComboBox drop_ausgeinheit = new JComboBox();
 	private JComboBox drop_eingeinheit = new JComboBox();
-	
+
 	private JLabel titel = new JLabel("Einheitenumrechner");
 	private JLabel tit_eing = new JLabel("Eingabe:");
 	private JLabel tit_ausg = new JLabel("Ausgabe:");
-	
+
 	private JButton startButton = new JButton("START");
 	private JButton menubutton = new JButton("Hauptmenue");
-	
-/**
- * Im Klassenkonstruktor wird die GUI fuer den Einheitenumrechner erstellt.
- * Es werden die Buttons, Bilder und Drop-Down-Elemente formatiert und der "Hauptmenue"-Button
- * zur Rueckkehr zum Startfenster implementiert.
- */
-	
+
+	/**
+	 * Im Klassenkonstruktor wird die GUI fuer den Einheitenumrechner erstellt.
+	 * Es werden die Buttons, Bilder und Drop-Down-Elemente formatiert und der "Hauptmenue"-Button
+	 * zur Rueckkehr zum Startfenster implementiert.
+	 */
+
 	public Einheitenumrechner() {
-		
+
 		//Startup und Layout
 		setTitle("Einheitenumrechner");
 		setResizable(false);
@@ -53,26 +53,26 @@ public class Einheitenumrechner extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		Berechnung.init();
-		
+
 		//Ueberschrift
 		titel.setForeground(new Color(0, 128, 0));
 		titel.setHorizontalAlignment(SwingConstants.CENTER);
 		titel.setBounds(300, 29, 240, 23);
 		titel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titel);
-		
+
 		//Auswahl Laenge, Flaeche, Volumen, Gewicht
 		drop_groessen.setFont(new Font("Tahoma", Font.BOLD, 14));
 		drop_groessen.setModel(new DefaultComboBoxModel(new String[] {"Waehlen...", "Laenge", "Flaeche", "Volumen", "Gewicht"}));
 		drop_groessen.setBounds(299, 125, 240, 31);
 		contentPane.add(drop_groessen);
-		
+
 		//Auswahl Ausgabe
 		drop_ausgeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		drop_ausgeinheit.setModel(new DefaultComboBoxModel(new String[] {"Waehle Ausgabeeinheit..."}));
 		drop_ausgeinheit.setBounds(498, 260, 232, 29);
 		contentPane.add(drop_ausgeinheit);
-		
+
 		//Auswahl Eingabe
 		drop_eingeinheit.setModel(new DefaultComboBoxModel(new String[] {"Waehle Eingabeeinheit..."}));
 		drop_eingeinheit.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -96,7 +96,7 @@ public class Einheitenumrechner extends JFrame {
 		tit_eing.setFont(new Font("Tahoma", Font.BOLD, 14));
 		tit_eing.setBounds(128, 187, 232, 21);
 		contentPane.add(tit_eing);
-		
+
 		//Label zu Ausgabe
 		tit_ausg.setFont(new Font("Tahoma", Font.BOLD, 14));
 		tit_ausg.setBounds(498, 187, 232, 21);
@@ -106,12 +106,12 @@ public class Einheitenumrechner extends JFrame {
 		startButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
 		startButton.setBounds(370, 233, 118, 44);
 		contentPane.add(startButton);
-		
+
 		//Designe MenueButton
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		menubutton.setBounds(644, 26, 150, 31);
 		contentPane.add(menubutton);
-		
+
 		//Verbinde MenueButton mit ActionListener
 		menubutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -119,7 +119,7 @@ public class Einheitenumrechner extends JFrame {
 				setVisible(false);
 			}
 		});
-		
+
 		//Verbinde drop_groessen mit ActionListener
 		drop_groessen.addActionListener(new ActionListener() {
 
@@ -132,7 +132,7 @@ public class Einheitenumrechner extends JFrame {
 			 * @param e fuehrt das Event aus
 			 */
 			public void actionPerformed(ActionEvent e) {
-				
+
 				//Laenge
 				if(drop_groessen.getSelectedItem().equals("Laenge"))
 				{
@@ -240,7 +240,7 @@ public class Einheitenumrechner extends JFrame {
 					/**
 					 * Die Funktion "actionPerformed" ermittelt die Eingabe des Nutzers und berechnet
 					 * mit Hilfe der Funktionen aus der Klasse "Berechnung" den Ausgabewert in der 
-					 * gewaehlten Einheit.
+					 * gewaehlten Einheit. Außerdem erscheint eine Fehlermeldung, wenn der Nutzer einen Punkt "." anstatt eines Kommas"," verwendet um Dezimahlzahlen darzustellen.
 					 * 
 					 * @param e fuehrt das Event aus
 					 */
@@ -252,11 +252,11 @@ public class Einheitenumrechner extends JFrame {
 						if(textField_eing.getText().indexOf(",")>0) {
 							JOptionPane.showMessageDialog(null,"Formatierungs Fehler \'.\' statt \',\' verwenden", "Error", JOptionPane.ERROR_MESSAGE);
 						}else {
-						try {
-							eingwert = Double.parseDouble(textField_eing.getText());
-						} catch (Exception e2 ) {
-							JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
-						} 
+							try {
+								eingwert = Double.parseDouble(textField_eing.getText());
+							} catch (Exception e2 ) {
+								JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
+							} 
 						}
 
 						System.out.println("Eingabewert: "+eingwert);
@@ -280,7 +280,7 @@ public class Einheitenumrechner extends JFrame {
 
 			}
 		});
-		
+
 		// Window Closer
 		addWindowListener(new WindowClosingListener());
 		setVisible(true);

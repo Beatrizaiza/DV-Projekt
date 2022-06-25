@@ -1,4 +1,4 @@
- import java.util.HashMap;
+import java.util.HashMap;
 /**
  * @author Leon Welker
  * @version 1.2
@@ -6,20 +6,19 @@
  * Einheitenrechner und gibt mittels der Funktionen
  * aus der Klasse "einheitenumrechner" dem Nutzer den Wert
  * in der gewünschten Zieleinheit aus.
- *
  */
 public class Berechnung {
 
 
 	/**
-	 * Werte aus "Einheitenrechner"
+	 * Hier werden die Speicherplätze für die entsprechenden Werte aus "Einheitenrechner" initialisiert. 
 	 */
 	private String einheite;
 	private String einheita;
 	private double eingwert;
 
 	/**
-	 * Get- und Set-Methoden zur Übergabe
+	 * Implementierung der Get- und Set-Methoden zur Übergabe
 	 * der Ein- und Ausgabeeinheiten aus der 
 	 * Klasse "Einheitenumrechner"
 	 */
@@ -37,9 +36,11 @@ public class Berechnung {
 	}
 
 	/** 
-	 * Get- und Set-Methode für den Eingabewert
+	 * Implementierung der Get- und Set-Methoden zur Übergabe
+	 * der Ein- und Ausgabewerte aus der 
+	 * Klasse "Einheitenumrechner"
 	 */
-	
+
 
 	public double getEingwert() {
 		return eingwert;
@@ -50,7 +51,7 @@ public class Berechnung {
 
 	/**
 	 * Implementierung einer HashMap zum Speichern 
-	 * der Umrechnungsfaktoren der Groessen
+	 * der Umrechnungsfaktoren der einzelnen Groessen
 	 */
 	public static HashMap<String, Double> Rechnung = new HashMap<>();
 
@@ -86,7 +87,7 @@ public class Berechnung {
 		Rechnung.put("Kubikdezimeter/Liter [dm^3/l]", 0.001);
 		Rechnung.put("Kubikmeter [m^3]", 1.0);
 		Rechnung.put("Kubikkilometer [km^3]", 1000000000.0);
-		
+
 		//Faktoren Gewicht
 		Rechnung.put("Milligramm [mg]", 0.000001);
 		Rechnung.put("Gramm [g]", 0.001);
@@ -95,7 +96,7 @@ public class Berechnung {
 		Rechnung.put("Stone [st]", 6.350);
 		Rechnung.put("Pfund [lb]", 0.454);
 		Rechnung.put("Unze [oz]", 0.0283);
-		
+
 	}
 
 
@@ -109,26 +110,25 @@ public class Berechnung {
 	 * @param eingwert (Eingabewert)
 	 * @param einheite (Eingabeeinheit)
 	 * @param einheita (Ausgabeeinheit)
-	 * @return Ausgabewert (ausgwert) als Ergebnis der Einheiten
-	 * spezifischen Umrechnung
+	 * @return Ausgabewert (ausgwert) als Ergebnis der spezifischen Umrechnung
 	 */
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
-		
-		
+
+
 		// allgemeine Variabel für die Eingabeeinheiten wird Faktor uebergeben
 		double Ee = Rechnung.get(einheite);
 		// allgemeine Variabel für die Ausgabeeinheiten wird Faktor uebergeben
 		double Ea = Rechnung.get(einheita);
-		
-					
+
+
 		double ausgwert = (eingwert * Ee) / Ea;
-		
+
 		System.out.println("Faktor Eingabeeinheit: "+Ee);
 		System.out.println("Faktor Ausgabeeinheit: "+Ea);
 
 		return ausgwert;
-		}
 	}
-		
-	
+}
+
+
 

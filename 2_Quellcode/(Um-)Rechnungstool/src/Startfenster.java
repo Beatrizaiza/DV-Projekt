@@ -78,7 +78,7 @@ public class Startfenster {
 		labelThermometer.setBounds(678, 399, 56, 131);
 		hauptfenster.setBounds(350, 100, 850, 600); // legt Groesse und Position fest//
 		hauptfenster.setResizable(false);
-		
+
 		//ActionListener
 		einheitenumrechner.addActionListener(new ActionListener() {
 			/**
@@ -90,7 +90,7 @@ public class Startfenster {
 				hauptfenster.setVisible(false);
 			}
 		});
-		
+
 		flaechenrechner.addActionListener(new ActionListener() {
 			/**
 			 * Verlinkung zur Flaechenrechner-GUI
@@ -101,7 +101,7 @@ public class Startfenster {
 				hauptfenster.setVisible(false);
 			}
 		});
-		
+
 		volumenrechner.addActionListener(new ActionListener() {
 			/**
 			 * Verlinkung zur Volumenrechner-GUI
@@ -112,7 +112,7 @@ public class Startfenster {
 				hauptfenster.setVisible(false);
 			}
 		});
-		
+
 		temperaturumrechner.addActionListener(new ActionListener() {
 			/**
 			 * Verlinkung zur Temperaturumrechner-GUI

@@ -18,7 +18,7 @@ import javax.swing.border.EmptyBorder;
  */
 
 public class Volumenrechner extends JFrame {
-	
+
 	//Objektvariablen
 	private JTextField result;
 	private JPanel contentPane;
@@ -38,7 +38,7 @@ public class Volumenrechner extends JFrame {
 	 * Im Klassenkonstruktor wird die GUI erstellt und designet
 	 */
 	public Volumenrechner() {
-	
+
 		setTitle("Volumenrechner");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -130,7 +130,6 @@ public class Volumenrechner extends JFrame {
 			 * passende Benutzeroberflaeche aus.(Was soll wo angezeigt werden)
 			 * 
 			 * @param e Action Event fuehrt das Ereignis durch
-			 * 
 			 */
 			public void actionPerformed(ActionEvent e) {
 				String Form = (String) volumeMenu.getSelectedItem();
@@ -231,9 +230,9 @@ public class Volumenrechner extends JFrame {
 					JOptionPane.showMessageDialog(null,"Formatierungs Fehler \'.\' statt \',\' verwenden", "Error", JOptionPane.ERROR_MESSAGE);
 				else if (Form.equals("Kugel")) {
 					try {
-					double r = Double.parseDouble(tf2.getText());
-					double answer = Volumen.sphereVolume(r);
-					result.setText(answer + " VE");
+						double r = Double.parseDouble(tf2.getText());
+						double answer = Volumen.sphereVolume(r);
+						result.setText(answer + " VE");
 					}catch (Exception e2) {
 						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 					}
@@ -241,61 +240,61 @@ public class Volumenrechner extends JFrame {
 				}
 				else if (Form.equals("Pyramide")) {
 					try {
-					double l = Double.parseDouble(tf2.getText());
-					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.pyramidVolume(l, h);
-					result.setText(answer + " VE");
+						double l = Double.parseDouble(tf2.getText());
+						double h = Double.parseDouble(tf3.getText());
+						double answer = Volumen.pyramidVolume(l, h);
+						result.setText(answer + " VE");
 					}catch (Exception e2) {
 						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 				else if (Form.equals("Wuerfel")) {
 					try {
-					double l = Double.parseDouble(tf2.getText());
-					double answer = Volumen.cubeVolume(l);
-					result.setText(answer + " VE");
+						double l = Double.parseDouble(tf2.getText());
+						double answer = Volumen.cubeVolume(l);
+						result.setText(answer + " VE");
 					}catch (Exception e2) {
 						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 				else if (Form.equals("Zylinder")) {
 					try {
-					double r = Double.parseDouble(tf2.getText());
-					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.cylinderVolume(r, h);
-					result.setText(answer + " VE");
+						double r = Double.parseDouble(tf2.getText());
+						double h = Double.parseDouble(tf3.getText());
+						double answer = Volumen.cylinderVolume(r, h);
+						result.setText(answer + " VE");
 					}catch (Exception e2) {
 						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 				else if (Form.equals("Kegel")) {
 					try {
-					double r = Double.parseDouble(tf2.getText());
-					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.coneVolume(r, h);
-					result.setText(answer + " VE");
+						double r = Double.parseDouble(tf2.getText());
+						double h = Double.parseDouble(tf3.getText());
+						double answer = Volumen.coneVolume(r, h);
+						result.setText(answer + " VE");
 					}catch (Exception e2) {
 						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 				else if (Form.equals("Quader")) {
 					try {
-					double l = Double.parseDouble(tf1.getText());
-					double b = Double.parseDouble(tf2.getText());
-					double h = Double.parseDouble(tf3.getText());
-					double answer = Volumen.squareVolume(l, b, h);
-					result.setText(answer + " VE");
+						double l = Double.parseDouble(tf1.getText());
+						double b = Double.parseDouble(tf2.getText());
+						double h = Double.parseDouble(tf3.getText());
+						double answer = Volumen.squareVolume(l, b, h);
+						result.setText(answer + " VE");
 					}catch (Exception e2) {
 						JOptionPane.showMessageDialog(null,"Bitte Zahlenwert eingeben", "Error", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 			}
 		});
-		
+
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		menubutton.setBounds(643, 28, 150, 31);
 		contentPane.add(menubutton);
-		
+
 		menubutton.addActionListener(new ActionListener() {
 			/**
 			 * Verknuepfung zur Startseite

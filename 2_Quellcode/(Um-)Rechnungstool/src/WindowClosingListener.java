@@ -3,9 +3,9 @@ import java.awt.event.*;
 
 /**
  *  Die Klasse "WindowClosingListener" schliesst die GUI des Startfensters und bringt die Meldung
- *  "Das Programm wird beendet!" vor dem Schlieﬂen.
+ *  "Das Programm wird beendet!" vor dem Schlieszen.
  * 
- * @author Leon Welker, Sophia Hug, Luca Wieland, Beatriz Aiza
+ * @author Leon Welker, Sophia Hug, Luca Wieland, Beatriz Aiza, Jasmin Binkowski
  * 
  * @version 1.0
  *
