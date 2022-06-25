@@ -7,13 +7,10 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 /**
- * 
+ * @author Luca Wieland, Leon Welker
+ * @version 1.2
  * Die Klasse "Einheitenumrechner" erzeugt die GUI fuer den Einheitenumrechner
  * 
- * @author Luca Wieland, Leon Welker
- * 
- * @version 1.2
- *
  */
 
 public class Einheitenumrechner extends JFrame {
@@ -39,7 +36,7 @@ public class Einheitenumrechner extends JFrame {
 	private JButton menubutton = new JButton("Hauptmenue");
 	
 /**
- * Im Klassenkonstruktor wird die GUI für den Einheitenumrechner erstellt.
+ * Im Klassenkonstruktor wird die GUI fuer den Einheitenumrechner erstellt.
  * Es werden die Buttons, Bilder und Drop-Down-Elemente formatiert und der "Hauptmenue"-Button
  * zur Rueckkehr zum Startfenster implementiert.
  */
@@ -130,7 +127,7 @@ public class Einheitenumrechner extends JFrame {
 			 * Die Funktion "actionPerformed" ruft basierend auf 
 			 * dem gewaehlten Objekt und der gewaehlten Einheit die passenden Dropdown-Menus
 			 * zur Wahl der entsprechenden Einheit auf und hohlt den an die entsprechende Einheit
-			 * gebundenen Wert aus der HashMap aus der Klasse "Berechnung" für die darauf folgende Berechnung.
+			 * gebundenen Wert aus der HashMap aus der Klasse "Berechnung" fuer die darauf folgende Berechnung.
 			 * 
 			 * @param e fuehrt das Event aus
 			 */

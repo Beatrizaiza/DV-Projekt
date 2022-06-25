@@ -7,10 +7,9 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- * Die Klasse "Startfenster" erzeugt die GUI fuer das Startfenster des Umrechnungstools
- * 
  * @author Luca Wieland
  * @version 1.3
+ *Die Klasse "Startfenster" erzeugt die GUI fuer das Startfenster des Umrechnungstools
  *
  */
 public class Startfenster {
@@ -28,7 +27,7 @@ public class Startfenster {
 	private Panel pane = new Panel();
 
 	/**
-	 * Im Klassenkonstruktor wird die GUI für das Startfenster erstellt.
+	 * Im Klassenkonstruktor wird die GUI fuer das Startfenster erstellt.
 	 * Es werden die Buttons und Bilder formatiert und die Ablaufe zur Weiterleitung der
 	 * zu den entsprechenden Berechnungstools erstellt.
 	 */

@@ -1,8 +1,8 @@
 /**
+ * @author Sophia Hug
+ * @version 1.1
  * In der Klassse "Flaechen" wird basierend auf 
  * den eingegebenen Werten (b,h,r,alpha) die entsprechende Flaeche berechnet (Darstellung in AreaGUI).
- * @author Sophia
- * @version 1.1
  */
 public class Flaechen {
 	
@@ -61,7 +61,7 @@ public class Flaechen {
 	}
 	
 	/**
-	 * Berechnet den Flaecheninhalt des Dreiecks für die gewaehlte Basis und Hoehe
+	 * Berechnet den Flaecheninhalt des Dreiecks fï¿½r die gewaehlte Basis und Hoehe
 	 * @param b Basislaenge
 	 * @param h Hoehe
 	 * @return Flaecheninhalt Dreieck
