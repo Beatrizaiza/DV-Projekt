@@ -8,12 +8,13 @@ import javax.swing.border.EmptyBorder;
 
 /**
  * 
- * @author leonwelker
- * In der Klasse "Volumenrechner" wird sowohl die GUI erstellt
- * und formatiert, als auch die noetigen Eingabeparameter vom
- * Nutzer erfragt und an die Klasse "Volumen" weitergegeben.
- * Nach der Berechnung wird das Ergebnis dem Nutzer ueber das 
- * Ausgabefeld zurueckgegeben.
+ * @author jasminbinkowski
+ * @version 1.2
+ * In der Klasse "Volumenrechner" wird die passende GUI erstellt und formatiert. 
+ * Ausserdem werden die noetigen Eingabeparameter vom
+ * Anwender erfragt und an die Klasse "Volumen" uebergeben.
+ * Nach der Berechnung des Volumens, wird das Ergebnis (in Volumeneinheiten) 
+ * dem Anwender ueber das Ausgabefeld zurueckgegeben.
  * 
  */
 
@@ -35,7 +36,7 @@ public class Volumenrechner extends JFrame {
 	private JLabel Volume = new JLabel("Volumen:");
 
 	/**
-	 * Im Klassenkonstruktor wird die GUI erstellt und designet
+	 * Im Klassenkonstruktor "Volumenrechner" wird die GUI erstellt und gestaltet.
 	 */
 	public Volumenrechner() {
 
@@ -57,9 +58,9 @@ public class Volumenrechner extends JFrame {
 		lblNewLabel.setBounds(293, 27, 240, 21);
 		contentPane.add(lblNewLabel);
 
-		String volumeList[] = { "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel" };
+		String volumeList[] = {"Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel"};
 		JComboBox volumeMenu = new JComboBox(volumeList);
-		volumeMenu.setModel(new DefaultComboBoxModel(new String[] { "Formen Waehlen", "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel", "Quader" }));
+		volumeMenu.setModel(new DefaultComboBoxModel(new String[] {"Formen Waehlen", "Kugel", "Pyramide", "Wuerfel", "Zylinder", "Kegel", "Quader"}));
 		volumeMenu.setForeground(new Color(0, 0, 0));
 		volumeMenu.setFont(new Font("Tahoma", Font.BOLD, 18));
 		volumeMenu.setBounds(180, 144, 472, 38);
@@ -126,10 +127,10 @@ public class Volumenrechner extends JFrame {
 		volumeMenu.addActionListener(new ActionListener() {
 
 			/**
-			 * Die Funktion "actionPerformed" ruft basierend auf dem gewaehlten Objekt die
-			 * passende Benutzeroberflaeche aus.(Was soll wo angezeigt werden)
-			 * 
-			 * @param e Action Event fuehrt das Ereignis durch
+			 * Die Methode "actionPerformed" ruft passend zum gewaehlten Objekt,
+			 * die dazugehoerige Benutzeroberflaeche auf.
+			 *
+			 * @param e ActionEvent enthaelt Informationen zum Ereignis und fuehrt es aus
 			 */
 			public void actionPerformed(ActionEvent e) {
 				String Form = (String) volumeMenu.getSelectedItem();
@@ -139,6 +140,8 @@ public class Volumenrechner extends JFrame {
 					L3.setText("");
 					result.setText(null);
 					bild.setIcon(new ImageIcon());
+					bild.setIcon(new ImageIcon("Volumen_waehlen.PNG"));
+					bild.setBounds(61, 375, 165, 152);
 				} else if (Form.equals("Kugel")) {
 					L1.setText("");
 					L2.setText("Radius");
@@ -227,7 +230,7 @@ public class Volumenrechner extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Form = (String) volumeMenu.getSelectedItem();
 				if (tf1.getText().indexOf(",")>0 || tf2.getText().indexOf(",")>0 || tf3.getText().indexOf(",")>0)
-					JOptionPane.showMessageDialog(null,"Formatierungs Fehler \'.\' statt \',\' verwenden", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null,"Formatierungsfehler: \'.\' statt \',\' verwenden", "Error", JOptionPane.ERROR_MESSAGE);
 				else if (Form.equals("Kugel")) {
 					try {
 						double r = Double.parseDouble(tf2.getText());
@@ -291,15 +294,17 @@ public class Volumenrechner extends JFrame {
 			}
 		});
 
+		/**
+		 * Der "menubutton" stellte eine Verknuepfung zur Startseite her,
+		 * dadurch wird die Moeglichkeit gegeben, 
+		 * nach jeder Auswahl wieder zum Startfenster zurueckzugelangen.
+		 */
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		menubutton.setBounds(643, 28, 150, 31);
 		contentPane.add(menubutton);
 
 		menubutton.addActionListener(new ActionListener() {
-			/**
-			 * Verknuepfung zur Startseite
-			 * @param e Action Event fuehrt das Ereignis durch
-			 */
+			
 			public void actionPerformed(ActionEvent e) {
 				Startfenster b=new Startfenster();
 				setVisible(false);
