@@ -7,15 +7,16 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 /**
- * @author Betriz Aiza
- * 
- * @version 1.0
- * 
  * In der Klasse "TemperaturechnerGUI2" wird sowohl die GUI erstellt
  * und formatiert, als auch die noetigen Eingabeparameter vom 
  * Nutzer erfragt und an die Klasse "Temperatur" weitergegeben.
- * Nach der Berechnung wird das Ergebniis dem Nutzer ueber das 
+ * Nach der Berechnung wird das Ergebnis dem Nutzer ueber das 
  * Ausgabefeld zurueckgegeben.
+ * 
+ * @author Beatriz Aiza
+ * 
+ * @version 1.0
+ *  
  */
 public class TemperaturechnerGUI2 extends JFrame {
 	//Objektvariablen

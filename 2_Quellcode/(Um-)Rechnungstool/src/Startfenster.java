@@ -7,9 +7,11 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- * @author Luca Wieland
- * @version 1.0
  *Die Klasse "Startfenster" erzeugt die GUI fuer das Startfenster des Umrechnungstools
+ *
+ * @author Luca Wieland
+ *
+ * @version 1.0
  *
  */
 public class Startfenster {

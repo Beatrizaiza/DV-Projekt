@@ -1,11 +1,14 @@
 import java.util.HashMap;
 /**
- * @author Leon Welker
- * @version 1.0
  * Die Klasse "Berechnung" erstellt die GUI fuer den
  * Einheitenrechner und gibt mittels der Funktionen
  * aus der Klasse "Einheitenumrechner" dem Nutzer den Wert
  * in der gewuenschten Zieleinheit aus.
+ * 
+ * @author Leon Welker
+ * 
+ * @version 1.0
+ * 
  */
 public class Berechnung {
 

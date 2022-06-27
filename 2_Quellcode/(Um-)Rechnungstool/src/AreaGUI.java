@@ -7,13 +7,16 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 /**
- * @author Sophia Hug
- * @version 1.0
  * In der Klasse "AreaGUI" wird sowohl die GUI erstellt und formatiert,
  * als auch die noetigen Eingabeparameter vom Nutzer erfragt und
  * an die Klasse "Flaechen" weitergegeben.
  * Nach der Berechnung wird das Ergebnis dem Nutzer ueber
  * das Ausgabefeld zurueckgegeben.
+ * 
+ * @author Sophia Hug
+ * 
+ * @version 1.0
+ * 
  */
 public class AreaGUI extends JFrame  {
 

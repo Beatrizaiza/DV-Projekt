@@ -1,8 +1,11 @@
 /**
- * 
- * @author Leon Welker
  * In der Klassse "Volumen" wird basierend auf 
  * den eingegebenen Werten (r,l,h,b) das entsprechende Volumen berechnet (Darstellung in Volumenrechner).
+ * 
+ * @author Leon Welker
+ * 
+ * @version 1.0
+ * 
  */
 public class Volumen {
 

@@ -7,9 +7,11 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 /**
- * @author Luca Wieland, Leon Welker
- * @version 1.2
  * Die Klasse "Einheitenumrechner" erzeugt die GUI fuer den Einheitenumrechner
+ * 
+ * @author Luca Wieland, Leon Welker
+ * 
+ * @version 1.0
  * 
  */
 

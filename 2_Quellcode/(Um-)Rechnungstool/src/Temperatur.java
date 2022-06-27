@@ -1,9 +1,10 @@
 /**
+ * In der Klasse "Temperatur" werden aus den eingegebenen Temperaturwerten (c,f,k) die jeweils anderen Werte der anderen
+ * Temperatureinheiten ausgerechnet
  * 
  * @author Leon Welker
+ * 
  * @version 1.0
- * In der Klasse "Temperatur" werden aus den eingegebenen Temperaturwerten (c,f,k) die jeweils anderen Werte der anderen
- * Temperatureinheiten ausgerechnet 
  *
  */
 public class Temperatur {
