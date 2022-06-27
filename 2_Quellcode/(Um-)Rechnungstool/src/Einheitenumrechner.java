@@ -235,6 +235,14 @@ public class Einheitenumrechner extends JFrame {
 					drop_ausgeinheit.addItem("Pfund [lb]");
 					drop_ausgeinheit.addItem("Unze [oz]");
 				}
+				
+				else if(drop_groessen.getSelectedItem().equals("Waehlen..."))
+				{
+					drop_eingeinheit.removeAllItems();
+					drop_eingeinheit.addItem("Waehle Eingabeeinheit...");
+					drop_ausgeinheit.removeAllItems();
+					drop_ausgeinheit.addItem("Waehle Ausgabeeinheit...");
+				}
 
 				startButton.addActionListener(new ActionListener() {
 					/**
