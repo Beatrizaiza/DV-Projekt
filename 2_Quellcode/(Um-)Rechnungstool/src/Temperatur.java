@@ -1,7 +1,9 @@
 /**
  * 
- * @author leonwelker
- * In der Klasse "Temperatur" wird aus den eingegebenen Parametern (c,f,k) die jeweils anderen Werte ausgerechnet 
+ * @author Leon Welker
+ * @version 1.0
+ * In der Klasse "Temperatur" werden aus den eingegebenen Temperaturwerten (c,f,k) die jeweils anderen Werte der anderen
+ * Temperatureinheiten ausgerechnet 
  *
  */
 public class Temperatur {
@@ -11,10 +13,10 @@ public class Temperatur {
 		double k; //Kelvin
 	
 	/**
-	 * C2f rechnet den eingegeben Wert in °Celsius um in °Fahrenheit 
+	 * C2f rechnet den eingegeben Wert in Celsius in Fahrenheit um 
 	 * 
-	 * @param c (Wert in °Celsius)
-	 * @return Der erechneten Wert in °Fahrenheit
+	 * @param c (Wert in Celsius)
+	 * @return Der erechneten Wert in Fahrenheit
 	 */
 	public static double C2f(double c) 
 	{
@@ -22,10 +24,10 @@ public class Temperatur {
 	}
 
 	/**
-	 * F2c rechnet den eingegeben Wert in °Fahrenheit um in °Celsius 
+	 * F2c rechnet den eingegeben Wert in Fahrenheit in Celsius um  
 	 * 
-	 * @param f (Wert in °Fahrenheit)
-	 * @return Der erechneten Wert in °Celsius
+	 * @param f (Wert in Fahrenheit)
+	 * @return Der erechneten Wert in Celsius
 	 * 
 	 */
 	public static double F2c(double f) 
@@ -34,10 +36,10 @@ public class Temperatur {
 	}
 	
 	/**
-	 * K2c rechnet den eingegeben Wert in Kelvin um in °Celsius
+	 * K2c rechnet den eingegeben Wert in Kelvin in Celsius um 
 	 * 
 	 * @param k (Wert in Kelvin)
-	 * @return Der erechneten Wert in °Celsius
+	 * @return Der erechneten Wert in Celsius
 	 */
 	public static double K2c(double k) 
 	{
@@ -45,10 +47,10 @@ public class Temperatur {
 	}
 	
 	/**
-	 * K2c rechnet den eingegeben Wert in °Celsius  um in Kelvin 
+	 * K2c rechnet den eingegeben Wert in Celsius in Kelvin um 
 	 * 
-	 * @param c (Wert in °Celsius)
-	 * @return
+	 * @param c (Wert in Celsius)
+	 * @return Der erechneten Wert in Kelvin
 	 */
 	public static double C2k(double c) 
 	{
@@ -56,10 +58,10 @@ public class Temperatur {
 	}
 	
 	/**
-	 * K2f rechnet den eingegeben Wert in Kelvin um in °Fahrenheit
+	 * K2f rechnet den eingegeben Wert in Kelvin in Fahrenheit um 
 	 * 
 	 * @param k (Wert in Kelvin)
-	 * @return
+	 * @return Der erechneten Wert in Fahrenheit
 	 */
 	public static double K2f(double k) 
 	{
@@ -67,10 +69,10 @@ public class Temperatur {
 	}
 	
 	/**
-	 * F2k rechnet den eingegeben Wert in °Fahrenheit um in Kelvin
+	 * F2k rechnet den eingegeben Wert in Fahrenheit in Kelvin um 
 	 * 
-	 * @param f (Wert in °Fahrenheit)
-	 * @return
+	 * @param f (Wert in Fahrenheit)
+	 * @return Der erechneten Wert in Kelvin
 	 */
 	public static double F2k(double f) 
 	{

@@ -8,8 +8,8 @@ import javax.swing.border.EmptyBorder;
 
 /**
  * 
- * @author jasminbinkowski
- * @version 1.2
+ * @author Jasmin Binkowski
+ * @version 1.0
  * In der Klasse "Volumenrechner" wird die passende GUI erstellt und formatiert. 
  * Ausserdem werden die noetigen Eingabeparameter vom
  * Anwender erfragt und an die Klasse "Volumen" uebergeben.

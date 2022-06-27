@@ -1,24 +1,24 @@
 import java.util.HashMap;
 /**
  * @author Leon Welker
- * @version 1.2
- * Die Klasse "Berechnung" erstellt die GUI für den
+ * @version 1.0
+ * Die Klasse "Berechnung" erstellt die GUI fuer den
  * Einheitenrechner und gibt mittels der Funktionen
- * aus der Klasse "einheitenumrechner" dem Nutzer den Wert
- * in der gewünschten Zieleinheit aus.
+ * aus der Klasse "Einheitenumrechner" dem Nutzer den Wert
+ * in der gewuenschten Zieleinheit aus.
  */
 public class Berechnung {
 
 
 	/**
-	 * Hier werden die Speicherplätze für die entsprechenden Werte aus "Einheitenrechner" initialisiert. 
+	 * Hier werden die Speicherplaetze fuer die entsprechenden Werte aus "Einheitenrechner" initialisiert. 
 	 */
 	private String einheite;
 	private String einheita;
 	private double eingwert;
 
 	/**
-	 * Implementierung der Get- und Set-Methoden zur Übergabe
+	 * Implementierung der Get- und Set-Methoden zur Uebergabe
 	 * der Ein- und Ausgabeeinheiten aus der 
 	 * Klasse "Einheitenumrechner"
 	 */
@@ -36,7 +36,7 @@ public class Berechnung {
 	}
 
 	/** 
-	 * Implementierung der Get- und Set-Methoden zur Übergabe
+	 * Implementierung der Get- und Set-Methoden zur Uebergabe
 	 * der Ein- und Ausgabewerte aus der 
 	 * Klasse "Einheitenumrechner"
 	 */
@@ -104,8 +104,8 @@ public class Berechnung {
 	// Methode zum Umrechnen der Groessen	
 	/**
 	 * Die Funktion "Umrechner" berechnet,
-	 * basierend auf die vom Nutzer gewählten Ein- und Ausgabeeinheiten, 
-	 * den gewünschten Wert. 
+	 * basierend auf die vom Nutzer gewaehlten Ein- und Ausgabeeinheiten, 
+	 * den gewuenschten Wert. 
 	 * 
 	 * @param eingwert (Eingabewert)
 	 * @param einheite (Eingabeeinheit)
@@ -115,9 +115,9 @@ public class Berechnung {
 	public static double Umrechner(double eingwert, String einheite, String einheita) {
 
 
-		// allgemeine Variabel für die Eingabeeinheiten wird Faktor uebergeben
+		// allgemeine Variabel fuer die Eingabeeinheiten wird Faktor uebergeben
 		double Ee = Rechnung.get(einheite);
-		// allgemeine Variabel für die Ausgabeeinheiten wird Faktor uebergeben
+		// allgemeine Variabel fuer die Ausgabeeinheiten wird Faktor uebergeben
 		double Ea = Rechnung.get(einheita);
 
 

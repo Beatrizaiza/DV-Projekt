@@ -7,8 +7,8 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 /**
- * @author Sophia
- * @version 1.3
+ * @author Sophia Hug
+ * @version 1.0
  * In der Klasse "AreaGUI" wird sowohl die GUI erstellt und formatiert,
  * als auch die noetigen Eingabeparameter vom Nutzer erfragt und
  * an die Klasse "Flaechen" weitergegeben.
@@ -32,7 +32,7 @@ public class AreaGUI extends JFrame  {
 	private JButton menubutton = new JButton("Hauptmenue");
 
 	/**
-	 * Im Klassen Konstruktor "AreaGUI" wird die GUI für Flaechen Designet und 
+	 * Im Klassenkonstruktor "AreaGUI" wird die GUI fuer Flaechen designed und 
 	 * die Ablaeufe werden erstellt
 	 */
 	public AreaGUI() {
