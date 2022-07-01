@@ -73,6 +73,7 @@ public class Volumenrechner extends JFrame {
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
 		rechnen.setBounds(643, 294, 107, 38);
 		contentPane.add(rechnen);
+		contentPane.getRootPane().setDefaultButton(rechnen); // Enter also as an option
 
 		result = new JTextField();
 		result.setEditable(false);

@@ -108,6 +108,7 @@ public class Einheitenumrechner extends JFrame {
 		startButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
 		startButton.setBounds(370, 233, 118, 44);
 		contentPane.add(startButton);
+		contentPane.getRootPane().setDefaultButton(startButton); // Enter also as an option
 
 		//Designe MenueButton
 		menubutton.setFont(new Font("Tahoma", Font.BOLD, 15));

@@ -65,6 +65,7 @@ public class TemperaturechnerGUI2 extends JFrame {
 		rechnen.setFont(new Font("Tahoma", Font.BOLD, 15));
 		rechnen.setBounds(364, 358, 107, 38);
 		contentPane.add(rechnen);
+		contentPane.getRootPane().setDefaultButton(rechnen); // Enter also as an option
 
 		L1 = new JLabel("");
 		L1.setHorizontalAlignment(SwingConstants.CENTER);
